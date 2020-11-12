@@ -41,7 +41,7 @@
             // 
             // button_entrar
             // 
-            this.button_entrar.Location = new System.Drawing.Point(356, 280);
+            this.button_entrar.Location = new System.Drawing.Point(330, 309);
             this.button_entrar.Name = "button_entrar";
             this.button_entrar.Size = new System.Drawing.Size(90, 28);
             this.button_entrar.TabIndex = 0;
@@ -52,7 +52,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(240, 186);
+            this.label1.Location = new System.Drawing.Point(179, 215);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 17);
             this.label1.TabIndex = 1;
@@ -62,7 +62,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(240, 231);
+            this.label2.Location = new System.Drawing.Point(179, 260);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 17);
             this.label2.TabIndex = 2;
@@ -70,24 +70,24 @@
             // 
             // textBox_nome
             // 
-            this.textBox_nome.Location = new System.Drawing.Point(350, 181);
+            this.textBox_nome.Location = new System.Drawing.Point(289, 210);
             this.textBox_nome.Name = "textBox_nome";
-            this.textBox_nome.Size = new System.Drawing.Size(100, 22);
+            this.textBox_nome.Size = new System.Drawing.Size(172, 22);
             this.textBox_nome.TabIndex = 3;
             this.textBox_nome.TextChanged += new System.EventHandler(this.textBox_nome_TextChanged);
             // 
             // textBox_pw
             // 
-            this.textBox_pw.Location = new System.Drawing.Point(350, 226);
+            this.textBox_pw.Location = new System.Drawing.Point(289, 255);
             this.textBox_pw.Name = "textBox_pw";
-            this.textBox_pw.Size = new System.Drawing.Size(100, 22);
+            this.textBox_pw.Size = new System.Drawing.Size(172, 22);
             this.textBox_pw.TabIndex = 4;
             this.textBox_pw.UseSystemPasswordChar = true;
             this.textBox_pw.TextChanged += new System.EventHandler(this.textBox_pw_TextChanged);
             // 
             // button_registo
             // 
-            this.button_registo.Location = new System.Drawing.Point(356, 327);
+            this.button_registo.Location = new System.Drawing.Point(330, 356);
             this.button_registo.Name = "button_registo";
             this.button_registo.Size = new System.Drawing.Size(90, 31);
             this.button_registo.TabIndex = 5;
@@ -98,7 +98,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ITICH.Properties.Resources.logotipo;
-            this.pictureBox1.Location = new System.Drawing.Point(310, 21);
+            this.pictureBox1.Location = new System.Drawing.Point(286, 50);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(176, 139);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -109,7 +109,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(470, 226);
+            this.checkBox1.Location = new System.Drawing.Point(496, 255);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(183, 21);
             this.checkBox1.TabIndex = 7;

@@ -1,55 +1,64 @@
-﻿using ITICH.ConecaoBD;
-using Microsoft.SqlServer.Management.Common;
-using System;
+﻿using System;
 using System.Data;
+using System.Data.SqlClient;
 using System.Windows.Forms;
-//using CSLoginRegisterForm.Connection;
 
 
 namespace ITICH
 {
     public partial class Login : Form
     {
+        private SqlConnection con = new SqlConnection();
+        private SqlCommand com = new SqlCommand();
+
         public Login()
         {
             InitializeComponent();
+            con.ConnectionString = @"Data Source = LAPTOP-O0RQ78U5\SQLEXPRESS;Initial Catalog = ITICH;Integrated Security = True";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(textBox_nome.Text) && !string.IsNullOrEmpty(textBox_pw.Text))
+            con.Open();
+            com.Connection = con;
+            com.CommandText = "SELECT email, password FROM Empresas WHERE email = '" + textBox_nome.Text + "' AND password = '" + textBox_pw.Text + "'";
+            SqlDataReader dr = com.ExecuteReader();
+
+            if (string.IsNullOrEmpty(textBox_nome.Text) || string.IsNullOrEmpty(textBox_pw.Text))
             {
-                string mySQL = "select email, password from Empresas where email = '" + textBox_nome.Text + "' and password = '" + @textBox_pw.Text + "'";
-                DataTable dadosUtilizador = ConecaoSQLServer.ExecuteSql(mySQL);
-
-                if (dadosUtilizador.Rows.Count > 0)
-                {
-                    textBox_nome.Clear();
-                    textBox_pw.Clear();
-                    checkBox1.Checked = false;
-
-                    Hide();
-
-                    PaginaInicial paginaInicial = new PaginaInicial();
-                    paginaInicial.ShowDialog();
-
-                    Show();
-                    textBox_nome.Select();
-                }
-                else
-                {
-                    MessageBox.Show("O nome ou a palavra passe errada!", "",
-                    MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                    textBox_nome.Focus();
-                    textBox_nome.SelectAll();
-                }
+                MessageBox.Show("Introduza o nome ou a palavra passe!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                textBox_nome.Select();
             }
             else
             {
-                MessageBox.Show("Introduza o nome ou a palavra passe", "",
-                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                textBox_nome.Select();
+                if (dr.Read())
+                {
+                    if (textBox_nome.Text.Equals(dr["email"].ToString()) && textBox_pw.Text.Equals(dr["password"].ToString()))
+                    {
+                        //MessageBox.Show("Sucesso Login", "qwe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.textBox_nome.Clear();
+                        this.textBox_pw.Clear();
+                        this.checkBox1.Checked = false;
+
+                        this.Hide();
+
+                        PaginaInicial paginaInicial = new PaginaInicial();
+                        paginaInicial.ShowDialog();
+                        paginaInicial = null;
+
+                        this.Show();
+                        this.textBox_nome.Select();
+                    }
+                    else
+                    {
+                        MessageBox.Show("O nome ou a palavra passe errada!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        textBox_nome.Focus();
+                        textBox_nome.SelectAll();
+                    }
+                }
             }
+            
+            con.Close();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
