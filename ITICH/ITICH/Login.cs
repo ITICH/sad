@@ -21,7 +21,7 @@ namespace ITICH
         {
             con.Open();
             com.Connection = con;
-            com.CommandText = "SELECT email, password FROM Empresas WHERE email = '" + textBox_nome.Text + "' AND password = '" + textBox_pw.Text + "'";
+            com.CommandText = "SELECT email, password FROM Empresa WHERE email = '" + textBox_nome.Text + "' AND password = '" + textBox_pw.Text + "'";
             SqlDataReader dr = com.ExecuteReader();
 
             if (string.IsNullOrEmpty(textBox_nome.Text) || string.IsNullOrEmpty(textBox_pw.Text))
@@ -63,7 +63,8 @@ namespace ITICH
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            
+            Registo registo = new Registo();
+            registo.ShowDialog();
         }
 
         private void label1_Click(object sender, EventArgs e)
