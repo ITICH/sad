@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ITICH.ConecaoBD;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -8,57 +9,71 @@ namespace ITICH
 {
     public partial class Login : Form
     {
-        private SqlConnection con = new SqlConnection();
-        private SqlCommand com = new SqlCommand();
-
         public Login()
         {
             InitializeComponent();
-            con.ConnectionString = @"Data Source = LAPTOP-O0RQ78U5\SQLEXPRESS;Initial Catalog = ITICH;Integrated Security = True";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            con.Open();
-            com.Connection = con;
-            com.CommandText = "SELECT email, password FROM Empresa WHERE email = '" + textBox_nome.Text + "' AND password = '" + textBox_pw.Text + "'";
-            SqlDataReader dr = com.ExecuteReader();
+            //seleciona os utitilizadores com perfil de Empresa
+            string queryLoginEMP = "SELECT email, password, perfil FROM Empresa WHERE email = '" + textBox_nome.Text + "' AND password = '" + textBox_pw.Text + "' AND perfil = 2";
+            //seleciona os utitilizadores com perfil de Administrador
+            string queryLoginADM = "SELECT email, password, perfil FROM Empresa WHERE email = '" + textBox_nome.Text + "' AND password = '" + textBox_pw.Text + "' AND perfil = 1";
+            
+            DataTable dadosUtilizador = ConecaoSQLServer.ExecutaSql(queryLoginEMP);
+            DataTable dadosUtilizadorADM = ConecaoSQLServer.ExecutaSql(queryLoginADM);
 
             if (string.IsNullOrEmpty(textBox_nome.Text) || string.IsNullOrEmpty(textBox_pw.Text))
             {
-                MessageBox.Show("Introduza o nome ou a palavra passe!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Introduza o email ou a palavra passe!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                textBox_nome.Select();
+            }
+            //chama metodo que verifica se o email está na forma correta ex.: aaa@aaa.com
+            else if (FormatacaoEmail.IsValidEmail(textBox_nome.Text) == false)
+            {
+                MessageBox.Show("Introduza um email correto!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 textBox_nome.Select();
             }
             else
             {
-                if (dr.Read())
+                //se o utilizador existir e os dados estiverem corretos vai entra na app
+                if (dadosUtilizador.Rows.Count > 0)
                 {
-                    if (textBox_nome.Text.Equals(dr["email"].ToString()) && textBox_pw.Text.Equals(dr["password"].ToString()))
-                    {
-                        //MessageBox.Show("Sucesso Login", "qwe", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.textBox_nome.Clear();
-                        this.textBox_pw.Clear();
-                        this.checkBox1.Checked = false;
+                    this.textBox_nome.Clear();
+                    this.textBox_pw.Clear();
+                    this.checkBox1.Checked = false;
 
-                        this.Hide();
+                    this.Hide();
 
-                        PaginaInicial paginaInicial = new PaginaInicial();
-                        paginaInicial.ShowDialog();
-                        paginaInicial = null;
+                    PaginaInicial paginaInicial = new PaginaInicial();
+                    paginaInicial.ShowDialog();
 
-                        this.Show();
-                        this.textBox_nome.Select();
-                    }
-                    else
-                    {
-                        MessageBox.Show("O nome ou a palavra passe errada!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                        textBox_nome.Focus();
-                        textBox_nome.SelectAll();
-                    }
+                    this.Show();
+                    this.textBox_nome.Select();
+                }
+                //só pode ser acedido pelo perfil do ADM 
+                else if (dadosUtilizadorADM.Rows.Count > 0)
+                {
+                    this.textBox_nome.Clear();
+                    this.textBox_pw.Clear();
+                    this.checkBox1.Checked = false;
+
+                    this.Hide();
+
+                    AreaAdministrador areaAdministrador = new AreaAdministrador();
+                    areaAdministrador.ShowDialog();
+
+                    this.Show();
+                    this.textBox_nome.Select();
+                }
+                else
+                {
+                    MessageBox.Show("O nome ou a palavra passe errada!", "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    textBox_nome.Focus();
+                    textBox_nome.SelectAll();
                 }
             }
-            
-            con.Close();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -94,7 +109,7 @@ namespace ITICH
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkBox1.Checked == true)
+            if (checkBox1.Checked == true)
             {
                 textBox_pw.UseSystemPasswordChar = false;
             }

@@ -54,9 +54,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(179, 215);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 17);
+            this.label1.Size = new System.Drawing.Size(102, 17);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Empresa";
+            this.label1.Text = "Email Empresa";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
@@ -109,9 +109,10 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(496, 255);
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F);
+            this.checkBox1.Location = new System.Drawing.Point(487, 259);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(183, 21);
+            this.checkBox1.Size = new System.Drawing.Size(142, 17);
             this.checkBox1.TabIndex = 7;
             this.checkBox1.Text = "Mostrar a palavra passe";
             this.checkBox1.UseVisualStyleBackColor = true;
