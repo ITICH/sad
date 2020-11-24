@@ -173,6 +173,12 @@
       <DependentUpon>AreaAdministrador.cs</DependentUpon>
     </Compile>
     <Compile Include="ConecaoBD\ConecaoSQLServer.cs" />
+    <Compile Include="RegistoEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistoEmpresa.designer.cs">
+      <DependentUpon>RegistoEmpresa.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormatacaoEmail.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -194,6 +200,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="RegistoEmpresa.resx">
+      <DependentUpon>RegistoEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
