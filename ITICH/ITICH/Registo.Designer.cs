@@ -36,48 +36,52 @@
             this.textBox_contacto = new System.Windows.Forms.TextBox();
             this.textBox_email = new System.Windows.Forms.TextBox();
             this.textBox_pwd = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button_registar = new System.Windows.Forms.Button();
             this.button_cancelar = new System.Windows.Forms.Button();
             this.textBox_pwd2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.checkBox1_pwd = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(227, 203);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(227, 198);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 17);
+            this.label1.Size = new System.Drawing.Size(68, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Empresa";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(227, 240);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(226, 236);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 17);
+            this.label2.Size = new System.Drawing.Size(69, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "Contacto";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(249, 278);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(250, 274);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 17);
+            this.label3.Size = new System.Drawing.Size(45, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "Email";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(183, 318);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(183, 314);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 17);
+            this.label4.Size = new System.Drawing.Size(112, 18);
             this.label4.TabIndex = 3;
             this.label4.Text = "Palavra - Passe";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -112,34 +116,32 @@
             this.textBox_pwd.TabIndex = 7;
             this.textBox_pwd.UseSystemPasswordChar = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ITICH.Properties.Resources.logotipo;
-            this.pictureBox1.Location = new System.Drawing.Point(277, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(176, 139);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            // 
             // button_registar
             // 
+            this.button_registar.BackColor = System.Drawing.Color.White;
+            this.button_registar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(205)))), ((int)(((byte)(31)))));
+            this.button_registar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(205)))), ((int)(((byte)(31)))));
+            this.button_registar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_registar.Location = new System.Drawing.Point(274, 423);
             this.button_registar.Name = "button_registar";
             this.button_registar.Size = new System.Drawing.Size(75, 28);
             this.button_registar.TabIndex = 9;
             this.button_registar.Text = "Registar";
-            this.button_registar.UseVisualStyleBackColor = true;
+            this.button_registar.UseVisualStyleBackColor = false;
             this.button_registar.Click += new System.EventHandler(this.button_registar_Click);
             // 
             // button_cancelar
             // 
+            this.button_cancelar.BackColor = System.Drawing.Color.White;
+            this.button_cancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(205)))), ((int)(((byte)(31)))));
+            this.button_cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(205)))), ((int)(((byte)(31)))));
+            this.button_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_cancelar.Location = new System.Drawing.Point(374, 423);
             this.button_cancelar.Name = "button_cancelar";
             this.button_cancelar.Size = new System.Drawing.Size(79, 28);
             this.button_cancelar.TabIndex = 10;
             this.button_cancelar.Text = "Cancelar";
-            this.button_cancelar.UseVisualStyleBackColor = true;
+            this.button_cancelar.UseVisualStyleBackColor = false;
             this.button_cancelar.Click += new System.EventHandler(this.button_cancelar_Click);
             // 
             // textBox_pwd2
@@ -154,9 +156,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(140, 358);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(129, 353);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(155, 17);
+            this.label5.Size = new System.Drawing.Size(158, 18);
             this.label5.TabIndex = 11;
             this.label5.Text = "Repita a palavra-passe";
             // 
@@ -172,10 +175,22 @@
             this.checkBox1_pwd.UseVisualStyleBackColor = true;
             this.checkBox1_pwd.CheckedChanged += new System.EventHandler(this.checkBox1_pwd_CheckedChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(205)))), ((int)(((byte)(31)))));
+            this.pictureBox1.Image = global::ITICH.Properties.Resources.logotipo;
+            this.pictureBox1.Location = new System.Drawing.Point(277, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(176, 139);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
             // Registo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(716, 479);
             this.Controls.Add(this.checkBox1_pwd);
             this.Controls.Add(this.textBox_pwd2);
@@ -192,6 +207,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Registo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registo";
             this.Load += new System.EventHandler(this.Registo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

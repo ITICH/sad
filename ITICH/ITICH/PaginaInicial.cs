@@ -53,12 +53,19 @@ namespace ITICH
 
         private void button2_parques_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            PesquisarParques pesquisarParques = new PesquisarParques();
+            pesquisarParques.ShowDialog();
+            this.Show();
         }
 
         private void button_addParque_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            RegistoParques registoParques = new RegistoParques();
+            registoParques.ShowDialog();
+            this.Show();
+            
         }
 
         private void button_simulacao_Click(object sender, EventArgs e)

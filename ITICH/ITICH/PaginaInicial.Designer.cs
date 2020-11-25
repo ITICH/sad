@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaginaInicial));
-            this.button_pedirAcesso = new System.Windows.Forms.Button();
             this.button_sair = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button_addParque = new System.Windows.Forms.Button();
@@ -37,19 +36,10 @@
             this.button2_parques = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button_pedirAcesso = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button_pedirAcesso
-            // 
-            this.button_pedirAcesso.Location = new System.Drawing.Point(1221, 49);
-            this.button_pedirAcesso.Name = "button_pedirAcesso";
-            this.button_pedirAcesso.Size = new System.Drawing.Size(129, 57);
-            this.button_pedirAcesso.TabIndex = 0;
-            this.button_pedirAcesso.Text = "Pedir Acesso Administrador";
-            this.button_pedirAcesso.UseVisualStyleBackColor = true;
-            this.button_pedirAcesso.Click += new System.EventHandler(this.button_pedirAcesso_Click);
             // 
             // button_sair
             // 
@@ -179,10 +169,29 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // button_pedirAcesso
+            // 
+            this.button_pedirAcesso.BackColor = System.Drawing.Color.White;
+            this.button_pedirAcesso.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(205)))), ((int)(((byte)(31)))));
+            this.button_pedirAcesso.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(205)))), ((int)(((byte)(31)))));
+            this.button_pedirAcesso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_pedirAcesso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(109)))), ((int)(((byte)(193)))));
+            this.button_pedirAcesso.Image = global::ITICH.Properties.Resources.admin;
+            this.button_pedirAcesso.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_pedirAcesso.Location = new System.Drawing.Point(1161, 12);
+            this.button_pedirAcesso.Name = "button_pedirAcesso";
+            this.button_pedirAcesso.Size = new System.Drawing.Size(233, 61);
+            this.button_pedirAcesso.TabIndex = 0;
+            this.button_pedirAcesso.Text = "Pedir Acesso Administrador";
+            this.button_pedirAcesso.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_pedirAcesso.UseVisualStyleBackColor = false;
+            this.button_pedirAcesso.Click += new System.EventHandler(this.button_pedirAcesso_Click);
+            // 
             // PaginaInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1406, 683);
             this.Controls.Add(this.button_sair);
             this.Controls.Add(this.pictureBox2);
@@ -205,12 +214,12 @@
         #endregion
 
         private System.Windows.Forms.Button button_pedirAcesso;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2_parques;
         private System.Windows.Forms.Button button_simulacao;
         private System.Windows.Forms.Button button_addParque;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button_sair;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

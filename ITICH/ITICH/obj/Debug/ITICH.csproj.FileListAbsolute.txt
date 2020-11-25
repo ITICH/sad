@@ -251,3 +251,4 @@ C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.csproj.CoreCompileInp
 C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.csproj.CopyComplete
 C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.exe
 C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.pdb
+C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.PesquisarParques.resources

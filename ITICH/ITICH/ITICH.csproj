@@ -151,6 +151,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.IdentityModel" />
     <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.6.0\lib\net461\System.IdentityModel.Tokens.Jwt.dll</HintPath>
@@ -172,6 +173,12 @@
     </Compile>
     <Compile Include="PaginaInicial.Designer.cs">
       <DependentUpon>PaginaInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PesquisarParques.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PesquisarParques.Designer.cs">
+      <DependentUpon>PesquisarParques.cs</DependentUpon>
     </Compile>
     <Compile Include="RegistoParques.cs">
       <SubType>Form</SubType>
@@ -196,6 +203,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PaginaInicial.resx">
       <DependentUpon>PaginaInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PesquisarParques.resx">
+      <DependentUpon>PesquisarParques.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistoParques.resx">
       <DependentUpon>RegistoParques.cs</DependentUpon>
@@ -253,6 +263,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loupe_pequeno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sem Título.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.2.0.0\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.2.0.0\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />
