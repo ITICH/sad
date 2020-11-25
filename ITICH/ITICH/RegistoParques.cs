@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ITICH
 {
-    public partial class RegistoEmpresa : Form
+    public partial class RegistoParques : Form
     {
-        public RegistoEmpresa()
+        public RegistoParques()
         {
             InitializeComponent();
         }

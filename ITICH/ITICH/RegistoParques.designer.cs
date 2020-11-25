@@ -1,7 +1,7 @@
 ﻿
 namespace ITICH
 {
-    partial class RegistoEmpresa
+    partial class RegistoParques
     {
         /// <summary>
         /// Required designer variable.

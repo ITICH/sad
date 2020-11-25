@@ -34,8 +34,8 @@
             this.textBox_nome = new System.Windows.Forms.TextBox();
             this.textBox_pw = new System.Windows.Forms.TextBox();
             this.button_registo = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,6 +74,7 @@
             this.textBox_nome.Name = "textBox_nome";
             this.textBox_nome.Size = new System.Drawing.Size(172, 22);
             this.textBox_nome.TabIndex = 3;
+            this.textBox_nome.Text = "itich@gmail.com";
             this.textBox_nome.TextChanged += new System.EventHandler(this.textBox_nome_TextChanged);
             // 
             // textBox_pw
@@ -82,6 +83,7 @@
             this.textBox_pw.Name = "textBox_pw";
             this.textBox_pw.Size = new System.Drawing.Size(172, 22);
             this.textBox_pw.TabIndex = 4;
+            this.textBox_pw.Text = "sad123";
             this.textBox_pw.UseSystemPasswordChar = true;
             this.textBox_pw.TextChanged += new System.EventHandler(this.textBox_pw_TextChanged);
             // 
@@ -95,17 +97,6 @@
             this.button_registo.UseVisualStyleBackColor = true;
             this.button_registo.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ITICH.Properties.Resources.logotipo;
-            this.pictureBox1.Location = new System.Drawing.Point(286, 50);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(176, 139);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
@@ -117,6 +108,17 @@
             this.checkBox1.Text = "Mostrar a palavra passe";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ITICH.Properties.Resources.logotipo;
+            this.pictureBox1.Location = new System.Drawing.Point(286, 50);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(176, 139);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Login
             // 

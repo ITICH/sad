@@ -166,18 +166,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AreaAdministrador.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AreaAdministrador.Designer.cs">
-      <DependentUpon>AreaAdministrador.cs</DependentUpon>
-    </Compile>
     <Compile Include="ConecaoBD\ConecaoSQLServer.cs" />
-    <Compile Include="RegistoEmpresa.cs">
+    <Compile Include="PaginaInicial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegistoEmpresa.designer.cs">
-      <DependentUpon>RegistoEmpresa.cs</DependentUpon>
+    <Compile Include="PaginaInicial.Designer.cs">
+      <DependentUpon>PaginaInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistoParques.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistoParques.designer.cs">
+      <DependentUpon>RegistoParques.cs</DependentUpon>
     </Compile>
     <Compile Include="FormatacaoEmail.cs" />
     <Compile Include="Login.cs">
@@ -185,12 +185,6 @@
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PaginaInicial.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PaginaInicial.Designer.cs">
-      <DependentUpon>PaginaInicial.cs</DependentUpon>
     </Compile>
     <Compile Include="Registo.cs">
       <SubType>Form</SubType>
@@ -200,14 +194,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="RegistoEmpresa.resx">
-      <DependentUpon>RegistoEmpresa.cs</DependentUpon>
+    <EmbeddedResource Include="PaginaInicial.resx">
+      <DependentUpon>PaginaInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistoParques.resx">
+      <DependentUpon>RegistoParques.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PaginaInicial.resx">
-      <DependentUpon>PaginaInicial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registo.resx">
       <DependentUpon>Registo.cs</DependentUpon>
@@ -239,7 +233,27 @@
   <ItemGroup>
     <None Include="Resources\logotipo.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\user5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loupe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\simulation4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.2.0.0\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.2.0.0\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -1,7 +1,7 @@
 ﻿using ITICH.ConecaoBD;
 using System;
 using System.Data;
-using System.Data.SqlClient;
+using System.Text;
 using System.Windows.Forms;
 
 
@@ -9,6 +9,27 @@ namespace ITICH
 {
     public partial class Login : Form
     {
+        //metodo que encripta a palavra-passe antes de ser guardada na BD
+        public string Desencriptarpwd(string password) //VERIFICAR QUE METODO É USADO PARA ENCRIPTAR------------------------------------------------------
+        {
+            /*string msg = "";
+            byte[] encode = new byte[password.Length];
+            encode = Encoding.UTF8.GetBytes(password);
+            msg = Convert.FromBase64String(encode);
+            return msg;*/
+
+            //NÃO ESETÁ A FUNCIONAR----------------------------------------------------------------------------------------------------------------------
+            string decryptpwd = "";
+            UTF8Encoding encodepwd = new UTF8Encoding();
+            Decoder Decode = encodepwd.GetDecoder();
+            byte[] todecode_byte = Convert.FromBase64String(password);
+            int charCount = Decode.GetCharCount(todecode_byte, 0, todecode_byte.Length);
+            char[] decoded_char = new char[charCount];
+            Decode.GetChars(todecode_byte, 0, todecode_byte.Length, decoded_char, 0);
+            decryptpwd = new String(decoded_char);
+            return decryptpwd;
+        }
+
         public Login()
         {
             InitializeComponent();
@@ -16,11 +37,13 @@ namespace ITICH
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //string pwdDesencripada = Desencriptarpwd(textBox_pw.Text);//--------------------------------------------------------------------------------
+
             //seleciona os utitilizadores com perfil de Empresa
-            string queryLoginEMP = "SELECT email, password, perfil FROM Empresa WHERE email = '" + textBox_nome.Text + "' AND password = '" + textBox_pw.Text + "' AND perfil = 2";
+            string queryLoginEMP = "SELECT email, password, perfil FROM Empresa WHERE email = '" + textBox_nome.Text + "' AND password = '" + /*pwdDesencripada*/textBox_pw.Text + "' AND perfil = 2";
             //seleciona os utitilizadores com perfil de Administrador
-            string queryLoginADM = "SELECT email, password, perfil FROM Empresa WHERE email = '" + textBox_nome.Text + "' AND password = '" + textBox_pw.Text + "' AND perfil = 1";
-            
+            string queryLoginADM = "SELECT email, password, perfil FROM Empresa WHERE email = '" + textBox_nome.Text + "' AND password = '" + /*pwdDesencripada*/textBox_pw.Text + "' AND perfil = 1";
+
             DataTable dadosUtilizador = ConecaoSQLServer.ExecutaSql(queryLoginEMP);
             DataTable dadosUtilizadorADM = ConecaoSQLServer.ExecutaSql(queryLoginADM);
 
@@ -49,10 +72,10 @@ namespace ITICH
                     PaginaInicial paginaInicial = new PaginaInicial();
                     paginaInicial.ShowDialog();
 
-                    this.Show();
-                    this.textBox_nome.Select();
+                   // this.Show();
+                   // this.textBox_nome.Select();
                 }
-                //só pode ser acedido pelo perfil do ADM 
+                //só pode ser acedido pelo perfil do ADM  ----------------------------------VERIFICAR SE É NECESSARIO OU NÃO TER ESTA PARTE
                 else if (dadosUtilizadorADM.Rows.Count > 0)
                 {
                     this.textBox_nome.Clear();
@@ -61,11 +84,11 @@ namespace ITICH
 
                     this.Hide();
 
-                    AreaAdministrador areaAdministrador = new AreaAdministrador();
-                    areaAdministrador.ShowDialog();
+                    PaginaInicial paginaInicial = new PaginaInicial();
+                    paginaInicial.ShowDialog();
 
-                    this.Show();
-                    this.textBox_nome.Select();
+                    //this.Show();
+                    //this.textBox_nome.Select();
                 }
                 else
                 {
