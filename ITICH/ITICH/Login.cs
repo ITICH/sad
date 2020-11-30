@@ -40,9 +40,9 @@ namespace ITICH
             //string pwdDesencripada = Desencriptarpwd(textBox_pw.Text);//--------------------------------------------------------------------------------
 
             //seleciona os utitilizadores com perfil de Empresa
-            string queryLoginEMP = "SELECT email, password, perfil FROM Empresa WHERE email = '" + textBox_nome.Text + "' AND password = '" + /*pwdDesencripada*/textBox_pw.Text + "' AND perfil = 2";
+            string queryLoginEMP = "SELECT e_mail, password, perfil FROM Empresa WHERE e_mail = '" + textBox_nome.Text + "' AND password = '" + /*pwdDesencripada*/textBox_pw.Text + "' AND perfil = 2";
             //seleciona os utitilizadores com perfil de Administrador
-            string queryLoginADM = "SELECT email, password, perfil FROM Empresa WHERE email = '" + textBox_nome.Text + "' AND password = '" + /*pwdDesencripada*/textBox_pw.Text + "' AND perfil = 1";
+            string queryLoginADM = "SELECT e_mail, password, perfil FROM Empresa WHERE e_mail = '" + textBox_nome.Text + "' AND password = '" + /*pwdDesencripada*/textBox_pw.Text + "' AND perfil = 1";
 
             DataTable dadosUtilizador = ConecaoSQLServer.ExecutaSql(queryLoginEMP);
             DataTable dadosUtilizadorADM = ConecaoSQLServer.ExecutaSql(queryLoginADM);

@@ -74,7 +74,7 @@ namespace ITICH
             else
             {
                 //verifica se o nome e o email da empresa já exitem 
-                string dadosUtilizador = "SELECT email, nome_empresa FROM Empresa WHERE email = '" + textBox_email.Text + "' OR nome_empresa = '" + textBox_nomeEmpresa.Text + "'";
+                string dadosUtilizador = "SELECT e_mail, nome_empresa FROM Empresa WHERE e_mail = '" + textBox_email.Text + "' OR nome_empresa = '" + textBox_nomeEmpresa.Text + "'";
                 DataTable dt = ConecaoSQLServer.ExecutaSql(dadosUtilizador);
 
                 if(dt.Rows.Count >=1)
@@ -84,7 +84,7 @@ namespace ITICH
                 else
                 {
                     //verifica se já exite ou não o nome ou o email (se já existirem não deixa inserir) e depois insere os dados se não existirem
-                    string dadosInseridos = "IF NOT EXISTS(SELECT nome_empresa, email FROM Empresa WHERE nome_empresa = '" + textBox_nomeEmpresa.Text + "' OR email = '" +textBox_email.Text + "') INSERT INTO Empresa(nome_empresa,contacto_tel,email,password,perfil) VALUES('" + textBox_nomeEmpresa.Text + "','" + textBox_contacto.Text + "','" +textBox_email.Text+ "','" +pwdEncriptada+ "','" +perfilEMP+ "')";
+                    string dadosInseridos = "IF NOT EXISTS(SELECT nome_empresa, e_mail FROM Empresa WHERE nome_empresa = '" + textBox_nomeEmpresa.Text + "' OR e_mail = '" +textBox_email.Text + "') INSERT INTO Empresa(nome_empresa,contacto_tel,e_mail,password,perfil) VALUES('" + textBox_nomeEmpresa.Text + "','" + textBox_contacto.Text + "','" +textBox_email.Text+ "','" +pwdEncriptada+ "','" +perfilEMP+ "')";
                     ConecaoSQLServer.ExecutaSql(dadosInseridos);
 
                     textBox_nomeEmpresa.Clear();
