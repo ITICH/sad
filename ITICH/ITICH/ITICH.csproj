@@ -168,6 +168,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConecaoBD\ConecaoSQLServer.cs" />
+    <Compile Include="EnvioPedidoEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnvioPedidoEmail.Designer.cs">
+      <DependentUpon>EnvioPedidoEmail.cs</DependentUpon>
+    </Compile>
     <Compile Include="PaginaInicial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +207,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EnvioPedidoEmail.resx">
+      <DependentUpon>EnvioPedidoEmail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PaginaInicial.resx">
       <DependentUpon>PaginaInicial.cs</DependentUpon>
     </EmbeddedResource>
@@ -272,6 +281,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paper-plane.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.2.0.0\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.2.0.0\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />

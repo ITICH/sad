@@ -18,21 +18,29 @@ namespace ITICH
             InitializeComponent();
         }
 
+        private void dadosDataGrid(string sql)
+        {
+            DataTable dadosParques = ConecaoSQLServer.ExecutaSql(sql);
+            dataGridView1.DataSource = dadosParques;
+            dataGridView1.Columns[0].HeaderText = "Parque Científico";
+            dataGridView1.Columns[1].HeaderText = "Localidade";
+            dataGridView1.Columns[2].HeaderText = "Email";
+            dataGridView1.Columns[0].Width = 212;
+            dataGridView1.Columns[1].Width = 213;
+            dataGridView1.Columns[2].Width = 213;
+        }
+
         private void PesquisarParques_Load(object sender, EventArgs e)
         {
-            string queryADM = "SELECT perfil FROM Empresa WHERE perfil = 1";//AINDA NÃO FUNCIONA CORRETAMENTE POR CAUSA DA ENCRIPTAÇÃO
-            DataTable dadosUtilizador = ConecaoSQLServer.ExecutaSql(queryADM);
+            //verifica qual é o utilizador que está logado
+            string utilizadorLogador = Login.dadosLogin;
 
-            if (dadosUtilizador.Rows.Count > 0)
-            {
-                button_addParque2.Enabled = true;
-              //  button_addParque2.Visible = true;
-            }
-            else
-            {
-                button_addParque2.Enabled = false;
-                //button_addParque2.Visible = false;
-            }
+            //verifica se o utilizado logado é administrador ou utilizador normal
+            //string queryADM = "SELECT e_mail, perfil FROM Empresa WHERE e_mail='" + utilizadorLogador + "' AND perfil = 1";//AINDA NÃO FUNCIONA CORRETAMENTE POR CAUSA DA ENCRIPTAÇÃO -- falta tambem verificar o utilizador
+            //DataTable dadosUtilizador = ConecaoSQLServer.ExecutaSql(queryADM);
+
+            string mostrarParques = "SELECT P.nome_parque, L.distrit, P.e_mail FROM Parques_cientificos P, Localizacao L WHERE L.id_localizacao = P.id_localizacao";
+            dadosDataGrid(mostrarParques);
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -52,7 +60,31 @@ namespace ITICH
 
         private void button_pesquisaP_Click(object sender, EventArgs e)
         {
+            string pesquisaNome = "SELECT P.nome_parque, L.distrit, P.e_mail FROM Parques_cientificos P, Localizacao L WHERE P.nome_parque ='" + textBox_pesquisa.Text + "' AND L.id_localizacao = P.id_localizacao";
+            string pesquisaDistrito = "SELECT P.nome_parque, L.distrit, P.e_mail FROM Parques_cientificos P, Localizacao L WHERE L.distrit ='" + textBox_pesqDistrito.Text + "' AND L.id_localizacao = P.id_localizacao";
+            string pesquisaNomeDistrito = "SELECT P.nome_parque, L.distrit, P.e_mail FROM Parques_cientificos P, Localizacao L WHERE P.nome_parque ='" + textBox_pesquisa.Text + "'AND L.distrit ='" + textBox_pesqDistrito.Text + "' AND L.id_localizacao = P.id_localizacao";
+            //DataTable pesquisarParque;
 
+            if (string.IsNullOrEmpty(textBox_pesquisa.Text) && string.IsNullOrEmpty(textBox_pesqDistrito.Text))
+            {
+                MessageBox.Show("Introduza um dos campos de pesquisa!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                textBox_pesquisa.Select();
+            }
+            else if (!string.IsNullOrEmpty(textBox_pesquisa.Text) && string.IsNullOrEmpty(textBox_pesqDistrito.Text))
+            {
+               // dataGridView1.Refresh();
+                dadosDataGrid(pesquisaNome);
+            }
+            else if (string.IsNullOrEmpty(textBox_pesquisa.Text) && !string.IsNullOrEmpty(textBox_pesqDistrito.Text))
+            {
+                //dataGridView1.Refresh();
+                dadosDataGrid(pesquisaDistrito);
+            }
+            else
+            {
+                //dataGridView1.Refresh();
+                dadosDataGrid(pesquisaNomeDistrito);
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -60,15 +92,27 @@ namespace ITICH
 
         }
 
-        private void button_addParque2_Click(object sender, EventArgs e)
+        private void button_pedirAcesso2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            RegistoParques registoParques = new RegistoParques();
-            registoParques.ShowDialog();
+            EnviarPedidoEmail enviarPedidoEmail = new EnviarPedidoEmail();
+            enviarPedidoEmail.ShowDialog();
             this.Show();
         }
 
-        private void button_pedirAcesso2_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PaginaInicial paginaInicial = new PaginaInicial();
+            paginaInicial.ShowDialog();
+            this.Show();
+        }
+
+        private void textBox_pesqDistrito_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_distrito_Click(object sender, EventArgs e)
         {
 
         }

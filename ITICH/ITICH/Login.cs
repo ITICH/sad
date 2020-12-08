@@ -1,6 +1,7 @@
 ﻿using ITICH.ConecaoBD;
 using System;
 using System.Data;
+using System.Diagnostics;
 using System.Text;
 using System.Windows.Forms;
 
@@ -35,9 +36,21 @@ namespace ITICH
             InitializeComponent();
         }
 
+        //COMO DEFINIR ISTO METODO OU CLASSE????????????????????????????????????????????????????????????????
+        public static string utilizadorLogado;
+
+        public static string dadosLogin
+        {
+            get { return utilizadorLogado; }
+            set { utilizadorLogado = value; }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             //string pwdDesencripada = Desencriptarpwd(textBox_pw.Text);//--------------------------------------------------------------------------------
+
+            //variavel usada para guardar e identificar o utilizador depois do login
+            string userAtual = textBox_nome.Text;
 
             //seleciona os utitilizadores com perfil de Empresa
             string queryLoginEMP = "SELECT e_mail, password, perfil FROM Empresa WHERE e_mail = '" + textBox_nome.Text + "' AND password = '" + /*pwdDesencripada*/textBox_pw.Text + "' AND perfil = 2";
@@ -67,11 +80,13 @@ namespace ITICH
                     this.textBox_pw.Clear();
                     this.checkBox1.Checked = false;
 
+                    dadosLogin = userAtual;
+
                     this.Hide();
 
                     PaginaInicial paginaInicial = new PaginaInicial();
                     paginaInicial.ShowDialog();
-
+                   
                    // this.Show();
                    // this.textBox_nome.Select();
                 }
@@ -81,6 +96,8 @@ namespace ITICH
                     this.textBox_nome.Clear();
                     this.textBox_pw.Clear();
                     this.checkBox1.Checked = false;
+
+                    dadosLogin = userAtual;
 
                     this.Hide();
 

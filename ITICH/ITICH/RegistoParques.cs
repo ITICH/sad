@@ -17,6 +17,12 @@ namespace ITICH
             InitializeComponent();
         }
 
+        private void RegistoParque_Load(object sender, EventArgs e)
+        {
+            //verifica qual é o utilizador que está logado
+            string utilizadorLogador = Login.dadosLogin;
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -52,9 +58,6 @@ namespace ITICH
 
         }
 
-        private void RegistoParque_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

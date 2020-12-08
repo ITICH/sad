@@ -95,8 +95,8 @@ namespace ITICH
 
                     Hide();
 
-                    PaginaInicial paginaInicial = new PaginaInicial();
-                    paginaInicial.ShowDialog();
+                    Login login = new Login(); //-------- ALTERAR NOVAMENTE SE NECESSARIO PARA PAGINA INICIAL----------!!!!!!!!!!!
+                    login.ShowDialog();
                     
                     Show();
                     textBox_nomeEmpresa.Select();
