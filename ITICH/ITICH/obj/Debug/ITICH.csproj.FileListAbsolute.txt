@@ -253,3 +253,6 @@ C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.exe
 C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.pdb
 C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.PesquisarParques.resources
 C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.EnviarPedidoEmail.resources
+C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.DadosEmpresa.resources
+C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.tab1.resources
+C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.Simulacao.resources

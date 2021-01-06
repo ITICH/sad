@@ -28,25 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox_pesqParque = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox_pesquisa = new System.Windows.Forms.TextBox();
             this.label_nomeParque = new System.Windows.Forms.Label();
+            this.label1_distrito = new System.Windows.Forms.Label();
+            this.textBox_pesqDistrito = new System.Windows.Forms.TextBox();
             this.button1_back = new System.Windows.Forms.Button();
             this.button_pedirAcesso2 = new System.Windows.Forms.Button();
             this.button_pesquisaP = new System.Windows.Forms.Button();
-            this.label1_distrito = new System.Windows.Forms.Label();
-            this.textBox_pesqDistrito = new System.Windows.Forms.TextBox();
             this.groupBox_pesqParque.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox_pesqParque
             // 
+            this.groupBox_pesqParque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(167)))), ((int)(((byte)(178)))));
             this.groupBox_pesqParque.Controls.Add(this.dataGridView1);
             this.groupBox_pesqParque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox_pesqParque.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox_pesqParque.Location = new System.Drawing.Point(48, 109);
+            this.groupBox_pesqParque.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox_pesqParque.ForeColor = System.Drawing.Color.White;
+            this.groupBox_pesqParque.Location = new System.Drawing.Point(53, 121);
             this.groupBox_pesqParque.Name = "groupBox_pesqParque";
             this.groupBox_pesqParque.Size = new System.Drawing.Size(959, 471);
             this.groupBox_pesqParque.TabIndex = 0;
@@ -58,6 +62,18 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(19, 38);
             this.dataGridView1.Name = "dataGridView1";
@@ -70,7 +86,7 @@
             // 
             // textBox_pesquisa
             // 
-            this.textBox_pesquisa.Location = new System.Drawing.Point(293, 63);
+            this.textBox_pesquisa.Location = new System.Drawing.Point(356, 63);
             this.textBox_pesquisa.Name = "textBox_pesquisa";
             this.textBox_pesquisa.Size = new System.Drawing.Size(190, 22);
             this.textBox_pesquisa.TabIndex = 1;
@@ -79,21 +95,44 @@
             // label_nomeParque
             // 
             this.label_nomeParque.AutoSize = true;
-            this.label_nomeParque.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_nomeParque.Location = new System.Drawing.Point(57, 64);
+            this.label_nomeParque.BackColor = System.Drawing.Color.Transparent;
+            this.label_nomeParque.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_nomeParque.ForeColor = System.Drawing.Color.White;
+            this.label_nomeParque.Location = new System.Drawing.Point(62, 61);
             this.label_nomeParque.Name = "label_nomeParque";
-            this.label_nomeParque.Size = new System.Drawing.Size(204, 18);
+            this.label_nomeParque.Size = new System.Drawing.Size(244, 23);
             this.label_nomeParque.TabIndex = 2;
             this.label_nomeParque.Text = "Pesquisar parque pelo Nome:";
             this.label_nomeParque.Click += new System.EventHandler(this.label_nomeParque_Click);
+            // 
+            // label1_distrito
+            // 
+            this.label1_distrito.AutoSize = true;
+            this.label1_distrito.BackColor = System.Drawing.Color.Transparent;
+            this.label1_distrito.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1_distrito.ForeColor = System.Drawing.Color.White;
+            this.label1_distrito.Location = new System.Drawing.Point(563, 61);
+            this.label1_distrito.Name = "label1_distrito";
+            this.label1_distrito.Size = new System.Drawing.Size(141, 23);
+            this.label1_distrito.TabIndex = 11;
+            this.label1_distrito.Text = "ou pelo Distrito:";
+            this.label1_distrito.Click += new System.EventHandler(this.label1_distrito_Click);
+            // 
+            // textBox_pesqDistrito
+            // 
+            this.textBox_pesqDistrito.Location = new System.Drawing.Point(733, 63);
+            this.textBox_pesqDistrito.Name = "textBox_pesqDistrito";
+            this.textBox_pesqDistrito.Size = new System.Drawing.Size(190, 22);
+            this.textBox_pesqDistrito.TabIndex = 12;
+            this.textBox_pesqDistrito.TextChanged += new System.EventHandler(this.textBox_pesqDistrito_TextChanged);
             // 
             // button1_back
             // 
             this.button1_back.BackColor = System.Drawing.Color.Transparent;
             this.button1_back.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1_back.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button1_back.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.button1_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1_back.Image = global::ITICH.Properties.Resources.undo;
+            this.button1_back.Image = global::ITICH.Properties.Resources.undo2;
             this.button1_back.Location = new System.Drawing.Point(12, 12);
             this.button1_back.Name = "button1_back";
             this.button1_back.Size = new System.Drawing.Size(47, 37);
@@ -107,13 +146,13 @@
             this.button_pedirAcesso2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(205)))), ((int)(((byte)(31)))));
             this.button_pedirAcesso2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(205)))), ((int)(((byte)(31)))));
             this.button_pedirAcesso2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_pedirAcesso2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_pedirAcesso2.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_pedirAcesso2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(109)))), ((int)(((byte)(193)))));
-            this.button_pedirAcesso2.Image = global::ITICH.Properties.Resources.admin;
+            this.button_pedirAcesso2.Image = global::ITICH.Properties.Resources.mail3;
             this.button_pedirAcesso2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_pedirAcesso2.Location = new System.Drawing.Point(1090, 25);
+            this.button_pedirAcesso2.Location = new System.Drawing.Point(1086, 25);
             this.button_pedirAcesso2.Name = "button_pedirAcesso2";
-            this.button_pedirAcesso2.Size = new System.Drawing.Size(294, 60);
+            this.button_pedirAcesso2.Size = new System.Drawing.Size(298, 67);
             this.button_pedirAcesso2.TabIndex = 9;
             this.button_pedirAcesso2.Text = "Pedir para adicionar novo parque";
             this.button_pedirAcesso2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -122,42 +161,25 @@
             // 
             // button_pesquisaP
             // 
+            this.button_pesquisaP.BackColor = System.Drawing.Color.Transparent;
             this.button_pesquisaP.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(205)))), ((int)(((byte)(31)))));
             this.button_pesquisaP.FlatAppearance.BorderSize = 0;
-            this.button_pesquisaP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(205)))), ((int)(((byte)(31)))));
+            this.button_pesquisaP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_pesquisaP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_pesquisaP.Image = global::ITICH.Properties.Resources.loupe_pequeno;
-            this.button_pesquisaP.Location = new System.Drawing.Point(841, 56);
+            this.button_pesquisaP.Image = global::ITICH.Properties.Resources.magnifying_glass;
+            this.button_pesquisaP.Location = new System.Drawing.Point(949, 56);
             this.button_pesquisaP.Name = "button_pesquisaP";
             this.button_pesquisaP.Size = new System.Drawing.Size(41, 36);
             this.button_pesquisaP.TabIndex = 3;
-            this.button_pesquisaP.UseVisualStyleBackColor = true;
+            this.button_pesquisaP.UseVisualStyleBackColor = false;
             this.button_pesquisaP.Click += new System.EventHandler(this.button_pesquisaP_Click);
-            // 
-            // label1_distrito
-            // 
-            this.label1_distrito.AutoSize = true;
-            this.label1_distrito.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1_distrito.Location = new System.Drawing.Point(495, 64);
-            this.label1_distrito.Name = "label1_distrito";
-            this.label1_distrito.Size = new System.Drawing.Size(112, 18);
-            this.label1_distrito.TabIndex = 11;
-            this.label1_distrito.Text = "ou pelo Distrito:";
-            this.label1_distrito.Click += new System.EventHandler(this.label1_distrito_Click);
-            // 
-            // textBox_pesqDistrito
-            // 
-            this.textBox_pesqDistrito.Location = new System.Drawing.Point(625, 63);
-            this.textBox_pesqDistrito.Name = "textBox_pesqDistrito";
-            this.textBox_pesqDistrito.Size = new System.Drawing.Size(190, 22);
-            this.textBox_pesqDistrito.TabIndex = 12;
-            this.textBox_pesqDistrito.TextChanged += new System.EventHandler(this.textBox_pesqDistrito_TextChanged);
             // 
             // PesquisarParques
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(49)))), ((int)(((byte)(57)))));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1406, 683);
             this.Controls.Add(this.textBox_pesqDistrito);
             this.Controls.Add(this.label1_distrito);
@@ -167,6 +189,7 @@
             this.Controls.Add(this.label_nomeParque);
             this.Controls.Add(this.textBox_pesquisa);
             this.Controls.Add(this.groupBox_pesqParque);
+            this.DoubleBuffered = true;
             this.Name = "PesquisarParques";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pesquisar Parques Cientificos e Tecnológicos";

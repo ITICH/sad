@@ -156,6 +156,7 @@
     <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.6.0\lib\net461\System.IdentityModel.Tokens.Jwt.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -167,7 +168,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ButtonRedondo.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ConecaoBD\ConecaoSQLServer.cs" />
+    <Compile Include="DadosEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DadosEmpresa.Designer.cs">
+      <DependentUpon>DadosEmpresa.cs</DependentUpon>
+    </Compile>
     <Compile Include="EnvioPedidoEmail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +195,11 @@
     </Compile>
     <Compile Include="PesquisarParques.Designer.cs">
       <DependentUpon>PesquisarParques.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="RegistoParques.cs">
       <SubType>Form</SubType>
@@ -207,6 +222,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Simulacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Simulacao.Designer.cs">
+      <DependentUpon>Simulacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tab1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tab1.Designer.cs">
+      <DependentUpon>tab1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DadosEmpresa.resx">
+      <DependentUpon>DadosEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EnvioPedidoEmail.resx">
       <DependentUpon>EnvioPedidoEmail.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,14 +257,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <EmbeddedResource Include="Simulacao.resx">
+      <DependentUpon>Simulacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tab1.resx">
+      <DependentUpon>tab1.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -277,9 +308,6 @@
     <None Include="Resources\loupe_pequeno.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Sem Título.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\admin.png" />
   </ItemGroup>
   <ItemGroup>
@@ -290,6 +318,90 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Design sem nome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuCor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fun1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fun2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fun7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\simulation3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-location2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifying-glass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\company.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\company2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tab1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tab2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tab4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exchange-rate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dictionary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\steps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\funGraf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\funGraf1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\funMenu1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\funMenu2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.2.0.0\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.2.0.0\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />
