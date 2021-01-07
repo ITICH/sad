@@ -222,6 +222,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistoParques\AdicionarAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistoParques\AdicionarAD.designer.cs">
+      <DependentUpon>AdicionarAD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistoParques\CriarParque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistoParques\CriarParque.designer.cs">
+      <DependentUpon>CriarParque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistoParques\RegistoParque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistoParques\RegistoParque.designer.cs">
+      <DependentUpon>RegistoParque.cs</DependentUpon>
+    </Compile>
     <Compile Include="Simulacao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +277,15 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistoParques\AdicionarAD.resx">
+      <DependentUpon>AdicionarAD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistoParques\CriarParque.resx">
+      <DependentUpon>CriarParque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistoParques\RegistoParque.resx">
+      <DependentUpon>RegistoParque.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Simulacao.resx">
       <DependentUpon>Simulacao.cs</DependentUpon>
