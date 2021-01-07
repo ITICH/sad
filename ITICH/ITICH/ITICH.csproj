@@ -201,12 +201,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="RegistoParques.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RegistoParques.designer.cs">
-      <DependentUpon>RegistoParques.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormatacaoEmail.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -263,9 +257,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PesquisarParques.resx">
       <DependentUpon>PesquisarParques.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RegistoParques.resx">
-      <DependentUpon>RegistoParques.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
