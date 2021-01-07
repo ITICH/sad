@@ -274,3 +274,6 @@ D:\OneDrive - ISPGAYA\4º Ano\Semestre 1\SAD\Projeto\Repo\ITICH\ITICH\obj\Debug\
 D:\OneDrive - ISPGAYA\4º Ano\Semestre 1\SAD\Projeto\Repo\ITICH\ITICH\obj\Debug\ITICH.csproj.CoreCompileInputs.cache
 D:\OneDrive - ISPGAYA\4º Ano\Semestre 1\SAD\Projeto\Repo\ITICH\ITICH\obj\Debug\ITICH.exe
 D:\OneDrive - ISPGAYA\4º Ano\Semestre 1\SAD\Projeto\Repo\ITICH\ITICH\obj\Debug\ITICH.pdb
+C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.RegistoParques.AdicionarAD.resources
+C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.RegistoParques.CriarParque.resources
+C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.RegistoParques.RegistoParque.resources
