@@ -241,7 +241,6 @@ C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\bin\Debug\ru\Microsoft.Data.SqlClient
 C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
 C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.csprojAssemblyReference.cache
-C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.RegistoParques.resources
 C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.Login.resources
 C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.PaginaInicial.resources
 C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.Registo.resources
@@ -255,7 +254,6 @@ C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.PesquisarParques.reso
 C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.EnviarPedidoEmail.resources
 C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.DadosEmpresa.resources
 C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.tab1.resources
-C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.Simulacao.resources
 D:\OneDrive - ISPGAYA\4º Ano\Semestre 1\SAD\Projeto\Repo\ITICH\ITICH\obj\Debug\ITICH.csprojAssemblyReference.cache
 D:\OneDrive - ISPGAYA\4º Ano\Semestre 1\SAD\Projeto\Repo\ITICH\ITICH\obj\Debug\ITICH.DadosEmpresa.resources
 D:\OneDrive - ISPGAYA\4º Ano\Semestre 1\SAD\Projeto\Repo\ITICH\ITICH\obj\Debug\ITICH.EnviarPedidoEmail.resources
@@ -275,5 +273,8 @@ D:\OneDrive - ISPGAYA\4º Ano\Semestre 1\SAD\Projeto\Repo\ITICH\ITICH\obj\Debug\
 D:\OneDrive - ISPGAYA\4º Ano\Semestre 1\SAD\Projeto\Repo\ITICH\ITICH\obj\Debug\ITICH.exe
 D:\OneDrive - ISPGAYA\4º Ano\Semestre 1\SAD\Projeto\Repo\ITICH\ITICH\obj\Debug\ITICH.pdb
 C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.RegistoParques.AdicionarAD.resources
-C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.RegistoParques.CriarParque.resources
 C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.RegistoParques.RegistoParque.resources
+C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.ValidarConta.resources
+C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.RegistoParques.RegistoForm.resources
+C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.Simulacoes.NovoSimulacao.resources
+C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\obj\Debug\ITICH.Simulacoes.Historico.resources

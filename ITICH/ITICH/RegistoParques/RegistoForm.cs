@@ -9,25 +9,31 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using ITICH.ConecaoBD;
+using ITICH.RegistoParques;
 using System.Diagnostics;
-using System.Collections;
+
+using System.Diagnostics;
 using System.Media;
 
 namespace ITICH.RegistoParques
 {
-    public partial class RegistoParque : Form
+    public partial class RegistoForm : Form
     {
+        private bool safeToQuit = false;
+
         private DataTable dataTable;
         private DataRow[] foundRows;
+
         private static List<string> areas = new List<string>();
         private static List<string> dominios = new List<string>();
-        private static DataTable incubadoras = new DataTable();
-        private static DataTable instalacoes = new DataTable();
 
-        public RegistoParque()
+        public RegistoForm()
         {
             InitializeComponent();
 
+            this.FormClosing += new FormClosingEventHandler(RegistoForm_FormClosing);
+
+            //Popular com os dados encontrados na base de dados
             dataTable = ConecaoSQLServer.ExecutaSql("SELECT * FROM Carateristicas_juridicas");
             foundRows = dataTable.Select();
             for (int i = 0; i < foundRows.Length; i++)
@@ -41,25 +47,10 @@ namespace ITICH.RegistoParques
                 comboBox_FaseGeral.Items.Add(foundRows[i][1].ToString());
             }
 
-            if (incubadoras.Columns.Count != 5)
-            {
-                for (int i = 0; i < 5; i++)
-                {
-                    incubadoras.Columns.Add(i.ToString(), typeof(string));
-                }
-            }
-
-            if (instalacoes.Columns.Count != 9)
-            {
-                for (int i = 0; i < 9; i++)
-                {
-                    instalacoes.Columns.Add(i.ToString(), typeof(string));
-                }
-            }
-
             Refresh();
         }
 
+        //Override do metodo Refresh
         public override void Refresh()
         {
             this.Enabled = false;
@@ -88,296 +79,17 @@ namespace ITICH.RegistoParques
             {
                 comboBox_Dominio.Items.Remove(item);
             }
+
+
             base.Refresh();
             this.Enabled = true;
         }
 
-        private void button_AdicionarArea_Click(object sender, EventArgs e)
-        {
-            if (comboBox_Area.SelectedItem != null)
-            {
-                areas.Add(comboBox_Area.SelectedItem.ToString());
-                int areaRowIndex = dataGridView_Area.Rows.Add();
-                dataGridView_Area.Rows[areaRowIndex].Cells[0].Value = comboBox_Area.SelectedItem.ToString();
-                button_RemoverArea.Enabled = true;
-                Refresh();
-            }
-            else
-            {
-                SystemSounds.Beep.Play();
-            }
-        }
-        private void button_RemoverArea_Click(object sender, EventArgs e)
-        {
-            if (dataGridView_Area.RowCount > 0)
-            {
-                areas.Remove(dataGridView_Area.SelectedCells[0].Value.ToString());
-                dataGridView_Area.Rows.RemoveAt(dataGridView_Area.CurrentCell.RowIndex);
-                Refresh();
-            }
-            if (dataGridView_Area.RowCount == 0)
-            {
-                button_RemoverArea.Enabled = false;
-            }
-        }
-        private void button_CriarArea_Click(object sender, EventArgs e)
-        {
-            this.Enabled = false;
-            AdicionarAD adicionarAD = new AdicionarAD();
-            adicionarAD.initArea();
-            adicionarAD.ShowDialog();
-            this.Enabled = true;
-            Refresh();
-        }
-
-        private void button_AdicionarDominio_Click(object sender, EventArgs e)
-        {
-            if (comboBox_Dominio.SelectedItem != null)
-            {
-                dominios.Add(comboBox_Dominio.SelectedItem.ToString());
-                int dominioRowIndex = dataGridView_Dominio.Rows.Add();
-                dataGridView_Dominio.Rows[dominioRowIndex].Cells[0].Value = comboBox_Dominio.SelectedItem.ToString();
-                button_RemoverDominio.Enabled = true;
-                Refresh();
-            }
-            else
-            {
-                SystemSounds.Beep.Play();
-            }
-        }
-        private void button_RemoverDominio_Click(object sender, EventArgs e)
-        {
-            if (dataGridView_Dominio.RowCount > 0)
-            {
-                dominios.Remove(dataGridView_Dominio.SelectedCells[0].Value.ToString());
-                dataGridView_Dominio.Rows.RemoveAt(dataGridView_Dominio.CurrentCell.RowIndex);
-                Refresh();
-            }
-            if (dataGridView_Dominio.RowCount == 0)
-            {
-                button_RemoverDominio.Enabled = false;
-            }
-        }
-        private void button_CriarDominio_Click(object sender, EventArgs e)
-        {
-            this.Enabled = false;
-            AdicionarAD adicionarAD = new AdicionarAD();
-            adicionarAD.initDominio();
-            adicionarAD.ShowDialog();
-            this.Enabled = true;
-            Refresh();
-        }
-
-        private void checkBox_Incubadora_CheckedChanged(object sender, EventArgs e)
-        {
-            _ = checkBox_Incubadora.Checked ? groupBox_Indubadora.Enabled = true : groupBox_Indubadora.Enabled = false;
-        }
-        private void button_AdicionarIncubadora_Click(object sender, EventArgs e)
-        {
-            if (verificarIncubadoras())
-            {
-                bool isIncubadoraEmpty = true;
-                DataRow incubadorasRow;
-                incubadorasRow = incubadoras.NewRow();
-                incubadorasRow[0] = textBox_IncubadoraNome.Text;
-                incubadorasRow[1] = textBox_IncubadoraVolume.Text;
-                incubadorasRow[2] = textBox_IncubadoraRH.Text;
-                incubadorasRow[3] = textBox_IncubadoraEspaco.Text;
-                incubadorasRow[4] = textBox_IncubadoraServico.Text;
-                for (int i = 0; i < incubadoras.Columns.Count; i++)
-                {
-                    if (!String.IsNullOrWhiteSpace(incubadorasRow[i].ToString()))
-                    {
-                        isIncubadoraEmpty = false;
-                        break;
-                    }
-                }
-                if (!isIncubadoraEmpty)
-                {
-                    incubadoras.Rows.Add(incubadorasRow);
-                    int IncubadoraRowIndex = dataGridView_Incubadora.Rows.Add();
-                    for (int i = 0; i < incubadoras.Columns.Count; i++)
-                    {
-                        dataGridView_Incubadora.Rows[IncubadoraRowIndex].Cells[i].Value = incubadorasRow[i];
-                    }
-                    textBox_IncubadoraNome.Clear();
-                    textBox_IncubadoraVolume.Clear();
-                    textBox_IncubadoraRH.Clear();
-                    textBox_IncubadoraEspaco.Clear();
-                    textBox_IncubadoraServico.Clear();
-                    button_RemoverIncubadora.Enabled = true;
-                }
-                else
-                {
-                    SystemSounds.Beep.Play();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Existem erros nos dados.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        private void button_RemoverIncubadora_Click(object sender, EventArgs e)
-        {
-            if (dataGridView_Incubadora.RowCount > 0)
-            {
-                DataRow[] incubadorasRow;
-                incubadorasRow = incubadoras.Select();
-                incubadorasRow[dataGridView_Incubadora.CurrentCell.RowIndex].Delete();
-                dataGridView_Incubadora.Rows.RemoveAt(dataGridView_Incubadora.CurrentCell.RowIndex);
-            }
-            if (dataGridView_Incubadora.RowCount == 0)
-            {
-                button_RemoverIncubadora.Enabled = false;
-            }
-        }
-        private bool verificarIncubadoras()
-        {
-            bool result = true;
-            if (!string.IsNullOrWhiteSpace(textBox_IncubadoraVolume.Text))
-            {
-                try
-                {
-                    int.Parse(textBox_IncubadoraVolume.Text);
-                    result = true;
-                }
-                catch
-                {
-                    result = false;
-                }
-            }
-            if (!string.IsNullOrWhiteSpace(textBox_IncubadoraRH.Text))
-            {
-                try
-                {
-                    int.Parse(textBox_IncubadoraRH.Text);
-                    result = true;
-                }
-                catch
-                {
-                    result = false;
-                }
-            }
-            return result;
-        }
-
-        private void button_AdicionarInstalacao_Click(object sender, EventArgs e)
-        {
-            bool isInstalacaoEmpty = true;
-            DataRow instalacoesRow;
-            instalacoesRow = instalacoes.NewRow();
-            instalacoesRow[0] = textBox_NomeInstalacao.Text;
-            instalacoesRow[1] = textBox_LocalidadeInstalacao.Text;
-            instalacoesRow[2] = textBox_ConcelhoInstalacao.Text;
-            instalacoesRow[3] = numericUpDown_LotesInstalacao.Text;
-            instalacoesRow[4] = numericUpDown_OcupadosInstalacao.Text;
-            instalacoesRow[5] = checkBox_EstacionamentoInstalacao.CheckState;
-            instalacoesRow[6] = checkBox_VigilanciaInstalacao.CheckState;
-            instalacoesRow[7] = checkBox_SegurancaInstalacao.CheckState;
-            instalacoesRow[8] = textBox_RedeInstalacao.Text;
-            for (int i = 0; i < 3; i++)
-            {
-                if (!String.IsNullOrWhiteSpace(instalacoesRow[i].ToString()))
-                {
-                    isInstalacaoEmpty = false;
-                    break;
-                }
-            }
-            for (int i = 5; i < 8; i++)
-            {
-                if (instalacoesRow[i].ToString() == "Checked")
-                {
-                    isInstalacaoEmpty = false;
-                    break;
-                }
-            }
-            for (int i = 3; i < 5; i++)
-            {
-                if (Convert.ToInt32(instalacoesRow[i]) > 0)
-                {
-                    isInstalacaoEmpty = false;
-                    break;
-                }
-            }
-            if (!String.IsNullOrWhiteSpace(instalacoesRow[8].ToString()))
-            {
-                isInstalacaoEmpty = false;
-            }
-
-            if (!isInstalacaoEmpty)
-            {
-                instalacoes.Rows.Add(instalacoesRow);
-                int InstalacoesRowIndex = dataGridView_Instalacao.Rows.Add();
-                dataGridView_Instalacao.Rows[InstalacoesRowIndex].Cells[0].Value = textBox_NomeInstalacao.Text;
-                dataGridView_Instalacao.Rows[InstalacoesRowIndex].Cells[1].Value = textBox_LocalidadeInstalacao.Text;
-                dataGridView_Instalacao.Rows[InstalacoesRowIndex].Cells[2].Value = textBox_ConcelhoInstalacao.Text;
-                dataGridView_Instalacao.Rows[InstalacoesRowIndex].Cells[3].Value = numericUpDown_LotesInstalacao.Text;
-                dataGridView_Instalacao.Rows[InstalacoesRowIndex].Cells[4].Value = numericUpDown_OcupadosInstalacao.Text;
-                dataGridView_Instalacao.Rows[InstalacoesRowIndex].Cells[5].Value = checkBox_EstacionamentoInstalacao.CheckState;
-                dataGridView_Instalacao.Rows[InstalacoesRowIndex].Cells[6].Value = checkBox_VigilanciaInstalacao.CheckState;
-                dataGridView_Instalacao.Rows[InstalacoesRowIndex].Cells[7].Value = checkBox_SegurancaInstalacao.CheckState;
-                dataGridView_Instalacao.Rows[InstalacoesRowIndex].Cells[8].Value = textBox_RedeInstalacao.Text;
-                textBox_NomeInstalacao.Clear();
-                textBox_LocalidadeInstalacao.Clear();
-                textBox_ConcelhoInstalacao.Clear();
-                numericUpDown_LotesInstalacao.Value = 0;
-                numericUpDown_OcupadosInstalacao.Value = 0;
-                checkBox_EstacionamentoInstalacao.Checked = false;
-                checkBox_VigilanciaInstalacao.Checked = false;
-                checkBox_SegurancaInstalacao.Checked = false;
-                textBox_RedeInstalacao.Clear();
-                button_RemoverInstalacao.Enabled = true;
-            }
-            else
-            {
-                SystemSounds.Beep.Play();
-            }
-        }
-        private void button_RemoverInstalacao_Click(object sender, EventArgs e)
-        {
-            if (dataGridView_Instalacao.RowCount > 0)
-            {
-                DataRow[] instalacoesRow;
-                instalacoesRow = instalacoes.Select();
-                instalacoesRow[dataGridView_Instalacao.CurrentCell.RowIndex].Delete();
-                dataGridView_Instalacao.Rows.RemoveAt(dataGridView_Instalacao.CurrentCell.RowIndex);
-            }
-            if (dataGridView_Instalacao.RowCount == 0)
-            {
-                button_RemoverInstalacao.Enabled = false;
-            }
-        }
-        private void numericUpDown_LotesInstalacao_ValueChanged(object sender, EventArgs e)
-        {
-            numericUpDown_OcupadosInstalacao.Maximum = numericUpDown_LotesInstalacao.Value;
-        }
-        private void numericUpDown_OcupadosInstalacao_ValueChanged(object sender, EventArgs e)
-        {
-            numericUpDown_OcupadosInstalacao.Maximum = numericUpDown_LotesInstalacao.Value;
-        }
-
-        private void button_Confirmar_Click(object sender, EventArgs e)
-        {
-            DialogResult confirmarParque = MessageBox.Show("Deseja confirmar o parque criado?", "Confirmar Submissão", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (confirmarParque == DialogResult.Yes)
-            {
-                this.Enabled = false;
-                if (verificarGeral())
-                {
-                    criarParque();
-                    MessageBox.Show("Parque criado com sucesso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Close();
-                }
-                else
-                {
-                    MessageBox.Show("Existem erros nos dados.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    this.Enabled = true;
-                }
-            }
-        }
+        //Verificar Dados Gerais
         private bool verificarGeral()
         {
             bool result = true;
+
             if (!string.IsNullOrWhiteSpace(textBox_TelefoneGeral.Text))
             {
                 try
@@ -402,43 +114,360 @@ namespace ITICH.RegistoParques
                     result = false;
                 }
             }
+
             return result;
         }
+
+        //AREAS
+        //Adicionar Area
+        private void button_AdicionarArea_Click(object sender, EventArgs e)
+        {
+            if (comboBox_Area.SelectedItem != null)
+            {
+                areas.Add(comboBox_Area.SelectedItem.ToString());
+                int areaRowIndex = dataGridView_Area.Rows.Add();
+                dataGridView_Area.Rows[areaRowIndex].Cells[0].Value = comboBox_Area.SelectedItem.ToString();
+                button_RemoverArea.Enabled = true;
+                Refresh();
+            }
+            else
+            {
+                SystemSounds.Beep.Play();
+            }
+        }
+        //Remover Area
+        private void button_RemoverArea_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_Area.RowCount > 0)
+            {
+                areas.Remove(dataGridView_Area.SelectedCells[0].Value.ToString());
+                dataGridView_Area.Rows.RemoveAt(dataGridView_Area.CurrentCell.RowIndex);
+                Refresh();
+            }
+            if (dataGridView_Area.RowCount == 0)
+            {
+                button_RemoverArea.Enabled = false;
+            }
+        }
+        //Criar Area
+        private void button_CriarArea_Click(object sender, EventArgs e)
+        {
+            this.Enabled = false;
+            AdicionarAD adicionarAD = new AdicionarAD();
+            adicionarAD.initArea();
+            adicionarAD.ShowDialog();
+            this.Enabled = true;
+            Refresh();
+        }
+
+        //DOMINIOS
+        //Adicionar Dominio
+        private void button_AdicionarDominio_Click(object sender, EventArgs e)
+        {
+            if (comboBox_Dominio.SelectedItem != null)
+            {
+                dominios.Add(comboBox_Dominio.SelectedItem.ToString());
+                int dominioRowIndex = dataGridView_Dominio.Rows.Add();
+                dataGridView_Dominio.Rows[dominioRowIndex].Cells[0].Value = comboBox_Dominio.SelectedItem.ToString();
+                button_RemoverDominio.Enabled = true;
+                Refresh();
+            }
+            else
+            {
+                SystemSounds.Beep.Play();
+            }
+        }
+        //Remover Dominio
+        private void button_RemoverDominio_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_Dominio.RowCount > 0)
+            {
+                dominios.Remove(dataGridView_Dominio.SelectedCells[0].Value.ToString());
+                dataGridView_Dominio.Rows.RemoveAt(dataGridView_Dominio.CurrentCell.RowIndex);
+                Refresh();
+            }
+            if (dataGridView_Dominio.RowCount == 0)
+            {
+                button_RemoverDominio.Enabled = false;
+            }
+        }
+        //Criar Dominio
+        private void button_CriarDominio_Click(object sender, EventArgs e)
+        {
+            this.Enabled = false;
+            AdicionarAD adicionarAD = new AdicionarAD();
+            adicionarAD.initDominio();
+            adicionarAD.ShowDialog();
+            this.Enabled = true;
+            Refresh();
+        }
+
+        //INCUBADORAS
+        //Adicionar Espaço
+        private void button_AdicionarEspaco_Click(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(textBox_Espaco.Text))
+            {
+                bool hasDupe = false;
+                for (int i = 0; i < dataGridView_Espaco.Rows.Count; i++)
+                {
+                    if (textBox_Espaco.Text.ToLower().Replace(" ", "") == dataGridView_Espaco.Rows[i].Cells[0].Value.ToString().ToLower().Replace(" ", ""))
+                    {
+                        hasDupe = true;
+                    }
+                }
+                if (!hasDupe)
+                {
+                    int espacoRowIndex = dataGridView_Espaco.Rows.Add();
+                    dataGridView_Espaco.Rows[espacoRowIndex].Cells[0].Value = textBox_Espaco.Text.ToString();
+                    textBox_Espaco.Clear();
+                    button_RemoverEspaco.Enabled = true;
+                    Refresh();
+                }
+                else
+                {
+                    MessageBox.Show("Já existe um espaço com esse nome.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                SystemSounds.Beep.Play();
+            }
+        }
+        //Remover Espaço
+        private void button_RemoverEspaco_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_Espaco.RowCount > 0)
+            {
+                dataGridView_Espaco.Rows.RemoveAt(dataGridView_Espaco.CurrentCell.RowIndex);
+            }
+            if (dataGridView_Espaco.RowCount == 0)
+            {
+                button_RemoverEspaco.Enabled = false;
+            }
+        }
+        //Adicionar Serviço
+        private void button_AdicionarServico_Click(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(textBox_Servico.Text))
+            {
+                bool hasDupe = false;
+                for (int i = 0; i < dataGridView_Servico.Rows.Count; i++)
+                {
+                    if (textBox_Servico.Text.ToLower().Replace(" ", "") == dataGridView_Servico.Rows[i].Cells[0].Value.ToString().ToLower().Replace(" ", ""))
+                    {
+                        hasDupe = true;
+                    }
+                }
+                if (!hasDupe)
+                {
+                    int servicoRowIndex = dataGridView_Servico.Rows.Add();
+                    dataGridView_Servico.Rows[servicoRowIndex].Cells[0].Value = textBox_Servico.Text.ToString();
+                    textBox_Servico.Clear();
+                    button_RemoverServico.Enabled = true;
+                    Refresh();
+                }
+                else
+                {
+                    MessageBox.Show("Já existe um serviço com esse nome.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                SystemSounds.Beep.Play();
+            }
+        }
+        //Remover Serviço
+        private void button_RemoverServico_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_Servico.RowCount > 0)
+            {
+                dataGridView_Servico.Rows.RemoveAt(dataGridView_Servico.CurrentCell.RowIndex);
+            }
+            if (dataGridView_Servico.RowCount == 0)
+            {
+                button_RemoverServico.Enabled = false;
+            }
+        }
+        //Verificar campos da Incubadora
+        private bool verificarIncubadoras()
+        {
+            bool result = true;
+            if (!string.IsNullOrWhiteSpace(textBox_VolumeIncubadora.Text))
+            {
+                try
+                {
+                    int.Parse(textBox_VolumeIncubadora.Text);
+                    result = true;
+                }
+                catch
+                {
+                    result = false;
+                }
+            }
+            if (!string.IsNullOrWhiteSpace(textBox_RHIncubadora.Text))
+            {
+                try
+                {
+                    int.Parse(textBox_RHIncubadora.Text);
+                    result = true;
+                }
+                catch
+                {
+                    result = false;
+                }
+            }
+            return result;
+        }
+        //Adicionar Incubadora
+        private void button_AdicionarIncubadora_Click(object sender, EventArgs e)
+        {
+            if (verificarIncubadoras())
+            {
+
+                if (!string.IsNullOrEmpty(textBox_NomeIncubadora.Text) ||
+                    !string.IsNullOrEmpty(textBox_VolumeIncubadora.Text) ||
+                    !string.IsNullOrEmpty(textBox_RHIncubadora.Text) ||
+                    dataGridView_Espaco.Rows.Count > 0)
+                {
+                    int IncubadoraRowIndex = dataGridView_Incubadora.Rows.Add();
+
+                    dataGridView_Incubadora.Rows[IncubadoraRowIndex].Cells[0].Value = textBox_NomeIncubadora.Text;
+                    dataGridView_Incubadora.Rows[IncubadoraRowIndex].Cells[1].Value = textBox_VolumeIncubadora.Text;
+                    dataGridView_Incubadora.Rows[IncubadoraRowIndex].Cells[2].Value = textBox_RHIncubadora.Text;
+                    DataGridViewComboBoxCell espacoCell = (DataGridViewComboBoxCell)dataGridView_Incubadora[3, IncubadoraRowIndex];
+                    espacoCell.Items.Clear();
+                    for (int i = 0; i < dataGridView_Espaco.Rows.Count; i++)
+                    {
+                        espacoCell.Items.Add(dataGridView_Espaco.Rows[i].Cells[0].Value.ToString());
+                    }
+
+                    textBox_Espaco.Clear();
+                    while (dataGridView_Espaco.Rows.Count > 0)
+                    {
+                        dataGridView_Espaco.Rows.RemoveAt(0);
+                    }
+                    textBox_NomeIncubadora.Clear();
+                    textBox_VolumeIncubadora.Clear();
+                    textBox_RHIncubadora.Clear();
+                    textBox_Espaco.Clear();
+                    button_RemoverIncubadora.Enabled = true;
+                }
+                else
+                {
+                    SystemSounds.Beep.Play();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Existem dados que não foram inseridos corretamente.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        //Remover Incubadora
+        private void button_RemoverIncubadora_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_Incubadora.RowCount > 0)
+            {
+                dataGridView_Incubadora.Rows.RemoveAt(dataGridView_Incubadora.CurrentCell.RowIndex);
+            }
+            if (dataGridView_Incubadora.RowCount == 0)
+            {
+                button_RemoverIncubadora.Enabled = false;
+            }
+        }
+
+        //INSTALACOES
+        //Adicionar Instalacao
+        private void button_AdicionarInstalacao_Click(object sender, EventArgs e)
+        {
+            bool isInstalacaoEmpty;
+
+            _ = String.IsNullOrEmpty(textBox_NomeInstalacao.Text) ? isInstalacaoEmpty = true : isInstalacaoEmpty = false;
+
+            if (!isInstalacaoEmpty)
+            {
+                int InstalacoesRowIndex = dataGridView_Instalacao.Rows.Add();
+                dataGridView_Instalacao.Rows[InstalacoesRowIndex].Cells[0].Value = textBox_NomeInstalacao.Text;
+                dataGridView_Instalacao.Rows[InstalacoesRowIndex].Cells[1].Value = textBox_LocalidadeInstalacao.Text;
+                dataGridView_Instalacao.Rows[InstalacoesRowIndex].Cells[2].Value = textBox_ConcelhoInstalacao.Text;
+                dataGridView_Instalacao.Rows[InstalacoesRowIndex].Cells[3].Value = numericUpDown_LotesInstalacao.Text;
+                dataGridView_Instalacao.Rows[InstalacoesRowIndex].Cells[4].Value = numericUpDown_OcupadosInstalacao.Text;
+                dataGridView_Instalacao.Rows[InstalacoesRowIndex].Cells[5].Value = checkBox_EstacionamentoInstalacao.CheckState;
+                dataGridView_Instalacao.Rows[InstalacoesRowIndex].Cells[6].Value = checkBox_VigilanciaInstalacao.CheckState;
+                dataGridView_Instalacao.Rows[InstalacoesRowIndex].Cells[7].Value = checkBox_SegurancaInstalacao.CheckState;
+                dataGridView_Instalacao.Rows[InstalacoesRowIndex].Cells[8].Value = textBox_RedeInstalacao.Text;
+                textBox_NomeInstalacao.Clear();
+                textBox_LocalidadeInstalacao.Clear();
+                textBox_ConcelhoInstalacao.Clear();
+                numericUpDown_LotesInstalacao.Value = 0;
+                numericUpDown_OcupadosInstalacao.Value = 0;
+                checkBox_EstacionamentoInstalacao.Checked = false;
+                checkBox_VigilanciaInstalacao.Checked = false;
+                checkBox_SegurancaInstalacao.Checked = false;
+                textBox_RedeInstalacao.Clear();
+                button_RemoverInstalacao.Enabled = true;
+
+                for (int i = 0; i < dataGridView_Instalacao.Rows.Count; i++)
+                {
+                    int estacionamento = dataGridView_Instalacao.Rows[i].Cells[5].Value.ToString() == "Checked" ? estacionamento = 1 : estacionamento = 0;
+                }
+            }
+            else
+            {
+                SystemSounds.Beep.Play();
+            }
+        }
+        //Remover Instalacao
+        private void button_RemoverInstalacao_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_Instalacao.RowCount > 0)
+            {
+                dataGridView_Instalacao.Rows.RemoveAt(dataGridView_Instalacao.CurrentCell.RowIndex);
+            }
+            if (dataGridView_Instalacao.RowCount == 0)
+            {
+                button_RemoverInstalacao.Enabled = false;
+            }
+        }
+        //Limites Instalacao
+        private void numericUpDown_LotesInstalacao_ValueChanged(object sender, EventArgs e)
+        {
+            numericUpDown_OcupadosInstalacao.Maximum = numericUpDown_LotesInstalacao.Value;
+        }
+        private void numericUpDown_OcupadosInstalacao_ValueChanged(object sender, EventArgs e)
+        {
+            numericUpDown_OcupadosInstalacao.Maximum = numericUpDown_LotesInstalacao.Value;
+        }
+
+        //Confirmar
+        private void button_Confirmar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox_NomeGeral.Text))
+            {
+                MessageBox.Show("Por favor especificar o nome do parque.", "Erro na Submissão!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (verificarGeral())
+            {
+                DialogResult confirmarParque = MessageBox.Show("Deseja confirmar o parque criado?", "Confirmar Submissão?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (confirmarParque == DialogResult.Yes)
+                {
+                    this.Enabled = false;
+                    criarParque();
+                    MessageBox.Show("Parque criado com sucesso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    safeToQuit = true;
+                    this.Enabled = true;
+                    Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Não existem erros no formulário.\nPor favor, verifique os seus dados.", "Erro na Submissão!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+        //Criar Parque
         private void criarParque()
         {
-            int indexLocalizacao;
-            int indexParque;
-            int indexIncubadora;
-            int indexCaracteristicas;
-            string nomeGeral;
-            string moradaGeral;
-            string concelhoGeral;
-            string distritoGeral;
-            string emailGeral;
-            string telefoneGeral;
-            string anoGeral;
-            string entidadeGestoraGeral;
-            int juridicialGeral;
-            string capitalGeral;
-            int faseGeral;
-            int finsGeral;
-            int interesseGeral;
-            int temIncubadora;
-
-            nomeGeral = textBox_NomeGeral.Text;
-            moradaGeral = textBox_MoradaGeral.Text;
-            concelhoGeral = textBox_ConcelhoGeral.Text;
-            distritoGeral = textBox_DistritoGeral.Text;
-            emailGeral = textBox_EmailGeral.Text;
-            telefoneGeral = textBox_TelefoneGeral.Text;
-            anoGeral = dateTimePicker_AnoGeral.Text;
-            entidadeGestoraGeral = textBox_EntidadeGeral.Text;
-            capitalGeral = textBox_CapitalGeral.Text;
-            _ = comboBox_JuridicialGeral.SelectedIndex == -1 ? juridicialGeral = 0 : juridicialGeral = comboBox_JuridicialGeral.SelectedIndex;
-            _ = comboBox_FaseGeral.SelectedIndex == -1 ? faseGeral = 0 : faseGeral = comboBox_FaseGeral.SelectedIndex;
-            _ = checkBox_FinsGeral.Checked ? finsGeral = 1 : finsGeral = 0;
-            _ = checkBox_InteresseGeral.Checked ? interesseGeral = 1 : interesseGeral = 0;
-            _ = checkBox_Incubadora.Checked ? temIncubadora = 1 : temIncubadora = 0;
             if (areas.Count > 0)
             {
                 for (int i = 0; i < areas.Count; i++)
@@ -457,40 +486,36 @@ namespace ITICH.RegistoParques
                     dominios[i] = foundRows[0][0].ToString();
                 }
             }
-            if (instalacoes.Rows.Count > 0)
-            {
-                for (int i = 0; i < instalacoes.Rows.Count; i++)
-                {
-                    for (int k = 5; k < 8; k++)
-                    {
-                        _ = instalacoes.Rows[i][k].Equals("Checked") ? instalacoes.Rows[i][k] = "1" : instalacoes.Rows[i][k] = "0";
-                        Console.WriteLine(instalacoes.Rows[i][k]);
-                    }
-                }
-            }
 
-            ConecaoSQLServer.ExecutaSql("INSERT INTO Localizacao (distrit, concelh, morada) VALUES ('" + distritoGeral + "', '" + concelhoGeral + "', '" + moradaGeral + "');");
+            ConecaoSQLServer.ExecutaSql("INSERT INTO Localizacao (distrit, concelh, morada) VALUES ('" + textBox_DistritoGeral.Text + "', '" + textBox_ConcelhoGeral.Text + "', '" + textBox_MoradaGeral.Text + "');");
             dataTable = ConecaoSQLServer.ExecutaSql("SELECT MAX(id_localizacao) FROM Localizacao");
             foundRows = dataTable.Select();
-            indexLocalizacao = Convert.ToInt32(foundRows[0][0]);
+            int indexLocalizacao = Convert.ToInt32(foundRows[0][0]);
 
+            int finsGeral = checkBox_FinsGeral.Checked ? 1 : 0;
+            int interesseGeral = checkBox_InteresseGeral.Checked ? 1 : 0;
+            int juridicialGeral = comboBox_JuridicialGeral.SelectedIndex == -1 ? 0 : comboBox_JuridicialGeral.SelectedIndex;
+            int faseGeral = comboBox_FaseGeral.SelectedIndex == -1 ? 0 : comboBox_FaseGeral.SelectedIndex;
+            int temIncubadora = dataGridView_Incubadora.Rows.Count > 0 ? temIncubadora = 1 : temIncubadora = 0;
             ConecaoSQLServer.ExecutaSql("INSERT INTO Parques_cientificos (entidade_gestora, fins_lucrativos, interesse_publico, contacto_tel, ano_de_inicio, patrimonio_acossiativo_e_capital_social, id_fase_de_desenvolvimento, id_carateristica_juridica, id_localizacao, nome_parque, e_mail, temIncubadora) VALUES (" +
-                                        "'" + entidadeGestoraGeral + "', " +
+                                        "'" + textBox_EntidadeGeral.Text + "', " +
                                         "'" + finsGeral + "', " +
                                         "'" + interesseGeral + "', " +
-                                        "'" + telefoneGeral + "', " +
-                                        "'" + anoGeral + "', " +
-                                        "'" + capitalGeral + "', " +
+                                        "'" + textBox_TelefoneGeral.Text + "', " +
+                                        "'" + dateTimePicker_AnoGeral.Text + "', " +
+                                        "'" + textBox_CapitalGeral.Text + "', " +
                                         "'" + faseGeral + "', " +
                                         "'" + juridicialGeral + "', " +
                                         "'" + indexLocalizacao + "', " +
-                                        "'" + nomeGeral + "', " +
-                                        "'" + emailGeral + "', " +
+                                        "'" + textBox_NomeGeral.Text + "', " +
+                                        "'" + textBox_EmailGeral.Text + "', " +
                                         "'" + temIncubadora + "')"
                                         );
+
             dataTable = ConecaoSQLServer.ExecutaSql("SELECT MAX(id_parque) FROM Parques_cientificos");
             foundRows = dataTable.Select();
-            indexParque = Convert.ToInt32(foundRows[0][0]);
+            int indexParque = Convert.ToInt32(foundRows[0][0]);
+
             if (areas.Count > 0)
             {
                 foreach (string item in areas)
@@ -501,7 +526,6 @@ namespace ITICH.RegistoParques
                                         );
                 }
             }
-
             if (dominios.Count > 0)
             {
                 foreach (string item in dominios)
@@ -512,74 +536,88 @@ namespace ITICH.RegistoParques
                                         );
                 }
             }
-            if (checkBox_Incubadora.Checked)
-            {
-                if (incubadoras.Rows.Count > 0)
-                {
-                    for (int i = 0; i < incubadoras.Rows.Count; i++)
-                    {
-                        ConecaoSQLServer.ExecutaSql("INSERT INTO Incubadoras (volume_negocios, numero_de_pessoas, nom_inc, id_parque) VALUES (" +
-                            "'" + incubadoras.Rows[i][1] + "', " +
-                            "'" + incubadoras.Rows[i][2] + "', " +
-                            "'" + incubadoras.Rows[i][0] + "', " +
-                            "'" + indexParque + "')"
-                            );
-                        dataTable = ConecaoSQLServer.ExecutaSql("SELECT MAX(id_incubadora) FROM Incubadoras");
-                        foundRows = dataTable.Select();
-                        indexIncubadora = Convert.ToInt32(foundRows[0][0]);
 
+            if (temIncubadora == 1)
+            {
+                for (int i = 0; i < dataGridView_Incubadora.Rows.Count; i++)
+                {
+                    ConecaoSQLServer.ExecutaSql("INSERT INTO Incubadoras (volume_negocios, numero_de_pessoas, nom_inc, id_parque) VALUES (" +
+                        "'" + dataGridView_Incubadora.Rows[i].Cells[1].Value.ToString() + "', " +
+                        "'" + dataGridView_Incubadora.Rows[i].Cells[2].Value.ToString() + "', " +
+                        "'" + dataGridView_Incubadora.Rows[i].Cells[0].Value.ToString() + "', " +
+                        "'" + indexParque + "')"
+                        );
+                    dataTable = ConecaoSQLServer.ExecutaSql("SELECT MAX(id_incubadora) FROM Incubadoras");
+                    foundRows = dataTable.Select();
+                    int indexIncubadora = Convert.ToInt32(foundRows[0][0]);
+
+                    DataGridViewComboBoxCell espacoCell = (DataGridViewComboBoxCell)dataGridView_Incubadora[3, i];
+                    for (int k = 0; k < espacoCell.Items.Count; k++)
+                    {
                         ConecaoSQLServer.ExecutaSql("INSERT INTO Espacos_incubadora (tipo_espaco, id_incubadora) VALUES (" +
-                        "'" + incubadoras.Rows[i][3] + "', " +
+                        "'" + espacoCell.Items[k].ToString() + "', " +
                         "'" + indexIncubadora + "')"
                         );
+                    }
 
+                    DataGridViewComboBoxCell servicoCell = (DataGridViewComboBoxCell)dataGridView_Incubadora[3, i];
+                    for (int k = 0; k < servicoCell.Items.Count; k++)
+                    {
                         ConecaoSQLServer.ExecutaSql("INSERT INTO Servicos_incubadora (tipo_servico, id_incubadora) VALUES (" +
-                        "'" + incubadoras.Rows[i][4] + "', " +
+                        "'" + servicoCell.Items[k].ToString() + "', " +
                         "'" + indexIncubadora + "')"
                         );
                     }
                 }
             }
-            if (instalacoes.Rows.Count > 0)
-            {
 
-                for (int i = 0; i < instalacoes.Rows.Count; i++)
+            if (dataGridView_Instalacao.Rows.Count > 0)
+            {
+                for (int i = 0; i < dataGridView_Instalacao.Rows.Count; i++)
                 {
+                    int estacionamento = dataGridView_Instalacao.Rows[i].Cells[5].Value.ToString() == "Checked" ? estacionamento = 1 : estacionamento = 0;
+                    int vigilancia = dataGridView_Instalacao.Rows[i].Cells[6].Value.ToString() == "Checked" ? vigilancia = 1 : vigilancia = 0;
+                    int seguranca = dataGridView_Instalacao.Rows[i].Cells[7].Value.ToString() == "Checked" ? seguranca = 1 : seguranca = 0;
+
                     ConecaoSQLServer.ExecutaSql("INSERT INTO Carateristicas_instalacoes (num_lotes, num_lotes_ocupados, estacionamento, videovigilancia, seguranca, tipo_de_rede) VALUES (" +
-                        "'" + instalacoes.Rows[i][3] + "', " +
-                        "'" + instalacoes.Rows[i][4] + "', " +
-                        "'" + instalacoes.Rows[i][5] + "', " +
-                        "'" + instalacoes.Rows[i][6] + "', " +
-                        "'" + instalacoes.Rows[i][7] + "', " +
-                        "'" + instalacoes.Rows[i][8] + "')"
+                        "'" + dataGridView_Instalacao.Rows[i].Cells[3].Value.ToString() + "', " +
+                        "'" + dataGridView_Instalacao.Rows[i].Cells[4].Value.ToString() + "', " +
+                        "'" + estacionamento + "', " +
+                        "'" + vigilancia + "', " +
+                        "'" + seguranca + "', " +
+                        "'" + dataGridView_Instalacao.Rows[i].Cells[8].Value.ToString() + "')"
                         );
+
                     dataTable = ConecaoSQLServer.ExecutaSql("SELECT MAX(id_carateristicas) FROM Carateristicas_instalacoes");
                     foundRows = dataTable.Select();
-                    indexCaracteristicas = Convert.ToInt32(foundRows[0][0]);
+                    int indexCaracteristicas = Convert.ToInt32(foundRows[0][0]);
 
                     ConecaoSQLServer.ExecutaSql("INSERT INTO Instalacoes (id_carateristicas, id_parque, designaca, localidad, concelh) VALUES (" +
                         "'" + indexCaracteristicas + "', " +
                         "'" + indexParque + "', " +
-                        "'" + instalacoes.Rows[i][0] + "', " +
-                        "'" + instalacoes.Rows[i][1] + "', " +
-                        "'" + instalacoes.Rows[i][2] + "')"
+                        "'" + dataGridView_Instalacao.Rows[i].Cells[0].Value.ToString() + "', " +
+                        "'" + dataGridView_Instalacao.Rows[i].Cells[1].Value.ToString() + "', " +
+                        "'" + dataGridView_Instalacao.Rows[i].Cells[2].Value.ToString() + "')"
                         );
                 }
             }
 
             areas.Clear();
             dominios.Clear();
-            incubadoras.Clear();
-            instalacoes.Clear();
         }
 
-        private void button_Cancelar_Click(object sender, EventArgs e)
+        //Sair do form
+        private void RegistoForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult cancelarParque = MessageBox.Show("Tem a certeza que quer sair?\n(Os valores inseridos não serão gravados)", "Cancelar Submissão", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-            if (cancelarParque == DialogResult.Yes)
+            if (e.CloseReason != CloseReason.UserClosing)
+                return;
+
+            if (!safeToQuit)
             {
-                Close();
+                if (MessageBox.Show("Tem a certeza que quer abandonar a criação do parque?\n(Todas as informações serão perdidas!)", "Atenção!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
+                    e.Cancel = true;
             }
         }
+
     }
 }

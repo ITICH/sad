@@ -168,9 +168,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ButtonRedondo.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="ConecaoBD\ConecaoSQLServer.cs" />
     <Compile Include="DadosEmpresa.cs">
       <SubType>Form</SubType>
@@ -222,11 +219,11 @@
     <Compile Include="RegistoParques\AdicionarAD.designer.cs">
       <DependentUpon>AdicionarAD.cs</DependentUpon>
     </Compile>
-    <Compile Include="RegistoParques\CriarParque.cs">
+    <Compile Include="RegistoParques\RegistoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegistoParques\CriarParque.designer.cs">
-      <DependentUpon>CriarParque.cs</DependentUpon>
+    <Compile Include="RegistoParques\RegistoForm.designer.cs">
+      <DependentUpon>RegistoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="RegistoParques\RegistoParque.cs">
       <SubType>Form</SubType>
@@ -234,17 +231,31 @@
     <Compile Include="RegistoParques\RegistoParque.designer.cs">
       <DependentUpon>RegistoParque.cs</DependentUpon>
     </Compile>
-    <Compile Include="Simulacao.cs">
+    <Compile Include="Simulacoes\Historico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Simulacao.Designer.cs">
-      <DependentUpon>Simulacao.cs</DependentUpon>
+    <Compile Include="Simulacoes\Historico.Designer.cs">
+      <DependentUpon>Historico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Simulacoes\Resultados.cs" />
+    <Compile Include="Simulacoes\CalcSimulacao.cs" />
+    <Compile Include="Simulacoes\NovoSimulacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Simulacoes\NovoSimulacao.Designer.cs">
+      <DependentUpon>NovoSimulacao.cs</DependentUpon>
     </Compile>
     <Compile Include="tab1.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="tab1.Designer.cs">
       <DependentUpon>tab1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ValidarConta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ValidarConta.Designer.cs">
+      <DependentUpon>ValidarConta.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="DadosEmpresa.resx">
       <DependentUpon>DadosEmpresa.cs</DependentUpon>
@@ -272,17 +283,23 @@
     <EmbeddedResource Include="RegistoParques\AdicionarAD.resx">
       <DependentUpon>AdicionarAD.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegistoParques\CriarParque.resx">
-      <DependentUpon>CriarParque.cs</DependentUpon>
+    <EmbeddedResource Include="RegistoParques\RegistoForm.resx">
+      <DependentUpon>RegistoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistoParques\RegistoParque.resx">
       <DependentUpon>RegistoParque.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Simulacao.resx">
-      <DependentUpon>Simulacao.cs</DependentUpon>
+    <EmbeddedResource Include="Simulacoes\Historico.resx">
+      <DependentUpon>Historico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Simulacoes\NovoSimulacao.resx">
+      <DependentUpon>NovoSimulacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="tab1.resx">
       <DependentUpon>tab1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ValidarConta.resx">
+      <DependentUpon>ValidarConta.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -420,6 +437,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\funMenu2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\biography.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.2.0.0\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.2.0.0\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />

@@ -204,5 +204,15 @@ namespace ITICH
         {
 
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chart_fases_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -84,7 +84,7 @@ namespace ITICH
                 else
                 {
                     //verifica se já exite ou não o nome ou o email (se já existirem não deixa inserir) e depois insere os dados se não existirem
-                    string dadosInseridos = "IF NOT EXISTS(SELECT nome_empresa, e_mail FROM Empresa WHERE nome_empresa = '" + textBox_nomeEmpresa.Text + "' OR e_mail = '" +textBox_email.Text + "') INSERT INTO Empresa(nome_empresa,contacto_tel,e_mail,password,perfil) VALUES('" + textBox_nomeEmpresa.Text + "','" + textBox_contacto.Text + "','" +textBox_email.Text+ "','" +pwdEncriptada+ "','" +perfilEMP+ "')";
+                    string dadosInseridos = "IF NOT EXISTS(SELECT nome_empresa, e_mail FROM Empresa WHERE nome_empresa = '" + textBox_nomeEmpresa.Text + "' OR e_mail = '" + textBox_email.Text + "') INSERT INTO Empresa(nome_empresa,contacto_tel,e_mail,password,perfil, validada) VALUES('" + textBox_nomeEmpresa.Text + "','" + textBox_contacto.Text + "','" + textBox_email.Text + "','" + pwdEncriptada + "','" + perfilEMP + "', '0')";
                     ConecaoSQLServer.ExecutaSql(dadosInseridos);
 
                     textBox_nomeEmpresa.Clear();

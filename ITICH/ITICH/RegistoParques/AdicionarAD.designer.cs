@@ -38,18 +38,20 @@ namespace ITICH.RegistoParques
             // button_Cancelar
             // 
             this.button_Cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button_Cancelar.Location = new System.Drawing.Point(116, 51);
+            this.button_Cancelar.Location = new System.Drawing.Point(155, 63);
+            this.button_Cancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button_Cancelar.Name = "button_Cancelar";
-            this.button_Cancelar.Size = new System.Drawing.Size(75, 23);
+            this.button_Cancelar.Size = new System.Drawing.Size(100, 28);
             this.button_Cancelar.TabIndex = 11;
             this.button_Cancelar.Text = "Cancelar";
             this.button_Cancelar.UseVisualStyleBackColor = true;
             // 
             // button_Confirmar
             // 
-            this.button_Confirmar.Location = new System.Drawing.Point(197, 51);
+            this.button_Confirmar.Location = new System.Drawing.Point(263, 63);
+            this.button_Confirmar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button_Confirmar.Name = "button_Confirmar";
-            this.button_Confirmar.Size = new System.Drawing.Size(75, 23);
+            this.button_Confirmar.Size = new System.Drawing.Size(100, 28);
             this.button_Confirmar.TabIndex = 10;
             this.button_Confirmar.Text = "Confirmar";
             this.button_Confirmar.UseVisualStyleBackColor = true;
@@ -58,38 +60,42 @@ namespace ITICH.RegistoParques
             // label_Descricao
             // 
             this.label_Descricao.AutoSize = true;
-            this.label_Descricao.Location = new System.Drawing.Point(12, 9);
+            this.label_Descricao.Location = new System.Drawing.Point(16, 11);
+            this.label_Descricao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_Descricao.Name = "label_Descricao";
-            this.label_Descricao.Size = new System.Drawing.Size(30, 13);
+            this.label_Descricao.Size = new System.Drawing.Size(38, 17);
             this.label_Descricao.TabIndex = 9;
             this.label_Descricao.Text = "desc";
             // 
             // textBox_AdicionarAD
             // 
-            this.textBox_AdicionarAD.Location = new System.Drawing.Point(15, 25);
+            this.textBox_AdicionarAD.Location = new System.Drawing.Point(20, 31);
+            this.textBox_AdicionarAD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox_AdicionarAD.Name = "textBox_AdicionarAD";
-            this.textBox_AdicionarAD.Size = new System.Drawing.Size(257, 20);
+            this.textBox_AdicionarAD.Size = new System.Drawing.Size(341, 22);
             this.textBox_AdicionarAD.TabIndex = 8;
             // 
             // AdicionarAD
             // 
             this.AcceptButton = this.button_Confirmar;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button_Cancelar;
-            this.ClientSize = new System.Drawing.Size(279, 81);
+            this.ClientSize = new System.Drawing.Size(372, 100);
             this.ControlBox = false;
             this.Controls.Add(this.button_Cancelar);
             this.Controls.Add(this.button_Confirmar);
             this.Controls.Add(this.label_Descricao);
             this.Controls.Add(this.textBox_AdicionarAD);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AdicionarAD";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AdicionarAD";
+            this.Load += new System.EventHandler(this.AdicionarAD_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

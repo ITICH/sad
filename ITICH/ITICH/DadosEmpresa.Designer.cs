@@ -63,6 +63,7 @@
             this.groupBox_dadosEmpresa.Controls.Add(this.label_contacto);
             this.groupBox_dadosEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox_dadosEmpresa.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox_dadosEmpresa.ForeColor = System.Drawing.Color.White;
             this.groupBox_dadosEmpresa.Location = new System.Drawing.Point(48, 358);
             this.groupBox_dadosEmpresa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox_dadosEmpresa.Name = "groupBox_dadosEmpresa";
@@ -151,6 +152,7 @@
             this.groupBox1.Controls.Add(this.label_password);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(48, 110);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
@@ -258,28 +260,36 @@
             // 
             // button_editDados
             // 
-            this.button_editDados.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_editDados.ForeColor = System.Drawing.Color.Black;
+            this.button_editDados.BackColor = System.Drawing.Color.White;
+            this.button_editDados.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(205)))), ((int)(((byte)(31)))));
+            this.button_editDados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(205)))), ((int)(((byte)(31)))));
+            this.button_editDados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_editDados.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_editDados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(109)))), ((int)(((byte)(193)))));
             this.button_editDados.Location = new System.Drawing.Point(4, 4);
             this.button_editDados.Margin = new System.Windows.Forms.Padding(4);
             this.button_editDados.Name = "button_editDados";
             this.button_editDados.Size = new System.Drawing.Size(172, 44);
             this.button_editDados.TabIndex = 5;
             this.button_editDados.Text = "Editar dados";
-            this.button_editDados.UseVisualStyleBackColor = true;
+            this.button_editDados.UseVisualStyleBackColor = false;
             this.button_editDados.Click += new System.EventHandler(this.button_editDados_Click);
             // 
             // button_cancel
             // 
-            this.button_cancel.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_cancel.ForeColor = System.Drawing.Color.Black;
+            this.button_cancel.BackColor = System.Drawing.Color.White;
+            this.button_cancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(205)))), ((int)(((byte)(31)))));
+            this.button_cancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(205)))), ((int)(((byte)(31)))));
+            this.button_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_cancel.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_cancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(109)))), ((int)(((byte)(193)))));
             this.button_cancel.Location = new System.Drawing.Point(4, 56);
             this.button_cancel.Margin = new System.Windows.Forms.Padding(4);
             this.button_cancel.Name = "button_cancel";
             this.button_cancel.Size = new System.Drawing.Size(172, 44);
             this.button_cancel.TabIndex = 6;
             this.button_cancel.Text = "Voltar atrás";
-            this.button_cancel.UseVisualStyleBackColor = true;
+            this.button_cancel.UseVisualStyleBackColor = false;
             this.button_cancel.Click += new System.EventHandler(this.button_cancel_Click);
             // 
             // textBox_nomeEmpresa

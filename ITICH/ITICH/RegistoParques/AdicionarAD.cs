@@ -85,5 +85,10 @@ namespace ITICH.RegistoParques
 
             }
         }
+
+        private void AdicionarAD_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

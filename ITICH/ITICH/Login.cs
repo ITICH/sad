@@ -58,9 +58,9 @@ namespace ITICH
             string userAtual = textBox_nome.Text;
 
             //seleciona os utitilizadores com perfil de Empresa
-            string queryLoginEMP = "SELECT id_empresa, e_mail, password, perfil FROM Empresa WHERE e_mail = '" + textBox_nome.Text + "' AND password = '" + Encriptarpwd(textBox_pw.Text) + "' AND perfil = 2";
+            string queryLoginEMP = "SELECT id_empresa, e_mail, password, perfil, validada FROM Empresa WHERE e_mail = '" + textBox_nome.Text + "' AND password = '" + Encriptarpwd(textBox_pw.Text) + "' AND perfil = 2";
             //seleciona os utitilizadores com perfil de Administrador
-            string queryLoginADM = "SELECT id_empresa, e_mail, password, perfil FROM Empresa WHERE e_mail = '" + textBox_nome.Text + "' AND password = '" + Encriptarpwd(textBox_pw.Text) + "' AND perfil = 1";
+            string queryLoginADM = "SELECT id_empresa, e_mail, password, perfil, validada FROM Empresa WHERE e_mail = '" + textBox_nome.Text + "' AND password = '" + Encriptarpwd(textBox_pw.Text) + "' AND perfil = 1";
 
             DataTable dadosUtilizador = ConecaoSQLServer.ExecutaSql(queryLoginEMP);
             DataTable dadosUtilizadorADM = ConecaoSQLServer.ExecutaSql(queryLoginADM);
@@ -81,21 +81,30 @@ namespace ITICH
                 //se o utilizador existir e os dados estiverem corretos vai entra na app
                 if (dadosUtilizador.Rows.Count > 0)
                 {
-                    dadosLogin = userAtual;
-                    dadosLoginID = Int32.Parse(dadosUtilizador.Rows[0][0].ToString());
-                    dadosLoginPwd = textBox_pw.Text;//-----------------------------------------------------ALTERAR ESTA PARTE DEPOIS DE ARRANJAR A PARTE DE DESENCRIPTAR
+                    //Verificação para ver se a conta foi validada
+                    if (dadosUtilizador.Rows[0][4].ToString().Equals("True"))
+                    {
+                        dadosLogin = userAtual;
+                        dadosLoginID = Int32.Parse(dadosUtilizador.Rows[0][0].ToString());
+                        dadosLoginPwd = textBox_pw.Text;//-----------------------------------------------------ALTERAR ESTA PARTE DEPOIS DE ARRANJAR A PARTE DE DESENCRIPTAR
 
-                    this.textBox_nome.Clear();
-                    this.textBox_pw.Clear();
-                    this.checkBox1.Checked = false;
+                        this.textBox_nome.Clear();
+                        this.textBox_pw.Clear();
+                        this.checkBox1.Checked = false;
 
-                    this.Hide();
+                        this.Hide();
 
-                    PaginaInicial paginaInicial = new PaginaInicial();
-                    paginaInicial.ShowDialog();
-                   
-                   // this.Show();
-                   // this.textBox_nome.Select();
+                        PaginaInicial paginaInicial = new PaginaInicial();
+                        paginaInicial.ShowDialog();
+
+                        // this.Show();
+                        // this.textBox_nome.Select();
+                    }
+                    //Mensagem de aviso caso a conta não tenha sido validada
+                    else
+                    {
+                        MessageBox.Show("A conta ainda não foi validada!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
                 //só pode ser acedido pelo perfil do ADM  ----------------------------------VERIFICAR SE É NECESSARIO OU NÃO TER ESTA PARTE
                 else if (dadosUtilizadorADM.Rows.Count > 0)
