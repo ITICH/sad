@@ -28,54 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series22 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series23 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series24 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.chart_fDesenvolvimento = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.chart_fases = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_fDesenvolvimento)).BeginInit();
-            this.panel6.SuspendLayout();
-            this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_fases)).BeginInit();
@@ -88,15 +89,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(0, 0);
             this.panel1.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::ITICH.Properties.Resources.tab2;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(32, 23);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(350, 106);
-            this.panel2.TabIndex = 1;
             // 
             // panel3
             // 
@@ -119,61 +111,6 @@
             this.panel5.Size = new System.Drawing.Size(79, 66);
             this.panel5.TabIndex = 0;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ITICH.Properties.Resources.exchange_rate;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(56, 61);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackgroundImage = global::ITICH.Properties.Resources.funGraf1;
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.Controls.Add(this.chart1);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Location = new System.Drawing.Point(32, 20);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1522, 438);
-            this.panel4.TabIndex = 1;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
-            // 
-            // chart1
-            // 
-            chartArea7.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.chart1.Legends.Add(legend7);
-            this.chart1.Location = new System.Drawing.Point(8, 56);
-            this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
-            series13.ChartArea = "ChartArea1";
-            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
-            series13.Font = new System.Drawing.Font("Nirmala UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series13.IsVisibleInLegend = false;
-            series13.Legend = "Legend1";
-            series13.Name = "Volume";
-            series13.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
-            this.chart1.Series.Add(series13);
-            this.chart1.Size = new System.Drawing.Size(1476, 363);
-            this.chart1.TabIndex = 1;
-            this.chart1.Text = "chart1";
-            this.chart1.Click += new System.EventHandler(this.chart1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(174, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 28);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Volume de Negócios";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -211,6 +148,82 @@
             this.panel7.Size = new System.Drawing.Size(79, 66);
             this.panel7.TabIndex = 2;
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Transparent;
+            this.panel6.Controls.Add(this.panel10);
+            this.panel6.Controls.Add(this.panel11);
+            this.panel6.Location = new System.Drawing.Point(786, 500);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(790, 491);
+            this.panel6.TabIndex = 4;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(165)))), ((int)(((byte)(77)))));
+            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel10.Controls.Add(this.pictureBox3);
+            this.panel10.Location = new System.Drawing.Point(74, 20);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(79, 66);
+            this.panel10.TabIndex = 0;
+            this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel10_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ITICH.Properties.Resources.exchange_rate;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(56, 61);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackgroundImage = global::ITICH.Properties.Resources.fundoGAR22ww;
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel4.Controls.Add(this.chart1);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Location = new System.Drawing.Point(32, 20);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1522, 438);
+            this.panel4.TabIndex = 1;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // chart1
+            // 
+            chartArea11.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea11);
+            legend11.Name = "Legend1";
+            this.chart1.Legends.Add(legend11);
+            this.chart1.Location = new System.Drawing.Point(8, 56);
+            this.chart1.Name = "chart1";
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
+            series22.ChartArea = "ChartArea1";
+            series22.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
+            series22.Font = new System.Drawing.Font("Nirmala UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series22.IsVisibleInLegend = false;
+            series22.Legend = "Legend1";
+            series22.Name = "Volume";
+            series22.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
+            this.chart1.Series.Add(series22);
+            this.chart1.Size = new System.Drawing.Size(1476, 363);
+            this.chart1.TabIndex = 1;
+            this.chart1.Text = "chart1";
+            this.chart1.Click += new System.EventHandler(this.chart1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(174, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(206, 28);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Volume de Negócios";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::ITICH.Properties.Resources.dictionary;
@@ -245,23 +258,23 @@
             // 
             // chart_fDesenvolvimento
             // 
-            chartArea9.Name = "ChartArea1";
-            this.chart_fDesenvolvimento.ChartAreas.Add(chartArea9);
-            legend9.Name = "Legend1";
-            this.chart_fDesenvolvimento.Legends.Add(legend9);
+            chartArea12.Name = "ChartArea1";
+            this.chart_fDesenvolvimento.ChartAreas.Add(chartArea12);
+            legend12.Name = "Legend1";
+            this.chart_fDesenvolvimento.Legends.Add(legend12);
             this.chart_fDesenvolvimento.Location = new System.Drawing.Point(80, 67);
             this.chart_fDesenvolvimento.Name = "chart_fDesenvolvimento";
-            series17.ChartArea = "ChartArea1";
-            series17.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series17.Legend = "Legend1";
-            series17.Name = "Volume";
-            series18.ChartArea = "ChartArea1";
-            series18.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series18.IsValueShownAsLabel = true;
-            series18.Legend = "Legend1";
-            series18.Name = "Areas";
-            this.chart_fDesenvolvimento.Series.Add(series17);
-            this.chart_fDesenvolvimento.Series.Add(series18);
+            series23.ChartArea = "ChartArea1";
+            series23.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series23.Legend = "Legend1";
+            series23.Name = "Volume";
+            series24.ChartArea = "ChartArea1";
+            series24.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series24.IsValueShownAsLabel = true;
+            series24.Legend = "Legend1";
+            series24.Name = "Areas";
+            this.chart_fDesenvolvimento.Series.Add(series23);
+            this.chart_fDesenvolvimento.Series.Add(series24);
             this.chart_fDesenvolvimento.Size = new System.Drawing.Size(609, 334);
             this.chart_fDesenvolvimento.TabIndex = 2;
             this.chart_fDesenvolvimento.Text = "chart2";
@@ -275,27 +288,6 @@
             this.label2.Size = new System.Drawing.Size(265, 28);
             this.label2.TabIndex = 0;
             this.label2.Text = "Áreas de Desenvolvimento";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Transparent;
-            this.panel6.Controls.Add(this.panel10);
-            this.panel6.Controls.Add(this.panel11);
-            this.panel6.Location = new System.Drawing.Point(786, 500);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(775, 491);
-            this.panel6.TabIndex = 4;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(165)))), ((int)(((byte)(77)))));
-            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel10.Controls.Add(this.pictureBox3);
-            this.panel10.Location = new System.Drawing.Point(56, 20);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(79, 66);
-            this.panel10.TabIndex = 0;
-            this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel10_Paint);
             // 
             // pictureBox3
             // 
@@ -312,9 +304,10 @@
             // 
             this.panel11.BackgroundImage = global::ITICH.Properties.Resources.funGraf1;
             this.panel11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel11.Controls.Add(this.label5);
             this.panel11.Controls.Add(this.chart_fases);
             this.panel11.Controls.Add(this.label3);
-            this.panel11.Location = new System.Drawing.Point(31, 35);
+            this.panel11.Location = new System.Drawing.Point(49, 35);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(722, 434);
             this.panel11.TabIndex = 1;
@@ -322,28 +315,28 @@
             // 
             // chart_fases
             // 
-            chartArea8.Name = "ChartArea1";
-            this.chart_fases.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.chart_fases.Legends.Add(legend8);
+            chartArea10.Name = "ChartArea1";
+            this.chart_fases.ChartAreas.Add(chartArea10);
+            legend10.Name = "Legend1";
+            this.chart_fases.Legends.Add(legend10);
             this.chart_fases.Location = new System.Drawing.Point(80, 67);
             this.chart_fases.Name = "chart_fases";
-            series14.ChartArea = "ChartArea1";
-            series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series14.Legend = "Legend1";
-            series14.Name = "Volume";
-            series15.ChartArea = "ChartArea1";
-            series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series15.IsValueShownAsLabel = true;
-            series15.Legend = "Legend1";
-            series15.Name = "Areas";
-            series16.ChartArea = "ChartArea1";
-            series16.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series16.Legend = "Legend1";
-            series16.Name = "Fases";
-            this.chart_fases.Series.Add(series14);
-            this.chart_fases.Series.Add(series15);
-            this.chart_fases.Series.Add(series16);
+            series19.ChartArea = "ChartArea1";
+            series19.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series19.Legend = "Legend1";
+            series19.Name = "Volume";
+            series20.ChartArea = "ChartArea1";
+            series20.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series20.IsValueShownAsLabel = true;
+            series20.Legend = "Legend1";
+            series20.Name = "Areas";
+            series21.ChartArea = "ChartArea1";
+            series21.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series21.Legend = "Legend1";
+            series21.Name = "Fases";
+            this.chart_fases.Series.Add(series19);
+            this.chart_fases.Series.Add(series20);
+            this.chart_fases.Series.Add(series21);
             this.chart_fases.Size = new System.Drawing.Size(609, 334);
             this.chart_fases.TabIndex = 3;
             this.chart_fases.Text = "chart2";
@@ -360,6 +353,25 @@
             this.label3.Text = "Fases de Desenvolvimento";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::ITICH.Properties.Resources.tab2;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Location = new System.Drawing.Point(32, 23);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(350, 106);
+            this.panel2.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(424, 381);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(252, 20);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Fases de denvolvimento dos parques";
+            // 
             // tab1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -372,19 +384,19 @@
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_fDesenvolvimento)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
@@ -416,5 +428,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_fDesenvolvimento;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -20,8 +20,8 @@ namespace ITICH
         private void EnviarPedidoEmail_Load(object sender, EventArgs e)
         {
             string utilizadorLogado = Login.dadosLogin;
-            string emailADM = "nunofeiteira@gmail.com";//MUDAR DEPOIS DOS TESTES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            string emailEmpresa = "nunofeiteira22@gmail.com";//MUDAR DEPOIS DOS TESTES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            string emailADM = "itinfrastructureschoicehelper@gmail.com";//MUDAR DEPOIS DOS TESTES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            string emailEmpresa = "exemploEmpresa@gmail.com";//MUDAR DEPOIS DOS TESTES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             //textBox_emailDe.Text = utilizadorLogado;//MUDAR PARA ESTE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             textBox_emailDe.Text = emailEmpresa;
             textBox_emailPara.Text = emailADM;

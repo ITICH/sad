@@ -17,6 +17,8 @@ namespace ITICH.Simulacoes
     {
         public static List<string> areas = new List<string>();
         public static SortedList<int, double> resSimulacao = new SortedList<int, double>();
+        //lista onde vai guardar todos os resultados
+        public static List<Resultados> result = new List<Resultados>();
         public static int estacionamentoInst;
         public static int vigilanciaInst;
         public static int segurancaInst;
@@ -34,16 +36,17 @@ namespace ITICH.Simulacoes
         private DataRow[] foundRows;
         string[] distritos = { "", "Aveiro", "Beja", "Braga", "Bragança", "Castelo Branco", "Coimbra", "Évora", "Faro", "Guarda", "Leiria", "Lisboa", "Portalegre", "Porto", "Santarém", "Setúbal", "Viana do Castelo", "Vila Real", "Viseu", "Ilha da Madeira", "Ilha de Porto Santo", "Ilha de Santa Maria", "Ilha de São Miguel", "Ilha Terceira", "Ilha da Graciosa", "Ilha de São Jorge", "Ilha do Pico", "Ilha do Faial", "Ilha das Flores", "Ilha do Corvo" };
         int[] volNeg = { 10000, 100000, 300000, 500000, 700000, 900000, 1000000, 30000000, 50000000, 100000000 };
-        Dictionary<int, string> niveisImp = new Dictionary<int, string>();
         string[] tipoInst = { "", "Salas", "Incubação", "Cowork", "Lotes" };
-
+        //dicionario onde são guardados os niveis de importância
+        Dictionary<int, string> niveisImp = new Dictionary<int, string>();
+        
         //verifica qual é o utilizador que está logado
         int utilizadorLogadoId = Login.dadosLoginID;
         //numero de parques a usar na simulação
         private static int numParques;
+        
         //numero de critérios a usar na simulação
         private static int numCriterios = 7;
-
         double[] valCriterios;
 
         public NovoSimulacao()
@@ -58,25 +61,18 @@ namespace ITICH.Simulacoes
             }
             //dados na comboBox distritos
             comboBox1.DataSource = distritos;
-
             //dados na comboBox fases
             comboBox2.DataSource = volNeg;
-
             //dados na comboBox fases
             comboBox5.DataSource = tipoInst;
-
             Refresh();
         }
-
         private void dadosDataGrid(SortedList<int,double> resultados, int[] id_parques, string[] nome_parque, string[] email)
         {
-            dataGridView_teste.Columns.Add("Index", "Id Parque");
             dataGridView_teste.Columns.Add("Name", "Parque");
             dataGridView_teste.Columns.Add("Email", "Email");
             dataGridView_teste.Columns.Add("Value", "Percentagem");
 
-            //lista onde vai guardar todos os resultados
-            List<Resultados> result = new List<Resultados>();
             int id = 1;
             for (int i = 0; i < resultados.Count; i++)
             {
@@ -87,7 +83,7 @@ namespace ITICH.Simulacoes
             //Coloca os resusltados todos na tabela
             for (int i = 0; i < resultados.Count; i++)
             {
-                dataGridView_teste.Rows.Add(result[i].id_parques, result[i].nome_parque, result[i].email, result[i].resl+"%");
+                dataGridView_teste.Rows.Add(/*result[i].id_parques, */result[i].nome_parque, result[i].email, result[i].resl+"%");
             }
             //Ordena os dados pela ordem decrescente da percentagem
             this.dataGridView_teste.Sort(dataGridView_teste.Columns["Value"], ListSortDirection.Descending);
@@ -98,11 +94,12 @@ namespace ITICH.Simulacoes
                 DataGridViewRow apagarRow = dataGridView_teste.Rows[i];
                 dataGridView_teste.Rows.Remove(apagarRow);
             }
-
-            dataGridView_teste.Columns[0].Width = 85;
-            dataGridView_teste.Columns[1].Width = 112;
-            dataGridView_teste.Columns[2].Width = 109;
-            dataGridView_teste.Columns[3].Width = 109;
+            dataGridView_teste.Columns[0].Width = 120;
+            dataGridView_teste.Columns[1].Width = 115;
+            dataGridView_teste.Columns[2].Width = 115;
+            dataGridView_teste.Rows[0].Height = 40;
+            dataGridView_teste.Rows[1].Height = 40;
+            dataGridView_teste.Rows[2].Height = 40;
         }
 
         public override void Refresh()
@@ -120,17 +117,16 @@ namespace ITICH.Simulacoes
             {
                 comboBox3.Items.Remove(item);
             }
-
             base.Refresh();
             this.Enabled = true;
         }
 
         private void Simulacao1_Load(object sender, EventArgs e)
         {
-            button_exportar.Visible = false;
             button_guardar.Visible = false;
+            label39.Visible = false;
 
-            niveisImp.Add(3, "Pouco Importânte");
+            niveisImp.Add(3, "Pouco Importânte");//adiciona os niveis de importância ao dicionario
             niveisImp.Add(1, "Mesma Importância");
             niveisImp.Add(5, "Grande Importância");
             niveisImp.Add(7, "Importância Muito Grande");
@@ -220,37 +216,11 @@ namespace ITICH.Simulacoes
             comboBox6_ti.DataSource = new BindingSource(niveisImp, null);
             comboBox6_ti.ValueMember = "Key";
             comboBox6_ti.DisplayMember = "Value";
-
-            //preenche as selectBoxs com os dados os Niveis de Importacia em relação a cada critério
-            //comboBox_Fd.DataSource = niveisImp.Clone();
-            //comboBox_TInt.DataSource = niveisImp.Clone();
-            //comboBox_Vn.DataSource = niveisImp.Clone();
-            //comboBox_CInst.DataSource = niveisImp.Clone();
-            //comboBox_Inc.DataSource = niveisImp.Clone();
-            //comboBox_area.DataSource = niveisImp.Clone();
-            //comboBox2_a.DataSource = niveisImp.Clone();
-            //comboBox2_ci.DataSource = niveisImp.Clone();
-            //comboBox2_i.DataSource = niveisImp.Clone();
-            //comboBox2_ti.DataSource = niveisImp.Clone();
-            //comboBox2_vn.DataSource = niveisImp.Clone();
-            //comboBox3_ci.DataSource = niveisImp.Clone();
-            //comboBox3_i.DataSource = niveisImp.Clone();
-            //comboBox3_ti.DataSource = niveisImp.Clone();
-            //comboBox3_vn.DataSource = niveisImp.Clone();
-            //comboBox4_ci.DataSource = niveisImp.Clone();
-            //comboBox4_i.DataSource = niveisImp.Clone();
-            //comboBox4_ti.DataSource = niveisImp.Clone();
-            //comboBox5_i.DataSource = niveisImp.Clone();
-            //comboBox5_ti.DataSource = niveisImp.Clone();
-            //comboBox6_ti.DataSource = niveisImp.Clone();
-
         }
-
         private void button1_back4_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
-
         private void button_CriarArea_Click(object sender, EventArgs e)
         {
             this.Enabled = false;
@@ -260,7 +230,6 @@ namespace ITICH.Simulacoes
             this.Enabled = true;
             Refresh();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             if (comboBox3.SelectedItem != null)
@@ -276,7 +245,6 @@ namespace ITICH.Simulacoes
                 SystemSounds.Beep.Play();
             }
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             if (dataGridView2.RowCount > 0)
@@ -307,45 +275,34 @@ namespace ITICH.Simulacoes
 
             double[,] matrizCriterios = new double[numCriterios, numCriterios];
 
-            //Preeche a matriz de Criterios
             int conta = 0;
-            for (int i = 0; i < numCriterios; i++)
+            for (int i = 0; i < numCriterios; i++)//Preeche a matriz de Criterios
             {
                 for (int j = 0; j < numCriterios; j++)
                 {
                     matrizCriterios[i, j] = valCriterios[conta];
                     conta+=1;
-                    //Console.Write("{0}\t", i ,j);
                 }
             }
 
             double[] resCaclCriterios = new double[numCriterios];
             resCaclCriterios = CalcSimulacao.CalcCriteriosAhp(matrizCriterios,numCriterios);
-            Console.Write("[{0}]", string.Join(";", resCaclCriterios));
 
-            //escreve na consola os resultados para verificar
-            /*for (int i = 0; i < numCriterios; i++)
-            {
-                Console.Write("\n");
-                for (int j = 0; j < numCriterios; j++)
-                    Console.Write("{0}\t", matrizCriterios[i, j]);
-                Console.Write("{0}\t", i);
-            }*/
-            //Console.Write("[{0}]", string.Join(",", resCaclCriterios));
-
-            //busca o numero de parques / opções
-            string parques = "SELECT COUNT(id_parque) as numParques FROM Parques_cientificos";
+            string parques = "SELECT COUNT(id_parque) as numParques FROM Parques_cientificos";//busca o numero de parques / opções
             DataTable dtParques = ConecaoSQLServer.ExecutaSql(parques);
             numParques = Int32.Parse(dtParques.Rows[0][0].ToString());
 
             //colocar comentario-------------VERIFICAR PQ É QUE SE NÃO TIVER TUDO PREENCHIDO CONTINUA COM O CALC E FICA INVERTIDA A MATRIZ E COM O VAL 8
-            if (string.IsNullOrEmpty(label_ImpLocal.Text) || string.IsNullOrEmpty(label_impArea.Text) || string.IsNullOrEmpty(label_impFdesenv.Text) || string.IsNullOrEmpty(label_impVol.Text) || string.IsNullOrEmpty(label_impInst.Text) || string.IsNullOrEmpty(label_impSerInc.Text) || string.IsNullOrEmpty(label_impTpInst.Text))
+            if (string.IsNullOrEmpty(label_ImpLocal.Text) || string.IsNullOrEmpty(label_impArea.Text) || 
+                string.IsNullOrEmpty(label_impFdesenv.Text) || string.IsNullOrEmpty(label_impVol.Text) || 
+                string.IsNullOrEmpty(label_impInst.Text) || string.IsNullOrEmpty(label_impSerInc.Text) || 
+                string.IsNullOrEmpty(label_impTpInst.Text))
             {
-                MessageBox.Show("Escolha a importância em todos os campos!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Preencha todos os campos!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
             }
             else
             {
-                //button_ConfirmarDados.Enabled = true;
                 local = Int32.Parse(label_ImpLocal.Text);
                 area = Int32.Parse(label_impArea.Text);
                 fDesenvolvimento = Int32.Parse(label_impFdesenv.Text);
@@ -363,12 +320,9 @@ namespace ITICH.Simulacoes
             string[] emailParques = new string[dtParquesTodos.Rows.Count];
             for (int i=0;i< dtParquesTodos.Rows.Count;i++)
             {
-                //id de todos os parques
-                tdParques[i] = Int32.Parse(dtParquesTodos.Rows[i][0].ToString());
-                //todos os nomes dos parques
-                nomeParques[i] = dtParquesTodos.Rows[i][1].ToString();
-                //email dos parques
-                emailParques[i] = dtParquesTodos.Rows[i][2].ToString();
+                tdParques[i] = Int32.Parse(dtParquesTodos.Rows[i][0].ToString());//id de todos os parques
+                nomeParques[i] = dtParquesTodos.Rows[i][1].ToString();//todos os nomes dos parques
+                emailParques[i] = dtParquesTodos.Rows[i][2].ToString();//email dos parques
             }
 
     //########################################################################################################################################################################
@@ -399,7 +353,6 @@ namespace ITICH.Simulacoes
             //preenche a matriz FASES e calcula a matriz com o metodo ahp e retorna um vetor com os RESULTADOS
             double[] resCaclMatrizFase = new double[tdParques.Length];
             resCaclMatrizFase = CalcSimulacao.PreencheMatriz(tdParques, fasesMaisImp, fDesenvolvimento);
-            //Console.Write("[{0}]", string.Join(";", resCaclMatrizFase));
 
     //########################################################################################################################################################################
             //busca os parques com a mesma Area na comboBox 
@@ -416,7 +369,6 @@ namespace ITICH.Simulacoes
             }
             double[] resCaclMatrizAreas = new double[tdParques.Length];
             resCaclMatrizAreas = CalcSimulacao.PreencheMatriz(tdParques, areasMaisImp, area);
-            //Console.Write("[{0}]", string.Join(";", resCaclMatrizAreas));
 
     //########################################################################################################################################################################            
             //busca os parques com o mesmo ou maior volumeNegocios na comboBox
@@ -431,7 +383,6 @@ namespace ITICH.Simulacoes
             //preenche a matriz VOL. NEGOCIOS e calcula a matriz com o metodo ahp e retorna um vetor com os RESULTADOS
             double[] resCaclMatrizVolNeg = new double[tdParques.Length];
             resCaclMatrizVolNeg = CalcSimulacao.PreencheMatriz(tdParques, volNegMaisImp, volNegocios);
-            //Console.Write("[{0}]", string.Join(";", resCaclMatrizVolNeg));
 
     //########################################################################################################################################################################
             //busca os parques com as mesmas carateristica da instalação selceionadas
@@ -452,7 +403,6 @@ namespace ITICH.Simulacoes
 
                 //preenche a matriz Caract. Instalações e calcula a matriz com o metodo ahp e retorna um vetor com os RESULTADOS
                 resCaclMatrizCartInst = CalcSimulacao.PreencheMatriz(tdParques, cartInstMaisImp, cartInstalacao);
-                //Console.Write("[{0}]", string.Join(";", resCaclMatrizCartInst));
             }
             else if (segurancaInst == 1 || estacionamentoInst == 1 || vigilanciaInst == 1)
             {
@@ -466,7 +416,6 @@ namespace ITICH.Simulacoes
 
                 //preenche a matriz Caract. Instalações e calcula a matriz com o metodo ahp e retorna um vetor com os RESULTADOS
                 resCaclMatrizCartInst = CalcSimulacao.PreencheMatriz(tdParques, cartInstMaisImp, cartInstalacao);
-                //Console.Write("[{0}]", string.Join(";", resCaclMatrizCartInst));
             }
 
     //########################################################################################################################################################################
@@ -485,7 +434,6 @@ namespace ITICH.Simulacoes
 
                 //preenche a matriz INCUBADORA e calcula a matriz com o metodo ahp e retorna um vetor com os RESULTADOS
                 resCaclMatrizInc = CalcSimulacao.PreencheMatriz(tdParques, incMaisImp, serIncubadora);
-                //Console.Write("[{0}]", string.Join(";", resCaclMatrizInc));
             }
             else if (checkBox2.Checked)
             {
@@ -500,7 +448,6 @@ namespace ITICH.Simulacoes
 
                 //preenche a matriz INCUBADORA e calcula a matriz com o metodo ahp e retorna um vetor com os RESULTADOS
                 resCaclMatrizInc = CalcSimulacao.PreencheMatriz(tdParques, incMaisImp, serIncubadora);
-                //Console.Write("[{0}]", string.Join(";", resCaclMatrizInc));
             }
 
     //#######################################################################################################################################################################
@@ -516,17 +463,33 @@ namespace ITICH.Simulacoes
             //preenche a matriz TIPO INSTALAÇÃO e calcula a matriz com o metodo ahp e retorna um vetor com os RESULTADOS
             double[] resCaclMatrizTipoInst = new double[tdParques.Length];
             resCaclMatrizTipoInst = CalcSimulacao.PreencheMatriz(tdParques, tipoInstMaisImp, tipoInstalacao);
-            //Console.Write("[{0}]", string.Join(";", resCaclMatrizTipoInst));
 
     //#######################################################################################################################################################################
             //RESULTADO da SIMULAÇÃO
-            //double[] resSimulacao = new double[tdParques.Length];
             resSimulacao = CalcSimulacao.CalcSimulacaoAhp(resCaclCriterios, resCaclMatrizLocal, resCaclMatrizFase, resCaclMatrizAreas, resCaclMatrizVolNeg, resCaclMatrizCartInst, resCaclMatrizInc, resCaclMatrizTipoInst, tdParques.Length);
-            dadosDataGrid(resSimulacao, tdParques, nomeParques, emailParques);
+            dadosDataGrid(resSimulacao, tdParques, nomeParques, emailParques);//mostra resultado no datagrid
 
-            button_exportar.Visible = true;
             button_guardar.Visible = true;
+            label39.Visible = true;
         }
+
+        private void button_guardar_Click(object sender, EventArgs e)
+        {
+            string email=null;
+            foreach (DataGridViewRow row in dataGridView_teste.SelectedRows)
+            {
+                email = row.Cells[1].Value.ToString();
+            }
+            if (string.IsNullOrEmpty(email))
+            {
+                MessageBox.Show("Selecione um parque!", "",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string caminho = CriarXml.CriarXML(email);
+            MessageBox.Show("Dados exportados e guardados com sucesso, em \n"+caminho, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             label_ImpLocal.Text = trackBar1.Value.ToString();
@@ -630,6 +593,9 @@ namespace ITICH.Simulacoes
         private void groupBox10_Enter(object sender, EventArgs e) { }
         private void groupBox4_Enter(object sender, EventArgs e) { }
         private void button_exportar_Click(object sender, EventArgs e) { }
-        private void button_guardar_Click(object sender, EventArgs e) { }
+        private void dataGridView_teste_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
+        private void groupBox6_Enter(object sender, EventArgs e) { }
+        private void groupBox7_Enter(object sender, EventArgs e) { }
+        private void label40_Click(object sender, EventArgs e) { }
     }
 }

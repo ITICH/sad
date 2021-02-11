@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<parque nome="sanjotec                                          ">
+  <Morada>Avenida 25 de Abril 3830-044 Ílhavo</Morada>
+  <FaseDesenvolvimento>Fase II</FaseDesenvolvimento>
+  <VolumeNegocios>52000000,0000</VolumeNegocios>
+  <Areas>
+    <AreaNegocio>De base tecnologica                               </AreaNegocio>
+  </Areas>
+  <TipoDeServicos>
+    <Sercico>Divulgação informação interesse empresarial</Sercico>
+    <Sercico>Sessões capacitação gestão de startups</Sercico>
+    <Sercico>Serviços de telecomunicações</Sercico>
+  </TipoDeServicos>
+  <TiposDeEspaco>
+    <Espaco>salas</Espaco>
+    <Espaco>auditorio</Espaco>
+    <Espaco>Salas</Espaco>
+  </TiposDeEspaco>
+  <Instalacoes>
+    <TipoDeInstalacao>salas</TipoDeInstalacao>
+  </Instalacoes>
+</parque>

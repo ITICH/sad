@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<parques>
+  <parque nome="pci@pci.pt&#xD;&#xA;" />
+  <Morada>Avenida 25 de Abril 3830-044 Ílhavo</Morada>
+  <FaseDesenvolvimento>Fase IV</FaseDesenvolvimento>
+  <VolumeNegocios>7500000,0000</VolumeNegocios>
+  <AreaNegocios>Agroindustrial                                    </AreaNegocios>
+  <AreaNegocios>Energia                                           </AreaNegocios>
+  <AreaNegocios>Materiais                                         </AreaNegocios>
+  <AreaNegocios>TICE                                              </AreaNegocios>
+  <AreaNegocios>Mar                                               </AreaNegocios>
+  <TipoSercicos>Acompanhamento na gestão operacional do negócio</TipoSercicos>
+  <TipoSercicos>Acompanhamento na gestão operacional do negócio</TipoSercicos>
+  <TipoSercicos>Acompanhamento na gestão operacional do negócio</TipoSercicos>
+  <TipoSercicos>Acompanhamento na gestão operacional do negócio</TipoSercicos>
+  <TipoSercicos>Assessoria e apoio jurídico</TipoSercicos>
+  <TipoSercicos>Assessoria e apoio jurídico</TipoSercicos>
+  <TipoSercicos>Assessoria e apoio jurídico</TipoSercicos>
+  <TipoSercicos>Assessoria e apoio jurídico</TipoSercicos>
+  <TipoSercicos>Apoio consolidação do modelo e plano de negócios</TipoSercicos>
+  <TipoSercicos>Apoio consolidação do modelo e plano de negócios</TipoSercicos>
+  <TipoSercicos>Apoio consolidação do modelo e plano de negócios</TipoSercicos>
+  <TipoSercicos>Apoio consolidação do modelo e plano de negócios</TipoSercicos>
+  <TipoSercicos>Apoio proteção direitos de propriedade intelectual</TipoSercicos>
+  <TipoSercicos>Apoio proteção direitos de propriedade intelectual</TipoSercicos>
+  <TipoSercicos>Apoio proteção direitos de propriedade intelectual</TipoSercicos>
+  <TipoSercicos>Apoio proteção direitos de propriedade intelectual</TipoSercicos>
+  <TipoSercicos>Acesso portefólio de competências e serviços da UA</TipoSercicos>
+  <TipoSercicos>Acesso portefólio de competências e serviços da UA</TipoSercicos>
+  <TipoSercicos>Acesso portefólio de competências e serviços da UA</TipoSercicos>
+  <TipoSercicos>Acesso portefólio de competências e serviços da UA</TipoSercicos>
+  <TipoSercicos>Apoio constituição da empresa, início de atividade</TipoSercicos>
+  <TipoSercicos>Apoio constituição da empresa, início de atividade</TipoSercicos>
+  <TipoSercicos>Apoio constituição da empresa, início de atividade</TipoSercicos>
+  <TipoSercicos>Apoio constituição da empresa, início de atividade</TipoSercicos>
+  <TipoSercicos>Apoio na estruturação da estratégia de comunicação</TipoSercicos>
+  <TipoSercicos>Apoio na estruturação da estratégia de comunicação</TipoSercicos>
+  <TipoSercicos>Apoio na estruturação da estratégia de comunicação</TipoSercicos>
+  <TipoSercicos>Apoio na estruturação da estratégia de comunicação</TipoSercicos>
+  <TipoSercicos>Apoio divulgação da atividade, produtos e serviços</TipoSercicos>
+  <TipoSercicos>Apoio divulgação da atividade, produtos e serviços</TipoSercicos>
+  <TipoSercicos>Apoio divulgação da atividade, produtos e serviços</TipoSercicos>
+  <TipoSercicos>Apoio divulgação da atividade, produtos e serviços</TipoSercicos>
+  <TipoSercicos>Contacto com investidores e entidades financeiras</TipoSercicos>
+  <TipoSercicos>Contacto com investidores e entidades financeiras</TipoSercicos>
+  <TipoSercicos>Contacto com investidores e entidades financeiras</TipoSercicos>
+  <TipoSercicos>Contacto com investidores e entidades financeiras</TipoSercicos>
+  <TipoSercicos>test</TipoSercicos>
+  <TipoSercicos>test</TipoSercicos>
+  <TipoSercicos>test</TipoSercicos>
+  <TipoSercicos>test</TipoSercicos>
+  <TipoEspaco>Gabinete individual / co-working</TipoEspaco>
+  <TipoEspaco>Gabinete virtual</TipoEspaco>
+  <TipoEspaco>Sala de reuniões e de formação</TipoEspaco>
+  <TipoEspaco>test</TipoEspaco>
+  <TipoEspaco>Gabinete individual / co-working</TipoEspaco>
+  <TipoEspaco>Gabinete virtual</TipoEspaco>
+  <TipoEspaco>Sala de reuniões e de formação</TipoEspaco>
+  <TipoEspaco>test</TipoEspaco>
+  <TipoEspaco>Gabinete individual / co-working</TipoEspaco>
+  <TipoEspaco>Gabinete virtual</TipoEspaco>
+  <TipoEspaco>Sala de reuniões e de formação</TipoEspaco>
+  <TipoEspaco>test</TipoEspaco>
+  <TipoEspaco>Gabinete individual / co-working</TipoEspaco>
+  <TipoEspaco>Gabinete virtual</TipoEspaco>
+  <TipoEspaco>Sala de reuniões e de formação</TipoEspaco>
+  <TipoEspaco>test</TipoEspaco>
+  <TipoEspaco>Gabinete individual / co-working</TipoEspaco>
+  <TipoEspaco>Gabinete virtual</TipoEspaco>
+  <TipoEspaco>Sala de reuniões e de formação</TipoEspaco>
+  <TipoEspaco>test</TipoEspaco>
+  <TipoEspaco>Gabinete individual / co-working</TipoEspaco>
+  <TipoEspaco>Gabinete virtual</TipoEspaco>
+  <TipoEspaco>Sala de reuniões e de formação</TipoEspaco>
+  <TipoEspaco>test</TipoEspaco>
+  <TipoEspaco>Gabinete individual / co-working</TipoEspaco>
+  <TipoEspaco>Gabinete virtual</TipoEspaco>
+  <TipoEspaco>Sala de reuniões e de formação</TipoEspaco>
+  <TipoEspaco>test</TipoEspaco>
+  <TipoEspaco>Gabinete individual / co-working</TipoEspaco>
+  <TipoEspaco>Gabinete virtual</TipoEspaco>
+  <TipoEspaco>Sala de reuniões e de formação</TipoEspaco>
+  <TipoEspaco>test</TipoEspaco>
+  <TipoEspaco>Gabinete individual / co-working</TipoEspaco>
+  <TipoEspaco>Gabinete virtual</TipoEspaco>
+  <TipoEspaco>Sala de reuniões e de formação</TipoEspaco>
+  <TipoEspaco>test</TipoEspaco>
+  <TipoEspaco>Gabinete individual / co-working</TipoEspaco>
+  <TipoEspaco>Gabinete virtual</TipoEspaco>
+  <TipoEspaco>Sala de reuniões e de formação</TipoEspaco>
+  <TipoEspaco>test</TipoEspaco>
+  <TipoDeInstalacao>Universidade de Aveiro Incubator</TipoDeInstalacao>
+  <TipoDeInstalacao>Design Factory Aveiro</TipoDeInstalacao>
+</parques>

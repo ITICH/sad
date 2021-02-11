@@ -203,6 +203,36 @@ namespace ITICH.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fundoGAR22ww {
+            get {
+                object obj = ResourceManager.GetObject("fundoGAR22ww", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fundoGraf222 {
+            get {
+                object obj = ResourceManager.GetObject("fundoGraf222", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fundografico1 {
+            get {
+                object obj = ResourceManager.GetObject("fundografico1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap funGraf {
             get {
                 object obj = ResourceManager.GetObject("funGraf", resourceCulture);

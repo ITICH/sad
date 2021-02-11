@@ -103,5 +103,10 @@ namespace ITICH
                 this.ValidarConta_Load(sender, e);
             }
         }
+
+        private void listBox_contas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

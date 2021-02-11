@@ -231,6 +231,7 @@
     <Compile Include="RegistoParques\RegistoParque.designer.cs">
       <DependentUpon>RegistoParque.cs</DependentUpon>
     </Compile>
+    <Compile Include="Simulacoes\CriarXml.cs" />
     <Compile Include="Simulacoes\Historico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -443,6 +444,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\biography.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Xml\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundografico1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundoGraf222.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundoGAR22ww.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.2.0.0\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.2.0.0\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />

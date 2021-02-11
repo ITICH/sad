@@ -30,7 +30,8 @@ namespace ITICH
                 //chart1.Series["Volume"].IsValueShownAsLabel = true;
                 chart1.DataSource = dt;
                 chart1.DataBind();
-            }else if (i == 2)
+            }
+            else if (i == 2)
             {
                // chart_fDesenvolvimento.Series["Area"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
                 chart_fDesenvolvimento.Series["Areas"].XValueMember = "nome_area";
@@ -74,27 +75,6 @@ namespace ITICH
                 i+=1;
             }*/
         }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void tab1_Load(object sender, EventArgs e)
         {
             //grafico Volume de Negócios
@@ -120,99 +100,28 @@ namespace ITICH
             this.chart_fDesenvolvimento.Series["Volume"].YValueMembers = "total";*/
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel8_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel11_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel10_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel9_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chart1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void chart_fDesenvolvimento_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chart2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel8_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chart_fases_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void panel4_Paint(object sender, PaintEventArgs e) { }
+        private void panel3_Paint(object sender, PaintEventArgs e) { }
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e) { }
+        private void panel5_Paint(object sender, PaintEventArgs e) { }
+        private void label1_Click(object sender, EventArgs e){}
+        private void label2_Click(object sender, EventArgs e){}
+        private void pictureBox2_Click(object sender, EventArgs e){}
+        private void panel8_Paint(object sender, PaintEventArgs e){}
+        private void panel7_Paint(object sender, PaintEventArgs e){}
+        private void panel6_Paint(object sender, PaintEventArgs e){}
+        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e){}
+        private void panel11_Paint(object sender, PaintEventArgs e){}
+        private void pictureBox3_Click(object sender, EventArgs e){}
+        private void panel10_Paint(object sender, PaintEventArgs e){}
+        private void panel9_Paint(object sender, PaintEventArgs e){}
+        private void label3_Click(object sender, EventArgs e){}
+        private void label2_Click_1(object sender, EventArgs e){}
+        private void chart1_Click(object sender, EventArgs e){}
+        private void chart_fDesenvolvimento_Click(object sender, EventArgs e){}
+        private void chart2_Click(object sender, EventArgs e){}
+        private void panel8_Paint_1(object sender, PaintEventArgs e){}
+        private void label4_Click(object sender, EventArgs e){}
+        private void chart_fases_Click(object sender, EventArgs e) {}
     }
 }

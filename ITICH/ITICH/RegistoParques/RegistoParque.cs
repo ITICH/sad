@@ -581,5 +581,10 @@ namespace ITICH.RegistoParques
                 Close();
             }
         }
+
+        private void RegistoParque_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<parque nome="PCI - Creative Science Park Aveiro Region         ">
+  <Morada>Avenida 25 de Abril 3830-044 Ílhavo</Morada>
+  <FaseDesenvolvimento>Fase IV</FaseDesenvolvimento>
+  <VolumeNegocios>7500000,0000</VolumeNegocios>
+  <Areas>
+    <AreaNegocio>Agroindustrial                                    </AreaNegocio>
+    <AreaNegocio>Energia                                           </AreaNegocio>
+    <AreaNegocio>Materiais                                         </AreaNegocio>
+    <AreaNegocio>TICE                                              </AreaNegocio>
+    <AreaNegocio>Mar                                               </AreaNegocio>
+  </Areas>
+  <TipoDeServicos>
+    <Sercico>Acompanhamento na gestão operacional do negócio</Sercico>
+    <Sercico>Assessoria e apoio jurídico</Sercico>
+    <Sercico>Apoio consolidação do modelo e plano de negócios</Sercico>
+    <Sercico>Apoio proteção direitos de propriedade intelectual</Sercico>
+    <Sercico>Acesso portefólio de competências e serviços da UA</Sercico>
+    <Sercico>Apoio constituição da empresa, início de atividade</Sercico>
+    <Sercico>Apoio na estruturação da estratégia de comunicação</Sercico>
+    <Sercico>Apoio divulgação da atividade, produtos e serviços</Sercico>
+    <Sercico>Contacto com investidores e entidades financeiras</Sercico>
+    <Sercico>test</Sercico>
+  </TipoDeServicos>
+  <TiposDeEspaco>
+    <Espaco>Gabinete individual / co-working</Espaco>
+    <Espaco>Gabinete virtual</Espaco>
+    <Espaco>Sala de reuniões e de formação</Espaco>
+    <Espaco>test</Espaco>
+  </TiposDeEspaco>
+  <Instalacoes>
+    <TipoDeInstalacao>Universidade de Aveiro Incubator</TipoDeInstalacao>
+    <TipoDeInstalacao>Design Factory Aveiro</TipoDeInstalacao>
+  </Instalacoes>
+</parque>

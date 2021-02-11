@@ -29,6 +29,12 @@ namespace ITICH.RegistoParques
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -148,9 +154,10 @@ namespace ITICH.RegistoParques
             // 
             // button_Confirmar
             // 
-            this.button_Confirmar.Location = new System.Drawing.Point(747, 1145);
+            this.button_Confirmar.Location = new System.Drawing.Point(996, 1409);
+            this.button_Confirmar.Margin = new System.Windows.Forms.Padding(4);
             this.button_Confirmar.Name = "button_Confirmar";
-            this.button_Confirmar.Size = new System.Drawing.Size(75, 23);
+            this.button_Confirmar.Size = new System.Drawing.Size(100, 28);
             this.button_Confirmar.TabIndex = 52;
             this.button_Confirmar.Text = "Confirmar";
             this.button_Confirmar.UseVisualStyleBackColor = true;
@@ -158,90 +165,101 @@ namespace ITICH.RegistoParques
             // 
             // textBox_MoradaGeral
             // 
-            this.textBox_MoradaGeral.Location = new System.Drawing.Point(278, 32);
+            this.textBox_MoradaGeral.Location = new System.Drawing.Point(371, 39);
+            this.textBox_MoradaGeral.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_MoradaGeral.Name = "textBox_MoradaGeral";
-            this.textBox_MoradaGeral.Size = new System.Drawing.Size(357, 20);
+            this.textBox_MoradaGeral.Size = new System.Drawing.Size(475, 22);
             this.textBox_MoradaGeral.TabIndex = 65;
             // 
             // comboBox_JuridicialGeral
             // 
             this.comboBox_JuridicialGeral.FormattingEnabled = true;
-            this.comboBox_JuridicialGeral.Location = new System.Drawing.Point(91, 148);
+            this.comboBox_JuridicialGeral.Location = new System.Drawing.Point(121, 182);
+            this.comboBox_JuridicialGeral.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_JuridicialGeral.Name = "comboBox_JuridicialGeral";
-            this.comboBox_JuridicialGeral.Size = new System.Drawing.Size(136, 21);
+            this.comboBox_JuridicialGeral.Size = new System.Drawing.Size(180, 24);
             this.comboBox_JuridicialGeral.TabIndex = 72;
             // 
             // textBox_NomeGeral
             // 
-            this.textBox_NomeGeral.Location = new System.Drawing.Point(6, 32);
+            this.textBox_NomeGeral.Location = new System.Drawing.Point(8, 39);
+            this.textBox_NomeGeral.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_NomeGeral.Name = "textBox_NomeGeral";
-            this.textBox_NomeGeral.Size = new System.Drawing.Size(266, 20);
+            this.textBox_NomeGeral.Size = new System.Drawing.Size(353, 22);
             this.textBox_NomeGeral.TabIndex = 64;
             // 
             // comboBox_FaseGeral
             // 
             this.comboBox_FaseGeral.FormattingEnabled = true;
-            this.comboBox_FaseGeral.Location = new System.Drawing.Point(233, 148);
+            this.comboBox_FaseGeral.Location = new System.Drawing.Point(311, 182);
+            this.comboBox_FaseGeral.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_FaseGeral.Name = "comboBox_FaseGeral";
-            this.comboBox_FaseGeral.Size = new System.Drawing.Size(130, 21);
+            this.comboBox_FaseGeral.Size = new System.Drawing.Size(172, 24);
             this.comboBox_FaseGeral.TabIndex = 74;
             // 
             // label_NomeGeral
             // 
             this.label_NomeGeral.AutoSize = true;
-            this.label_NomeGeral.Location = new System.Drawing.Point(6, 16);
+            this.label_NomeGeral.Location = new System.Drawing.Point(8, 20);
+            this.label_NomeGeral.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_NomeGeral.Name = "label_NomeGeral";
-            this.label_NomeGeral.Size = new System.Drawing.Size(35, 13);
+            this.label_NomeGeral.Size = new System.Drawing.Size(45, 17);
             this.label_NomeGeral.TabIndex = 56;
             this.label_NomeGeral.Text = "Nome";
             // 
             // label_EntidadeGeral
             // 
             this.label_EntidadeGeral.AutoSize = true;
-            this.label_EntidadeGeral.Location = new System.Drawing.Point(6, 94);
+            this.label_EntidadeGeral.Location = new System.Drawing.Point(8, 116);
+            this.label_EntidadeGeral.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_EntidadeGeral.Name = "label_EntidadeGeral";
-            this.label_EntidadeGeral.Size = new System.Drawing.Size(89, 13);
+            this.label_EntidadeGeral.Size = new System.Drawing.Size(119, 17);
             this.label_EntidadeGeral.TabIndex = 57;
             this.label_EntidadeGeral.Text = "Entidade Gestora";
             // 
             // textBox_EntidadeGeral
             // 
-            this.textBox_EntidadeGeral.Location = new System.Drawing.Point(6, 110);
+            this.textBox_EntidadeGeral.Location = new System.Drawing.Point(8, 135);
+            this.textBox_EntidadeGeral.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_EntidadeGeral.Name = "textBox_EntidadeGeral";
-            this.textBox_EntidadeGeral.Size = new System.Drawing.Size(221, 20);
+            this.textBox_EntidadeGeral.Size = new System.Drawing.Size(293, 22);
             this.textBox_EntidadeGeral.TabIndex = 71;
             // 
             // label_MoradaGeral
             // 
             this.label_MoradaGeral.AutoSize = true;
-            this.label_MoradaGeral.Location = new System.Drawing.Point(278, 16);
+            this.label_MoradaGeral.Location = new System.Drawing.Point(371, 20);
+            this.label_MoradaGeral.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_MoradaGeral.Name = "label_MoradaGeral";
-            this.label_MoradaGeral.Size = new System.Drawing.Size(43, 13);
+            this.label_MoradaGeral.Size = new System.Drawing.Size(56, 17);
             this.label_MoradaGeral.TabIndex = 59;
             this.label_MoradaGeral.Text = "Morada";
             // 
             // label_FaseGeral
             // 
             this.label_FaseGeral.AutoSize = true;
-            this.label_FaseGeral.Location = new System.Drawing.Point(233, 132);
+            this.label_FaseGeral.Location = new System.Drawing.Point(311, 162);
+            this.label_FaseGeral.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_FaseGeral.Name = "label_FaseGeral";
-            this.label_FaseGeral.Size = new System.Drawing.Size(130, 13);
+            this.label_FaseGeral.Size = new System.Drawing.Size(171, 17);
             this.label_FaseGeral.TabIndex = 60;
             this.label_FaseGeral.Text = "Fase de Desenvolvimento";
             // 
             // textBox_ConcelhoGeral
             // 
-            this.textBox_ConcelhoGeral.Location = new System.Drawing.Point(6, 71);
+            this.textBox_ConcelhoGeral.Location = new System.Drawing.Point(8, 87);
+            this.textBox_ConcelhoGeral.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_ConcelhoGeral.Name = "textBox_ConcelhoGeral";
-            this.textBox_ConcelhoGeral.Size = new System.Drawing.Size(130, 20);
+            this.textBox_ConcelhoGeral.Size = new System.Drawing.Size(172, 22);
             this.textBox_ConcelhoGeral.TabIndex = 66;
             // 
             // checkBox_InteresseGeral
             // 
             this.checkBox_InteresseGeral.AutoSize = true;
-            this.checkBox_InteresseGeral.Location = new System.Drawing.Point(614, 151);
+            this.checkBox_InteresseGeral.Location = new System.Drawing.Point(819, 186);
+            this.checkBox_InteresseGeral.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox_InteresseGeral.Name = "checkBox_InteresseGeral";
-            this.checkBox_InteresseGeral.Size = new System.Drawing.Size(112, 17);
+            this.checkBox_InteresseGeral.Size = new System.Drawing.Size(145, 21);
             this.checkBox_InteresseGeral.TabIndex = 76;
             this.checkBox_InteresseGeral.Text = "Interesse público?";
             this.checkBox_InteresseGeral.UseVisualStyleBackColor = true;
@@ -249,9 +267,10 @@ namespace ITICH.RegistoParques
             // label_ConcelhoGeral
             // 
             this.label_ConcelhoGeral.AutoSize = true;
-            this.label_ConcelhoGeral.Location = new System.Drawing.Point(6, 55);
+            this.label_ConcelhoGeral.Location = new System.Drawing.Point(8, 68);
+            this.label_ConcelhoGeral.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_ConcelhoGeral.Name = "label_ConcelhoGeral";
-            this.label_ConcelhoGeral.Size = new System.Drawing.Size(52, 13);
+            this.label_ConcelhoGeral.Size = new System.Drawing.Size(67, 17);
             this.label_ConcelhoGeral.TabIndex = 53;
             this.label_ConcelhoGeral.Text = "Concelho";
             // 
@@ -259,26 +278,29 @@ namespace ITICH.RegistoParques
             // 
             this.dateTimePicker_AnoGeral.CustomFormat = "yyyy-MM-dd";
             this.dateTimePicker_AnoGeral.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker_AnoGeral.Location = new System.Drawing.Point(6, 149);
+            this.dateTimePicker_AnoGeral.Location = new System.Drawing.Point(8, 183);
+            this.dateTimePicker_AnoGeral.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker_AnoGeral.MaxDate = new System.DateTime(2021, 1, 4, 0, 0, 0, 0);
             this.dateTimePicker_AnoGeral.Name = "dateTimePicker_AnoGeral";
-            this.dateTimePicker_AnoGeral.Size = new System.Drawing.Size(79, 20);
+            this.dateTimePicker_AnoGeral.Size = new System.Drawing.Size(104, 22);
             this.dateTimePicker_AnoGeral.TabIndex = 70;
             this.dateTimePicker_AnoGeral.Value = new System.DateTime(2021, 1, 4, 0, 0, 0, 0);
             // 
             // textBox_DistritoGeral
             // 
-            this.textBox_DistritoGeral.Location = new System.Drawing.Point(142, 71);
+            this.textBox_DistritoGeral.Location = new System.Drawing.Point(189, 87);
+            this.textBox_DistritoGeral.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_DistritoGeral.Name = "textBox_DistritoGeral";
-            this.textBox_DistritoGeral.Size = new System.Drawing.Size(130, 20);
+            this.textBox_DistritoGeral.Size = new System.Drawing.Size(172, 22);
             this.textBox_DistritoGeral.TabIndex = 67;
             // 
             // checkBox_FinsGeral
             // 
             this.checkBox_FinsGeral.AutoSize = true;
-            this.checkBox_FinsGeral.Location = new System.Drawing.Point(505, 151);
+            this.checkBox_FinsGeral.Location = new System.Drawing.Point(673, 186);
+            this.checkBox_FinsGeral.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox_FinsGeral.Name = "checkBox_FinsGeral";
-            this.checkBox_FinsGeral.Size = new System.Drawing.Size(103, 17);
+            this.checkBox_FinsGeral.Size = new System.Drawing.Size(133, 21);
             this.checkBox_FinsGeral.TabIndex = 75;
             this.checkBox_FinsGeral.Text = "Fins Lucrativos?";
             this.checkBox_FinsGeral.UseVisualStyleBackColor = true;
@@ -286,76 +308,85 @@ namespace ITICH.RegistoParques
             // label_DistritoGeral
             // 
             this.label_DistritoGeral.AutoSize = true;
-            this.label_DistritoGeral.Location = new System.Drawing.Point(142, 55);
+            this.label_DistritoGeral.Location = new System.Drawing.Point(189, 68);
+            this.label_DistritoGeral.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_DistritoGeral.Name = "label_DistritoGeral";
-            this.label_DistritoGeral.Size = new System.Drawing.Size(39, 13);
+            this.label_DistritoGeral.Size = new System.Drawing.Size(52, 17);
             this.label_DistritoGeral.TabIndex = 62;
             this.label_DistritoGeral.Text = "Distrito";
             // 
             // label_AnoGeral
             // 
             this.label_AnoGeral.AutoSize = true;
-            this.label_AnoGeral.Location = new System.Drawing.Point(6, 133);
+            this.label_AnoGeral.Location = new System.Drawing.Point(8, 164);
+            this.label_AnoGeral.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_AnoGeral.Name = "label_AnoGeral";
-            this.label_AnoGeral.Size = new System.Drawing.Size(56, 13);
+            this.label_AnoGeral.Size = new System.Drawing.Size(69, 17);
             this.label_AnoGeral.TabIndex = 61;
             this.label_AnoGeral.Text = "Ano Início";
             // 
             // textBox_EmailGeral
             // 
-            this.textBox_EmailGeral.Location = new System.Drawing.Point(278, 71);
+            this.textBox_EmailGeral.Location = new System.Drawing.Point(371, 87);
+            this.textBox_EmailGeral.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_EmailGeral.Name = "textBox_EmailGeral";
-            this.textBox_EmailGeral.Size = new System.Drawing.Size(221, 20);
+            this.textBox_EmailGeral.Size = new System.Drawing.Size(293, 22);
             this.textBox_EmailGeral.TabIndex = 68;
             // 
             // label_CapitalGeral
             // 
             this.label_CapitalGeral.AutoSize = true;
-            this.label_CapitalGeral.Location = new System.Drawing.Point(369, 133);
+            this.label_CapitalGeral.Location = new System.Drawing.Point(492, 164);
+            this.label_CapitalGeral.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_CapitalGeral.Name = "label_CapitalGeral";
-            this.label_CapitalGeral.Size = new System.Drawing.Size(71, 13);
+            this.label_CapitalGeral.Size = new System.Drawing.Size(93, 17);
             this.label_CapitalGeral.TabIndex = 58;
             this.label_CapitalGeral.Text = "Capital Social";
             // 
             // label_EmailGeral
             // 
             this.label_EmailGeral.AutoSize = true;
-            this.label_EmailGeral.Location = new System.Drawing.Point(278, 55);
+            this.label_EmailGeral.Location = new System.Drawing.Point(371, 68);
+            this.label_EmailGeral.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_EmailGeral.Name = "label_EmailGeral";
-            this.label_EmailGeral.Size = new System.Drawing.Size(32, 13);
+            this.label_EmailGeral.Size = new System.Drawing.Size(42, 17);
             this.label_EmailGeral.TabIndex = 55;
             this.label_EmailGeral.Text = "Email";
             // 
             // textBox_CapitalGeral
             // 
-            this.textBox_CapitalGeral.Location = new System.Drawing.Point(369, 149);
+            this.textBox_CapitalGeral.Location = new System.Drawing.Point(492, 183);
+            this.textBox_CapitalGeral.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_CapitalGeral.Name = "textBox_CapitalGeral";
-            this.textBox_CapitalGeral.Size = new System.Drawing.Size(130, 20);
+            this.textBox_CapitalGeral.Size = new System.Drawing.Size(172, 22);
             this.textBox_CapitalGeral.TabIndex = 73;
             // 
             // label_JuridicialGeral
             // 
             this.label_JuridicialGeral.AutoSize = true;
-            this.label_JuridicialGeral.Location = new System.Drawing.Point(91, 132);
+            this.label_JuridicialGeral.Location = new System.Drawing.Point(121, 162);
+            this.label_JuridicialGeral.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_JuridicialGeral.Name = "label_JuridicialGeral";
-            this.label_JuridicialGeral.Size = new System.Drawing.Size(104, 13);
+            this.label_JuridicialGeral.Size = new System.Drawing.Size(140, 17);
             this.label_JuridicialGeral.TabIndex = 54;
             this.label_JuridicialGeral.Text = "Carateristica Juridica";
             // 
             // label_TelefoneGeral
             // 
             this.label_TelefoneGeral.AutoSize = true;
-            this.label_TelefoneGeral.Location = new System.Drawing.Point(505, 55);
+            this.label_TelefoneGeral.Location = new System.Drawing.Point(673, 68);
+            this.label_TelefoneGeral.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_TelefoneGeral.Name = "label_TelefoneGeral";
-            this.label_TelefoneGeral.Size = new System.Drawing.Size(49, 13);
+            this.label_TelefoneGeral.Size = new System.Drawing.Size(64, 17);
             this.label_TelefoneGeral.TabIndex = 63;
             this.label_TelefoneGeral.Text = "Telefone";
             // 
             // textBox_TelefoneGeral
             // 
-            this.textBox_TelefoneGeral.Location = new System.Drawing.Point(505, 71);
+            this.textBox_TelefoneGeral.Location = new System.Drawing.Point(673, 87);
+            this.textBox_TelefoneGeral.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_TelefoneGeral.Name = "textBox_TelefoneGeral";
-            this.textBox_TelefoneGeral.Size = new System.Drawing.Size(130, 20);
+            this.textBox_TelefoneGeral.Size = new System.Drawing.Size(172, 22);
             this.textBox_TelefoneGeral.TabIndex = 69;
             // 
             // groupBox_DadosGerais
@@ -386,10 +417,12 @@ namespace ITICH.RegistoParques
             this.groupBox_DadosGerais.Controls.Add(this.label_ConcelhoGeral);
             this.groupBox_DadosGerais.Controls.Add(this.dateTimePicker_AnoGeral);
             this.groupBox_DadosGerais.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox_DadosGerais.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox_DadosGerais.Location = new System.Drawing.Point(12, 12);
+            this.groupBox_DadosGerais.ForeColor = System.Drawing.Color.White;
+            this.groupBox_DadosGerais.Location = new System.Drawing.Point(16, 15);
+            this.groupBox_DadosGerais.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox_DadosGerais.Name = "groupBox_DadosGerais";
-            this.groupBox_DadosGerais.Size = new System.Drawing.Size(810, 178);
+            this.groupBox_DadosGerais.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox_DadosGerais.Size = new System.Drawing.Size(1080, 219);
             this.groupBox_DadosGerais.TabIndex = 77;
             this.groupBox_DadosGerais.TabStop = false;
             this.groupBox_DadosGerais.Text = "Dados Gerais";
@@ -401,10 +434,12 @@ namespace ITICH.RegistoParques
             this.groupBox_Area.Controls.Add(this.button_RemoverArea);
             this.groupBox_Area.Controls.Add(this.dataGridView_Area);
             this.groupBox_Area.Controls.Add(this.button_CriarArea);
-            this.groupBox_Area.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox_Area.Location = new System.Drawing.Point(12, 196);
+            this.groupBox_Area.ForeColor = System.Drawing.Color.White;
+            this.groupBox_Area.Location = new System.Drawing.Point(16, 241);
+            this.groupBox_Area.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox_Area.Name = "groupBox_Area";
-            this.groupBox_Area.Size = new System.Drawing.Size(399, 234);
+            this.groupBox_Area.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox_Area.Size = new System.Drawing.Size(532, 288);
             this.groupBox_Area.TabIndex = 1;
             this.groupBox_Area.TabStop = false;
             this.groupBox_Area.Text = "Áreas de Negócio com Maior Representação";
@@ -414,10 +449,11 @@ namespace ITICH.RegistoParques
             this.comboBox_Area.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBox_Area.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox_Area.FormattingEnabled = true;
-            this.comboBox_Area.Location = new System.Drawing.Point(8, 18);
+            this.comboBox_Area.Location = new System.Drawing.Point(11, 22);
+            this.comboBox_Area.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_Area.Name = "comboBox_Area";
             this.comboBox_Area.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboBox_Area.Size = new System.Drawing.Size(251, 21);
+            this.comboBox_Area.Size = new System.Drawing.Size(333, 24);
             this.comboBox_Area.TabIndex = 1;
             this.comboBox_Area.Text = "Selecione Área...";
             // 
@@ -425,9 +461,10 @@ namespace ITICH.RegistoParques
             // 
             this.button_AdicionarArea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button_AdicionarArea.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button_AdicionarArea.Location = new System.Drawing.Point(265, 18);
+            this.button_AdicionarArea.Location = new System.Drawing.Point(353, 22);
+            this.button_AdicionarArea.Margin = new System.Windows.Forms.Padding(4);
             this.button_AdicionarArea.Name = "button_AdicionarArea";
-            this.button_AdicionarArea.Size = new System.Drawing.Size(64, 21);
+            this.button_AdicionarArea.Size = new System.Drawing.Size(85, 26);
             this.button_AdicionarArea.TabIndex = 2;
             this.button_AdicionarArea.Text = "Adicionar";
             this.button_AdicionarArea.UseVisualStyleBackColor = true;
@@ -438,9 +475,10 @@ namespace ITICH.RegistoParques
             this.button_RemoverArea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button_RemoverArea.Enabled = false;
             this.button_RemoverArea.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button_RemoverArea.Location = new System.Drawing.Point(335, 18);
+            this.button_RemoverArea.Location = new System.Drawing.Point(447, 22);
+            this.button_RemoverArea.Margin = new System.Windows.Forms.Padding(4);
             this.button_RemoverArea.Name = "button_RemoverArea";
-            this.button_RemoverArea.Size = new System.Drawing.Size(58, 21);
+            this.button_RemoverArea.Size = new System.Drawing.Size(77, 26);
             this.button_RemoverArea.TabIndex = 3;
             this.button_RemoverArea.Text = "Remover";
             this.button_RemoverArea.UseVisualStyleBackColor = true;
@@ -453,16 +491,21 @@ namespace ITICH.RegistoParques
             this.dataGridView_Area.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Area.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.areaNome});
-            this.dataGridView_Area.Location = new System.Drawing.Point(6, 45);
+            this.dataGridView_Area.Location = new System.Drawing.Point(8, 55);
+            this.dataGridView_Area.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_Area.Name = "dataGridView_Area";
+            this.dataGridView_Area.RowHeadersWidth = 51;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView_Area.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_Area.ShowEditingIcon = false;
-            this.dataGridView_Area.Size = new System.Drawing.Size(387, 156);
+            this.dataGridView_Area.Size = new System.Drawing.Size(516, 192);
             this.dataGridView_Area.TabIndex = 4;
             // 
             // areaNome
             // 
             this.areaNome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.areaNome.HeaderText = "Nome";
+            this.areaNome.MinimumWidth = 6;
             this.areaNome.Name = "areaNome";
             this.areaNome.ReadOnly = true;
             this.areaNome.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -472,9 +515,10 @@ namespace ITICH.RegistoParques
             // 
             this.button_CriarArea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button_CriarArea.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button_CriarArea.Location = new System.Drawing.Point(6, 207);
+            this.button_CriarArea.Location = new System.Drawing.Point(8, 255);
+            this.button_CriarArea.Margin = new System.Windows.Forms.Padding(4);
             this.button_CriarArea.Name = "button_CriarArea";
-            this.button_CriarArea.Size = new System.Drawing.Size(79, 21);
+            this.button_CriarArea.Size = new System.Drawing.Size(105, 26);
             this.button_CriarArea.TabIndex = 5;
             this.button_CriarArea.Text = "Criar Área";
             this.button_CriarArea.UseVisualStyleBackColor = true;
@@ -487,10 +531,12 @@ namespace ITICH.RegistoParques
             this.groupBox_Dominio.Controls.Add(this.comboBox_Dominio);
             this.groupBox_Dominio.Controls.Add(this.dataGridView_Dominio);
             this.groupBox_Dominio.Controls.Add(this.button_CriarDominio);
-            this.groupBox_Dominio.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox_Dominio.Location = new System.Drawing.Point(417, 196);
+            this.groupBox_Dominio.ForeColor = System.Drawing.Color.White;
+            this.groupBox_Dominio.Location = new System.Drawing.Point(556, 241);
+            this.groupBox_Dominio.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox_Dominio.Name = "groupBox_Dominio";
-            this.groupBox_Dominio.Size = new System.Drawing.Size(405, 234);
+            this.groupBox_Dominio.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox_Dominio.Size = new System.Drawing.Size(540, 288);
             this.groupBox_Dominio.TabIndex = 2;
             this.groupBox_Dominio.TabStop = false;
             this.groupBox_Dominio.Text = "Domínios Científicos e Tecnológicos Preferencias";
@@ -500,9 +546,10 @@ namespace ITICH.RegistoParques
             this.button_RemoverDominio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button_RemoverDominio.Enabled = false;
             this.button_RemoverDominio.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button_RemoverDominio.Location = new System.Drawing.Point(341, 18);
+            this.button_RemoverDominio.Location = new System.Drawing.Point(455, 22);
+            this.button_RemoverDominio.Margin = new System.Windows.Forms.Padding(4);
             this.button_RemoverDominio.Name = "button_RemoverDominio";
-            this.button_RemoverDominio.Size = new System.Drawing.Size(58, 21);
+            this.button_RemoverDominio.Size = new System.Drawing.Size(77, 26);
             this.button_RemoverDominio.TabIndex = 8;
             this.button_RemoverDominio.Text = "Remover";
             this.button_RemoverDominio.UseVisualStyleBackColor = true;
@@ -512,9 +559,10 @@ namespace ITICH.RegistoParques
             // 
             this.button_AdicionarDominio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button_AdicionarDominio.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button_AdicionarDominio.Location = new System.Drawing.Point(276, 18);
+            this.button_AdicionarDominio.Location = new System.Drawing.Point(368, 22);
+            this.button_AdicionarDominio.Margin = new System.Windows.Forms.Padding(4);
             this.button_AdicionarDominio.Name = "button_AdicionarDominio";
-            this.button_AdicionarDominio.Size = new System.Drawing.Size(59, 21);
+            this.button_AdicionarDominio.Size = new System.Drawing.Size(79, 26);
             this.button_AdicionarDominio.TabIndex = 7;
             this.button_AdicionarDominio.Text = "Adicionar";
             this.button_AdicionarDominio.UseVisualStyleBackColor = true;
@@ -525,10 +573,11 @@ namespace ITICH.RegistoParques
             this.comboBox_Dominio.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBox_Dominio.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox_Dominio.FormattingEnabled = true;
-            this.comboBox_Dominio.Location = new System.Drawing.Point(6, 18);
+            this.comboBox_Dominio.Location = new System.Drawing.Point(8, 22);
+            this.comboBox_Dominio.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_Dominio.Name = "comboBox_Dominio";
             this.comboBox_Dominio.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboBox_Dominio.Size = new System.Drawing.Size(264, 21);
+            this.comboBox_Dominio.Size = new System.Drawing.Size(351, 24);
             this.comboBox_Dominio.TabIndex = 6;
             this.comboBox_Dominio.Text = "Selecione Domínio...";
             // 
@@ -539,16 +588,21 @@ namespace ITICH.RegistoParques
             this.dataGridView_Dominio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Dominio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dominioNome});
-            this.dataGridView_Dominio.Location = new System.Drawing.Point(6, 45);
+            this.dataGridView_Dominio.Location = new System.Drawing.Point(8, 55);
+            this.dataGridView_Dominio.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_Dominio.Name = "dataGridView_Dominio";
+            this.dataGridView_Dominio.RowHeadersWidth = 51;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView_Dominio.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_Dominio.ShowEditingIcon = false;
-            this.dataGridView_Dominio.Size = new System.Drawing.Size(393, 156);
+            this.dataGridView_Dominio.Size = new System.Drawing.Size(524, 192);
             this.dataGridView_Dominio.TabIndex = 9;
             // 
             // dominioNome
             // 
             this.dominioNome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dominioNome.HeaderText = "Nome";
+            this.dominioNome.MinimumWidth = 6;
             this.dominioNome.Name = "dominioNome";
             this.dominioNome.ReadOnly = true;
             this.dominioNome.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -559,9 +613,10 @@ namespace ITICH.RegistoParques
             this.button_CriarDominio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button_CriarDominio.Cursor = System.Windows.Forms.Cursors.Default;
             this.button_CriarDominio.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button_CriarDominio.Location = new System.Drawing.Point(6, 207);
+            this.button_CriarDominio.Location = new System.Drawing.Point(8, 255);
+            this.button_CriarDominio.Margin = new System.Windows.Forms.Padding(4);
             this.button_CriarDominio.Name = "button_CriarDominio";
-            this.button_CriarDominio.Size = new System.Drawing.Size(79, 21);
+            this.button_CriarDominio.Size = new System.Drawing.Size(105, 26);
             this.button_CriarDominio.TabIndex = 10;
             this.button_CriarDominio.Text = "Criar Domínio";
             this.button_CriarDominio.UseVisualStyleBackColor = true;
@@ -580,10 +635,12 @@ namespace ITICH.RegistoParques
             this.groupBox_Indubadora.Controls.Add(this.label_VolumeNegocio);
             this.groupBox_Indubadora.Controls.Add(this.textBox_RHIncubadora);
             this.groupBox_Indubadora.Controls.Add(this.label_IncubadoraRH);
-            this.groupBox_Indubadora.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox_Indubadora.Location = new System.Drawing.Point(12, 436);
+            this.groupBox_Indubadora.ForeColor = System.Drawing.Color.White;
+            this.groupBox_Indubadora.Location = new System.Drawing.Point(16, 537);
+            this.groupBox_Indubadora.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox_Indubadora.Name = "groupBox_Indubadora";
-            this.groupBox_Indubadora.Size = new System.Drawing.Size(810, 432);
+            this.groupBox_Indubadora.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox_Indubadora.Size = new System.Drawing.Size(1080, 532);
             this.groupBox_Indubadora.TabIndex = 79;
             this.groupBox_Indubadora.TabStop = false;
             this.groupBox_Indubadora.Text = "Incubadoras";
@@ -595,10 +652,12 @@ namespace ITICH.RegistoParques
             this.groupBox_Servico.Controls.Add(this.textBox_Servico);
             this.groupBox_Servico.Controls.Add(this.button_RemoverServico);
             this.groupBox_Servico.Controls.Add(this.dataGridView_Servico);
-            this.groupBox_Servico.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox_Servico.Location = new System.Drawing.Point(405, 61);
+            this.groupBox_Servico.ForeColor = System.Drawing.Color.White;
+            this.groupBox_Servico.Location = new System.Drawing.Point(540, 75);
+            this.groupBox_Servico.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox_Servico.Name = "groupBox_Servico";
-            this.groupBox_Servico.Size = new System.Drawing.Size(393, 216);
+            this.groupBox_Servico.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox_Servico.Size = new System.Drawing.Size(524, 266);
             this.groupBox_Servico.TabIndex = 18;
             this.groupBox_Servico.TabStop = false;
             this.groupBox_Servico.Text = "Tipo de Serviço";
@@ -606,9 +665,10 @@ namespace ITICH.RegistoParques
             // label_Servico
             // 
             this.label_Servico.AutoSize = true;
-            this.label_Servico.Location = new System.Drawing.Point(6, 16);
+            this.label_Servico.Location = new System.Drawing.Point(8, 20);
+            this.label_Servico.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_Servico.Name = "label_Servico";
-            this.label_Servico.Size = new System.Drawing.Size(128, 13);
+            this.label_Servico.Size = new System.Drawing.Size(168, 17);
             this.label_Servico.TabIndex = 17;
             this.label_Servico.Text = "Nome do Tipo de Serviço";
             // 
@@ -616,9 +676,10 @@ namespace ITICH.RegistoParques
             // 
             this.button_AdicionarServico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button_AdicionarServico.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button_AdicionarServico.Location = new System.Drawing.Point(259, 31);
+            this.button_AdicionarServico.Location = new System.Drawing.Point(345, 38);
+            this.button_AdicionarServico.Margin = new System.Windows.Forms.Padding(4);
             this.button_AdicionarServico.Name = "button_AdicionarServico";
-            this.button_AdicionarServico.Size = new System.Drawing.Size(64, 21);
+            this.button_AdicionarServico.Size = new System.Drawing.Size(85, 26);
             this.button_AdicionarServico.TabIndex = 7;
             this.button_AdicionarServico.Text = "Adicionar";
             this.button_AdicionarServico.UseVisualStyleBackColor = true;
@@ -626,9 +687,10 @@ namespace ITICH.RegistoParques
             // 
             // textBox_Servico
             // 
-            this.textBox_Servico.Location = new System.Drawing.Point(6, 32);
+            this.textBox_Servico.Location = new System.Drawing.Point(8, 39);
+            this.textBox_Servico.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_Servico.Name = "textBox_Servico";
-            this.textBox_Servico.Size = new System.Drawing.Size(205, 20);
+            this.textBox_Servico.Size = new System.Drawing.Size(272, 22);
             this.textBox_Servico.TabIndex = 16;
             // 
             // button_RemoverServico
@@ -636,9 +698,10 @@ namespace ITICH.RegistoParques
             this.button_RemoverServico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button_RemoverServico.Enabled = false;
             this.button_RemoverServico.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button_RemoverServico.Location = new System.Drawing.Point(329, 31);
+            this.button_RemoverServico.Location = new System.Drawing.Point(439, 38);
+            this.button_RemoverServico.Margin = new System.Windows.Forms.Padding(4);
             this.button_RemoverServico.Name = "button_RemoverServico";
-            this.button_RemoverServico.Size = new System.Drawing.Size(58, 21);
+            this.button_RemoverServico.Size = new System.Drawing.Size(77, 26);
             this.button_RemoverServico.TabIndex = 8;
             this.button_RemoverServico.Text = "Remover";
             this.button_RemoverServico.UseVisualStyleBackColor = true;
@@ -651,16 +714,21 @@ namespace ITICH.RegistoParques
             this.dataGridView_Servico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Servico.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2});
-            this.dataGridView_Servico.Location = new System.Drawing.Point(6, 58);
+            this.dataGridView_Servico.Location = new System.Drawing.Point(8, 71);
+            this.dataGridView_Servico.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_Servico.Name = "dataGridView_Servico";
+            this.dataGridView_Servico.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView_Servico.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_Servico.ShowEditingIcon = false;
-            this.dataGridView_Servico.Size = new System.Drawing.Size(381, 152);
+            this.dataGridView_Servico.Size = new System.Drawing.Size(508, 187);
             this.dataGridView_Servico.TabIndex = 9;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn2.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -673,10 +741,12 @@ namespace ITICH.RegistoParques
             this.groupBox_Espaco.Controls.Add(this.textBox_Espaco);
             this.groupBox_Espaco.Controls.Add(this.button_RemoverEspaco);
             this.groupBox_Espaco.Controls.Add(this.dataGridView_Espaco);
-            this.groupBox_Espaco.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox_Espaco.Location = new System.Drawing.Point(6, 61);
+            this.groupBox_Espaco.ForeColor = System.Drawing.Color.White;
+            this.groupBox_Espaco.Location = new System.Drawing.Point(8, 75);
+            this.groupBox_Espaco.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox_Espaco.Name = "groupBox_Espaco";
-            this.groupBox_Espaco.Size = new System.Drawing.Size(393, 216);
+            this.groupBox_Espaco.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox_Espaco.Size = new System.Drawing.Size(524, 266);
             this.groupBox_Espaco.TabIndex = 15;
             this.groupBox_Espaco.TabStop = false;
             this.groupBox_Espaco.Text = "Tipo de Espaço";
@@ -684,9 +754,10 @@ namespace ITICH.RegistoParques
             // label_Espaco
             // 
             this.label_Espaco.AutoSize = true;
-            this.label_Espaco.Location = new System.Drawing.Point(6, 16);
+            this.label_Espaco.Location = new System.Drawing.Point(8, 20);
+            this.label_Espaco.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_Espaco.Name = "label_Espaco";
-            this.label_Espaco.Size = new System.Drawing.Size(128, 13);
+            this.label_Espaco.Size = new System.Drawing.Size(168, 17);
             this.label_Espaco.TabIndex = 17;
             this.label_Espaco.Text = "Nome do Tipo de Espaço";
             // 
@@ -694,9 +765,10 @@ namespace ITICH.RegistoParques
             // 
             this.button_AdicionarEspaco.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button_AdicionarEspaco.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button_AdicionarEspaco.Location = new System.Drawing.Point(259, 31);
+            this.button_AdicionarEspaco.Location = new System.Drawing.Point(345, 38);
+            this.button_AdicionarEspaco.Margin = new System.Windows.Forms.Padding(4);
             this.button_AdicionarEspaco.Name = "button_AdicionarEspaco";
-            this.button_AdicionarEspaco.Size = new System.Drawing.Size(64, 21);
+            this.button_AdicionarEspaco.Size = new System.Drawing.Size(85, 26);
             this.button_AdicionarEspaco.TabIndex = 7;
             this.button_AdicionarEspaco.Text = "Adicionar";
             this.button_AdicionarEspaco.UseVisualStyleBackColor = true;
@@ -704,9 +776,10 @@ namespace ITICH.RegistoParques
             // 
             // textBox_Espaco
             // 
-            this.textBox_Espaco.Location = new System.Drawing.Point(6, 32);
+            this.textBox_Espaco.Location = new System.Drawing.Point(8, 39);
+            this.textBox_Espaco.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_Espaco.Name = "textBox_Espaco";
-            this.textBox_Espaco.Size = new System.Drawing.Size(205, 20);
+            this.textBox_Espaco.Size = new System.Drawing.Size(272, 22);
             this.textBox_Espaco.TabIndex = 16;
             // 
             // button_RemoverEspaco
@@ -714,9 +787,10 @@ namespace ITICH.RegistoParques
             this.button_RemoverEspaco.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button_RemoverEspaco.Enabled = false;
             this.button_RemoverEspaco.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button_RemoverEspaco.Location = new System.Drawing.Point(329, 31);
+            this.button_RemoverEspaco.Location = new System.Drawing.Point(439, 38);
+            this.button_RemoverEspaco.Margin = new System.Windows.Forms.Padding(4);
             this.button_RemoverEspaco.Name = "button_RemoverEspaco";
-            this.button_RemoverEspaco.Size = new System.Drawing.Size(58, 21);
+            this.button_RemoverEspaco.Size = new System.Drawing.Size(77, 26);
             this.button_RemoverEspaco.TabIndex = 8;
             this.button_RemoverEspaco.Text = "Remover";
             this.button_RemoverEspaco.UseVisualStyleBackColor = true;
@@ -729,16 +803,21 @@ namespace ITICH.RegistoParques
             this.dataGridView_Espaco.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Espaco.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1});
-            this.dataGridView_Espaco.Location = new System.Drawing.Point(6, 58);
+            this.dataGridView_Espaco.Location = new System.Drawing.Point(8, 71);
+            this.dataGridView_Espaco.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_Espaco.Name = "dataGridView_Espaco";
+            this.dataGridView_Espaco.RowHeadersWidth = 51;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView_Espaco.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView_Espaco.ShowEditingIcon = false;
-            this.dataGridView_Espaco.Size = new System.Drawing.Size(381, 152);
+            this.dataGridView_Espaco.Size = new System.Drawing.Size(508, 187);
             this.dataGridView_Espaco.TabIndex = 9;
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn1.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -749,14 +828,14 @@ namespace ITICH.RegistoParques
             this.dataGridView_Incubadora.AllowUserToAddRows = false;
             this.dataGridView_Incubadora.AllowUserToResizeColumns = false;
             this.dataGridView_Incubadora.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Incubadora.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Incubadora.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView_Incubadora.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Incubadora.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IncubadoraNome,
@@ -765,26 +844,30 @@ namespace ITICH.RegistoParques
             this.IncubadoraEspaco,
             this.IncubadoraServico});
             this.dataGridView_Incubadora.Cursor = System.Windows.Forms.Cursors.IBeam;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_Incubadora.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_Incubadora.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView_Incubadora.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridView_Incubadora.Location = new System.Drawing.Point(6, 310);
+            this.dataGridView_Incubadora.Location = new System.Drawing.Point(8, 382);
+            this.dataGridView_Incubadora.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_Incubadora.Name = "dataGridView_Incubadora";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Incubadora.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.dataGridView_Incubadora.Size = new System.Drawing.Size(798, 116);
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Incubadora.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridView_Incubadora.RowHeadersWidth = 51;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView_Incubadora.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridView_Incubadora.Size = new System.Drawing.Size(1064, 143);
             this.dataGridView_Incubadora.TabIndex = 9;
             // 
             // IncubadoraNome
@@ -835,9 +918,10 @@ namespace ITICH.RegistoParques
             // 
             this.button_RemoverIncubadora.Enabled = false;
             this.button_RemoverIncubadora.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button_RemoverIncubadora.Location = new System.Drawing.Point(746, 281);
+            this.button_RemoverIncubadora.Location = new System.Drawing.Point(995, 346);
+            this.button_RemoverIncubadora.Margin = new System.Windows.Forms.Padding(4);
             this.button_RemoverIncubadora.Name = "button_RemoverIncubadora";
-            this.button_RemoverIncubadora.Size = new System.Drawing.Size(58, 23);
+            this.button_RemoverIncubadora.Size = new System.Drawing.Size(77, 28);
             this.button_RemoverIncubadora.TabIndex = 8;
             this.button_RemoverIncubadora.Text = "Remover";
             this.button_RemoverIncubadora.UseVisualStyleBackColor = true;
@@ -846,18 +930,20 @@ namespace ITICH.RegistoParques
             // label_NomeIncubadora
             // 
             this.label_NomeIncubadora.AutoSize = true;
-            this.label_NomeIncubadora.Location = new System.Drawing.Point(6, 16);
+            this.label_NomeIncubadora.Location = new System.Drawing.Point(8, 20);
+            this.label_NomeIncubadora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_NomeIncubadora.Name = "label_NomeIncubadora";
-            this.label_NomeIncubadora.Size = new System.Drawing.Size(107, 13);
+            this.label_NomeIncubadora.Size = new System.Drawing.Size(140, 17);
             this.label_NomeIncubadora.TabIndex = 6;
             this.label_NomeIncubadora.Text = "Nome da Incubadora";
             // 
             // button_AdicionarIncubadora
             // 
             this.button_AdicionarIncubadora.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button_AdicionarIncubadora.Location = new System.Drawing.Point(681, 281);
+            this.button_AdicionarIncubadora.Location = new System.Drawing.Point(908, 346);
+            this.button_AdicionarIncubadora.Margin = new System.Windows.Forms.Padding(4);
             this.button_AdicionarIncubadora.Name = "button_AdicionarIncubadora";
-            this.button_AdicionarIncubadora.Size = new System.Drawing.Size(59, 23);
+            this.button_AdicionarIncubadora.Size = new System.Drawing.Size(79, 28);
             this.button_AdicionarIncubadora.TabIndex = 7;
             this.button_AdicionarIncubadora.Text = "Adicionar";
             this.button_AdicionarIncubadora.UseVisualStyleBackColor = true;
@@ -865,40 +951,45 @@ namespace ITICH.RegistoParques
             // 
             // textBox_NomeIncubadora
             // 
-            this.textBox_NomeIncubadora.Location = new System.Drawing.Point(6, 32);
+            this.textBox_NomeIncubadora.Location = new System.Drawing.Point(8, 39);
+            this.textBox_NomeIncubadora.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_NomeIncubadora.Name = "textBox_NomeIncubadora";
-            this.textBox_NomeIncubadora.Size = new System.Drawing.Size(205, 20);
+            this.textBox_NomeIncubadora.Size = new System.Drawing.Size(272, 22);
             this.textBox_NomeIncubadora.TabIndex = 2;
             // 
             // textBox_VolumeIncubadora
             // 
-            this.textBox_VolumeIncubadora.Location = new System.Drawing.Point(217, 32);
+            this.textBox_VolumeIncubadora.Location = new System.Drawing.Point(289, 39);
+            this.textBox_VolumeIncubadora.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_VolumeIncubadora.Name = "textBox_VolumeIncubadora";
-            this.textBox_VolumeIncubadora.Size = new System.Drawing.Size(100, 20);
+            this.textBox_VolumeIncubadora.Size = new System.Drawing.Size(132, 22);
             this.textBox_VolumeIncubadora.TabIndex = 3;
             // 
             // label_VolumeNegocio
             // 
             this.label_VolumeNegocio.AutoSize = true;
-            this.label_VolumeNegocio.Location = new System.Drawing.Point(217, 16);
+            this.label_VolumeNegocio.Location = new System.Drawing.Point(289, 20);
+            this.label_VolumeNegocio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_VolumeNegocio.Name = "label_VolumeNegocio";
-            this.label_VolumeNegocio.Size = new System.Drawing.Size(100, 13);
+            this.label_VolumeNegocio.Size = new System.Drawing.Size(131, 17);
             this.label_VolumeNegocio.TabIndex = 8;
             this.label_VolumeNegocio.Text = "Volume de Negócio";
             // 
             // textBox_RHIncubadora
             // 
-            this.textBox_RHIncubadora.Location = new System.Drawing.Point(323, 32);
+            this.textBox_RHIncubadora.Location = new System.Drawing.Point(431, 39);
+            this.textBox_RHIncubadora.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_RHIncubadora.Name = "textBox_RHIncubadora";
-            this.textBox_RHIncubadora.Size = new System.Drawing.Size(99, 20);
+            this.textBox_RHIncubadora.Size = new System.Drawing.Size(131, 22);
             this.textBox_RHIncubadora.TabIndex = 4;
             // 
             // label_IncubadoraRH
             // 
             this.label_IncubadoraRH.AutoSize = true;
-            this.label_IncubadoraRH.Location = new System.Drawing.Point(323, 16);
+            this.label_IncubadoraRH.Location = new System.Drawing.Point(431, 20);
+            this.label_IncubadoraRH.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_IncubadoraRH.Name = "label_IncubadoraRH";
-            this.label_IncubadoraRH.Size = new System.Drawing.Size(99, 13);
+            this.label_IncubadoraRH.Size = new System.Drawing.Size(132, 17);
             this.label_IncubadoraRH.TabIndex = 10;
             this.label_IncubadoraRH.Text = "Número de Pessoal";
             // 
@@ -922,10 +1013,12 @@ namespace ITICH.RegistoParques
             this.groupBox_Instalacao.Controls.Add(this.dataGridView_Instalacao);
             this.groupBox_Instalacao.Controls.Add(this.numericUpDown_LotesInstalacao);
             this.groupBox_Instalacao.Controls.Add(this.numericUpDown_OcupadosInstalacao);
-            this.groupBox_Instalacao.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox_Instalacao.Location = new System.Drawing.Point(12, 874);
+            this.groupBox_Instalacao.ForeColor = System.Drawing.Color.White;
+            this.groupBox_Instalacao.Location = new System.Drawing.Point(16, 1076);
+            this.groupBox_Instalacao.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox_Instalacao.Name = "groupBox_Instalacao";
-            this.groupBox_Instalacao.Size = new System.Drawing.Size(810, 265);
+            this.groupBox_Instalacao.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox_Instalacao.Size = new System.Drawing.Size(1080, 326);
             this.groupBox_Instalacao.TabIndex = 15;
             this.groupBox_Instalacao.TabStop = false;
             this.groupBox_Instalacao.Text = "Instalações";
@@ -933,48 +1026,54 @@ namespace ITICH.RegistoParques
             // label_RedeInstalacao
             // 
             this.label_RedeInstalacao.AutoSize = true;
-            this.label_RedeInstalacao.Location = new System.Drawing.Point(192, 55);
+            this.label_RedeInstalacao.Location = new System.Drawing.Point(256, 68);
+            this.label_RedeInstalacao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_RedeInstalacao.Name = "label_RedeInstalacao";
-            this.label_RedeInstalacao.Size = new System.Drawing.Size(72, 13);
+            this.label_RedeInstalacao.Size = new System.Drawing.Size(94, 17);
             this.label_RedeInstalacao.TabIndex = 36;
             this.label_RedeInstalacao.Text = "Tipo de Rede";
             // 
             // textBox_NomeInstalacao
             // 
-            this.textBox_NomeInstalacao.Location = new System.Drawing.Point(8, 32);
+            this.textBox_NomeInstalacao.Location = new System.Drawing.Point(11, 39);
+            this.textBox_NomeInstalacao.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_NomeInstalacao.Name = "textBox_NomeInstalacao";
-            this.textBox_NomeInstalacao.Size = new System.Drawing.Size(180, 20);
+            this.textBox_NomeInstalacao.Size = new System.Drawing.Size(239, 22);
             this.textBox_NomeInstalacao.TabIndex = 21;
             // 
             // textBox_RedeInstalacao
             // 
-            this.textBox_RedeInstalacao.Location = new System.Drawing.Point(193, 71);
+            this.textBox_RedeInstalacao.Location = new System.Drawing.Point(257, 87);
+            this.textBox_RedeInstalacao.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_RedeInstalacao.Name = "textBox_RedeInstalacao";
-            this.textBox_RedeInstalacao.Size = new System.Drawing.Size(206, 20);
+            this.textBox_RedeInstalacao.Size = new System.Drawing.Size(273, 22);
             this.textBox_RedeInstalacao.TabIndex = 28;
             // 
             // textBox_LocalidadeInstalacao
             // 
-            this.textBox_LocalidadeInstalacao.Location = new System.Drawing.Point(193, 32);
+            this.textBox_LocalidadeInstalacao.Location = new System.Drawing.Point(257, 39);
+            this.textBox_LocalidadeInstalacao.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_LocalidadeInstalacao.Name = "textBox_LocalidadeInstalacao";
-            this.textBox_LocalidadeInstalacao.Size = new System.Drawing.Size(100, 20);
+            this.textBox_LocalidadeInstalacao.Size = new System.Drawing.Size(132, 22);
             this.textBox_LocalidadeInstalacao.TabIndex = 23;
             // 
             // label_NomeInstalacao
             // 
             this.label_NomeInstalacao.AutoSize = true;
-            this.label_NomeInstalacao.Location = new System.Drawing.Point(6, 16);
+            this.label_NomeInstalacao.Location = new System.Drawing.Point(8, 20);
+            this.label_NomeInstalacao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_NomeInstalacao.Name = "label_NomeInstalacao";
-            this.label_NomeInstalacao.Size = new System.Drawing.Size(64, 13);
+            this.label_NomeInstalacao.Size = new System.Drawing.Size(83, 17);
             this.label_NomeInstalacao.TabIndex = 26;
             this.label_NomeInstalacao.Text = "Designação";
             // 
             // checkBox_SegurancaInstalacao
             // 
             this.checkBox_SegurancaInstalacao.AutoSize = true;
-            this.checkBox_SegurancaInstalacao.Location = new System.Drawing.Point(620, 35);
+            this.checkBox_SegurancaInstalacao.Location = new System.Drawing.Point(827, 43);
+            this.checkBox_SegurancaInstalacao.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox_SegurancaInstalacao.Name = "checkBox_SegurancaInstalacao";
-            this.checkBox_SegurancaInstalacao.Size = new System.Drawing.Size(78, 17);
+            this.checkBox_SegurancaInstalacao.Size = new System.Drawing.Size(99, 21);
             this.checkBox_SegurancaInstalacao.TabIndex = 33;
             this.checkBox_SegurancaInstalacao.Text = "Segurança";
             this.checkBox_SegurancaInstalacao.UseVisualStyleBackColor = true;
@@ -982,25 +1081,28 @@ namespace ITICH.RegistoParques
             // label_LocalidadeInstalacao
             // 
             this.label_LocalidadeInstalacao.AutoSize = true;
-            this.label_LocalidadeInstalacao.Location = new System.Drawing.Point(192, 16);
+            this.label_LocalidadeInstalacao.Location = new System.Drawing.Point(256, 20);
+            this.label_LocalidadeInstalacao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_LocalidadeInstalacao.Name = "label_LocalidadeInstalacao";
-            this.label_LocalidadeInstalacao.Size = new System.Drawing.Size(59, 13);
+            this.label_LocalidadeInstalacao.Size = new System.Drawing.Size(77, 17);
             this.label_LocalidadeInstalacao.TabIndex = 29;
             this.label_LocalidadeInstalacao.Text = "Localidade";
             // 
             // textBox_ConcelhoInstalacao
             // 
-            this.textBox_ConcelhoInstalacao.Location = new System.Drawing.Point(299, 32);
+            this.textBox_ConcelhoInstalacao.Location = new System.Drawing.Point(399, 39);
+            this.textBox_ConcelhoInstalacao.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_ConcelhoInstalacao.Name = "textBox_ConcelhoInstalacao";
-            this.textBox_ConcelhoInstalacao.Size = new System.Drawing.Size(100, 20);
+            this.textBox_ConcelhoInstalacao.Size = new System.Drawing.Size(132, 22);
             this.textBox_ConcelhoInstalacao.TabIndex = 24;
             // 
             // checkBox_VigilanciaInstalacao
             // 
             this.checkBox_VigilanciaInstalacao.AutoSize = true;
-            this.checkBox_VigilanciaInstalacao.Location = new System.Drawing.Point(513, 35);
+            this.checkBox_VigilanciaInstalacao.Location = new System.Drawing.Point(684, 43);
+            this.checkBox_VigilanciaInstalacao.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox_VigilanciaInstalacao.Name = "checkBox_VigilanciaInstalacao";
-            this.checkBox_VigilanciaInstalacao.Size = new System.Drawing.Size(101, 17);
+            this.checkBox_VigilanciaInstalacao.Size = new System.Drawing.Size(130, 21);
             this.checkBox_VigilanciaInstalacao.TabIndex = 31;
             this.checkBox_VigilanciaInstalacao.Text = "Video Vigilância";
             this.checkBox_VigilanciaInstalacao.UseVisualStyleBackColor = true;
@@ -1008,9 +1110,10 @@ namespace ITICH.RegistoParques
             // button_AdicionarInstalacao
             // 
             this.button_AdicionarInstalacao.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button_AdicionarInstalacao.Location = new System.Drawing.Point(681, 68);
+            this.button_AdicionarInstalacao.Location = new System.Drawing.Point(908, 84);
+            this.button_AdicionarInstalacao.Margin = new System.Windows.Forms.Padding(4);
             this.button_AdicionarInstalacao.Name = "button_AdicionarInstalacao";
-            this.button_AdicionarInstalacao.Size = new System.Drawing.Size(59, 23);
+            this.button_AdicionarInstalacao.Size = new System.Drawing.Size(79, 28);
             this.button_AdicionarInstalacao.TabIndex = 22;
             this.button_AdicionarInstalacao.Text = "Adicionar";
             this.button_AdicionarInstalacao.UseVisualStyleBackColor = true;
@@ -1019,18 +1122,20 @@ namespace ITICH.RegistoParques
             // label_ConcelhoInstalacao
             // 
             this.label_ConcelhoInstalacao.AutoSize = true;
-            this.label_ConcelhoInstalacao.Location = new System.Drawing.Point(298, 16);
+            this.label_ConcelhoInstalacao.Location = new System.Drawing.Point(397, 20);
+            this.label_ConcelhoInstalacao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_ConcelhoInstalacao.Name = "label_ConcelhoInstalacao";
-            this.label_ConcelhoInstalacao.Size = new System.Drawing.Size(52, 13);
+            this.label_ConcelhoInstalacao.Size = new System.Drawing.Size(67, 17);
             this.label_ConcelhoInstalacao.TabIndex = 32;
             this.label_ConcelhoInstalacao.Text = "Concelho";
             // 
             // checkBox_EstacionamentoInstalacao
             // 
             this.checkBox_EstacionamentoInstalacao.AutoSize = true;
-            this.checkBox_EstacionamentoInstalacao.Location = new System.Drawing.Point(405, 35);
+            this.checkBox_EstacionamentoInstalacao.Location = new System.Drawing.Point(540, 43);
+            this.checkBox_EstacionamentoInstalacao.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox_EstacionamentoInstalacao.Name = "checkBox_EstacionamentoInstalacao";
-            this.checkBox_EstacionamentoInstalacao.Size = new System.Drawing.Size(102, 17);
+            this.checkBox_EstacionamentoInstalacao.Size = new System.Drawing.Size(131, 21);
             this.checkBox_EstacionamentoInstalacao.TabIndex = 30;
             this.checkBox_EstacionamentoInstalacao.Text = "Estacionamento";
             this.checkBox_EstacionamentoInstalacao.UseVisualStyleBackColor = true;
@@ -1039,9 +1144,10 @@ namespace ITICH.RegistoParques
             // 
             this.button_RemoverInstalacao.Enabled = false;
             this.button_RemoverInstalacao.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button_RemoverInstalacao.Location = new System.Drawing.Point(746, 68);
+            this.button_RemoverInstalacao.Location = new System.Drawing.Point(995, 84);
+            this.button_RemoverInstalacao.Margin = new System.Windows.Forms.Padding(4);
             this.button_RemoverInstalacao.Name = "button_RemoverInstalacao";
-            this.button_RemoverInstalacao.Size = new System.Drawing.Size(58, 23);
+            this.button_RemoverInstalacao.Size = new System.Drawing.Size(77, 28);
             this.button_RemoverInstalacao.TabIndex = 20;
             this.button_RemoverInstalacao.Text = "Remover";
             this.button_RemoverInstalacao.UseVisualStyleBackColor = true;
@@ -1050,18 +1156,20 @@ namespace ITICH.RegistoParques
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 55);
+            this.label1.Location = new System.Drawing.Point(8, 68);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 13);
+            this.label1.Size = new System.Drawing.Size(117, 17);
             this.label1.TabIndex = 34;
             this.label1.Text = "Número de Lotes";
             // 
             // label_OcupadosInstalacao
             // 
             this.label_OcupadosInstalacao.AutoSize = true;
-            this.label_OcupadosInstalacao.Location = new System.Drawing.Point(99, 55);
+            this.label_OcupadosInstalacao.Location = new System.Drawing.Point(132, 68);
+            this.label_OcupadosInstalacao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_OcupadosInstalacao.Name = "label_OcupadosInstalacao";
-            this.label_OcupadosInstalacao.Size = new System.Drawing.Size(85, 13);
+            this.label_OcupadosInstalacao.Size = new System.Drawing.Size(112, 17);
             this.label_OcupadosInstalacao.TabIndex = 35;
             this.label_OcupadosInstalacao.Text = "Lotes Ocupados";
             // 
@@ -1081,116 +1189,131 @@ namespace ITICH.RegistoParques
             this.textBox_InstalacaoVigilancia,
             this.textBox_InstalacaoSeguranca,
             this.textBox_InstalacaoTipoRede});
-            this.dataGridView_Instalacao.Location = new System.Drawing.Point(6, 97);
+            this.dataGridView_Instalacao.Location = new System.Drawing.Point(8, 119);
+            this.dataGridView_Instalacao.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_Instalacao.Name = "dataGridView_Instalacao";
-            this.dataGridView_Instalacao.Size = new System.Drawing.Size(798, 162);
+            this.dataGridView_Instalacao.RowHeadersWidth = 51;
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView_Instalacao.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridView_Instalacao.Size = new System.Drawing.Size(1064, 199);
             this.dataGridView_Instalacao.TabIndex = 19;
             // 
             // textBox_InstalacaoDesignacao
             // 
             this.textBox_InstalacaoDesignacao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.textBox_InstalacaoDesignacao.HeaderText = "Designação";
+            this.textBox_InstalacaoDesignacao.MinimumWidth = 6;
             this.textBox_InstalacaoDesignacao.Name = "textBox_InstalacaoDesignacao";
             this.textBox_InstalacaoDesignacao.ReadOnly = true;
             this.textBox_InstalacaoDesignacao.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.textBox_InstalacaoDesignacao.Width = 89;
+            this.textBox_InstalacaoDesignacao.Width = 112;
             // 
             // textBox_InstalacaoLocalidade
             // 
             this.textBox_InstalacaoLocalidade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.textBox_InstalacaoLocalidade.HeaderText = "Localidade";
+            this.textBox_InstalacaoLocalidade.MinimumWidth = 6;
             this.textBox_InstalacaoLocalidade.Name = "textBox_InstalacaoLocalidade";
             this.textBox_InstalacaoLocalidade.ReadOnly = true;
             this.textBox_InstalacaoLocalidade.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.textBox_InstalacaoLocalidade.Width = 84;
+            this.textBox_InstalacaoLocalidade.Width = 106;
             // 
             // textBox_InstalacaoConcelho
             // 
             this.textBox_InstalacaoConcelho.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.textBox_InstalacaoConcelho.HeaderText = "Concelho";
+            this.textBox_InstalacaoConcelho.MinimumWidth = 6;
             this.textBox_InstalacaoConcelho.Name = "textBox_InstalacaoConcelho";
             this.textBox_InstalacaoConcelho.ReadOnly = true;
             this.textBox_InstalacaoConcelho.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.textBox_InstalacaoConcelho.Width = 77;
+            this.textBox_InstalacaoConcelho.Width = 96;
             // 
             // textBox_InstalacaoNumeroLotes
             // 
             this.textBox_InstalacaoNumeroLotes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.textBox_InstalacaoNumeroLotes.HeaderText = "Número de Lotes";
+            this.textBox_InstalacaoNumeroLotes.MinimumWidth = 6;
             this.textBox_InstalacaoNumeroLotes.Name = "textBox_InstalacaoNumeroLotes";
             this.textBox_InstalacaoNumeroLotes.ReadOnly = true;
             this.textBox_InstalacaoNumeroLotes.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.textBox_InstalacaoNumeroLotes.Width = 80;
+            this.textBox_InstalacaoNumeroLotes.Width = 102;
             // 
             // textBox_InstalacaoLotesOcupados
             // 
             this.textBox_InstalacaoLotesOcupados.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.textBox_InstalacaoLotesOcupados.HeaderText = "Lotes Ocupados";
+            this.textBox_InstalacaoLotesOcupados.MinimumWidth = 6;
             this.textBox_InstalacaoLotesOcupados.Name = "textBox_InstalacaoLotesOcupados";
             this.textBox_InstalacaoLotesOcupados.ReadOnly = true;
             this.textBox_InstalacaoLotesOcupados.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.textBox_InstalacaoLotesOcupados.Width = 101;
+            this.textBox_InstalacaoLotesOcupados.Width = 129;
             // 
             // textBox_InstalacaoEstacionamento
             // 
             this.textBox_InstalacaoEstacionamento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.textBox_InstalacaoEstacionamento.HeaderText = "Estacionamento";
+            this.textBox_InstalacaoEstacionamento.MinimumWidth = 6;
             this.textBox_InstalacaoEstacionamento.Name = "textBox_InstalacaoEstacionamento";
             this.textBox_InstalacaoEstacionamento.ReadOnly = true;
             this.textBox_InstalacaoEstacionamento.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.textBox_InstalacaoEstacionamento.Width = 89;
+            this.textBox_InstalacaoEstacionamento.Width = 115;
             // 
             // textBox_InstalacaoVigilancia
             // 
             this.textBox_InstalacaoVigilancia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.textBox_InstalacaoVigilancia.HeaderText = "Video Vigilância";
+            this.textBox_InstalacaoVigilancia.MinimumWidth = 6;
             this.textBox_InstalacaoVigilancia.Name = "textBox_InstalacaoVigilancia";
             this.textBox_InstalacaoVigilancia.ReadOnly = true;
             this.textBox_InstalacaoVigilancia.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.textBox_InstalacaoVigilancia.Width = 79;
+            this.textBox_InstalacaoVigilancia.Width = 103;
             // 
             // textBox_InstalacaoSeguranca
             // 
             this.textBox_InstalacaoSeguranca.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.textBox_InstalacaoSeguranca.HeaderText = "Segurança";
+            this.textBox_InstalacaoSeguranca.MinimumWidth = 6;
             this.textBox_InstalacaoSeguranca.Name = "textBox_InstalacaoSeguranca";
             this.textBox_InstalacaoSeguranca.ReadOnly = true;
             this.textBox_InstalacaoSeguranca.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.textBox_InstalacaoSeguranca.Width = 65;
+            this.textBox_InstalacaoSeguranca.Width = 83;
             // 
             // textBox_InstalacaoTipoRede
             // 
             this.textBox_InstalacaoTipoRede.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.textBox_InstalacaoTipoRede.HeaderText = "Tipo de Rede";
+            this.textBox_InstalacaoTipoRede.MinimumWidth = 6;
             this.textBox_InstalacaoTipoRede.Name = "textBox_InstalacaoTipoRede";
             this.textBox_InstalacaoTipoRede.ReadOnly = true;
             this.textBox_InstalacaoTipoRede.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.textBox_InstalacaoTipoRede.Width = 89;
+            this.textBox_InstalacaoTipoRede.Width = 113;
             // 
             // numericUpDown_LotesInstalacao
             // 
-            this.numericUpDown_LotesInstalacao.Location = new System.Drawing.Point(9, 71);
+            this.numericUpDown_LotesInstalacao.Location = new System.Drawing.Point(12, 87);
+            this.numericUpDown_LotesInstalacao.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown_LotesInstalacao.Maximum = new decimal(new int[] {
             276447231,
             23283,
             0,
             0});
             this.numericUpDown_LotesInstalacao.Name = "numericUpDown_LotesInstalacao";
-            this.numericUpDown_LotesInstalacao.Size = new System.Drawing.Size(87, 20);
+            this.numericUpDown_LotesInstalacao.Size = new System.Drawing.Size(116, 22);
             this.numericUpDown_LotesInstalacao.TabIndex = 25;
             this.numericUpDown_LotesInstalacao.ThousandsSeparator = true;
             this.numericUpDown_LotesInstalacao.ValueChanged += new System.EventHandler(this.numericUpDown_LotesInstalacao_ValueChanged);
             // 
             // numericUpDown_OcupadosInstalacao
             // 
-            this.numericUpDown_OcupadosInstalacao.Location = new System.Drawing.Point(102, 71);
+            this.numericUpDown_OcupadosInstalacao.Location = new System.Drawing.Point(136, 87);
+            this.numericUpDown_OcupadosInstalacao.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown_OcupadosInstalacao.Maximum = new decimal(new int[] {
             276447231,
             23283,
             0,
             0});
             this.numericUpDown_OcupadosInstalacao.Name = "numericUpDown_OcupadosInstalacao";
-            this.numericUpDown_OcupadosInstalacao.Size = new System.Drawing.Size(87, 20);
+            this.numericUpDown_OcupadosInstalacao.Size = new System.Drawing.Size(116, 22);
             this.numericUpDown_OcupadosInstalacao.TabIndex = 27;
             this.numericUpDown_OcupadosInstalacao.ThousandsSeparator = true;
             this.numericUpDown_OcupadosInstalacao.ValueChanged += new System.EventHandler(this.numericUpDown_OcupadosInstalacao_ValueChanged);
@@ -1198,12 +1321,12 @@ namespace ITICH.RegistoParques
             // RegistoForm
             // 
             this.AcceptButton = this.button_Confirmar;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoScrollMargin = new System.Drawing.Size(0, 10);
-            this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(850, 612);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(49)))), ((int)(((byte)(57)))));
+            this.ClientSize = new System.Drawing.Size(1133, 753);
             this.Controls.Add(this.groupBox_Instalacao);
             this.Controls.Add(this.groupBox_Indubadora);
             this.Controls.Add(this.groupBox_Area);
@@ -1211,8 +1334,11 @@ namespace ITICH.RegistoParques
             this.Controls.Add(this.groupBox_DadosGerais);
             this.Controls.Add(this.button_Confirmar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RegistoForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistoForm";
+            this.Load += new System.EventHandler(this.RegistoForm_Load);
             this.groupBox_DadosGerais.ResumeLayout(false);
             this.groupBox_DadosGerais.PerformLayout();
             this.groupBox_Area.ResumeLayout(false);

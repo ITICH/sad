@@ -619,5 +619,9 @@ namespace ITICH.RegistoParques
             }
         }
 
+        private void RegistoForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
