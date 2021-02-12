@@ -85,7 +85,6 @@
             this.textBox_nome.Name = "textBox_nome";
             this.textBox_nome.Size = new System.Drawing.Size(172, 22);
             this.textBox_nome.TabIndex = 3;
-            this.textBox_nome.Text = "itich3@gmail.com";
             this.textBox_nome.TextChanged += new System.EventHandler(this.textBox_nome_TextChanged);
             // 
             // textBox_pw
@@ -94,7 +93,6 @@
             this.textBox_pw.Name = "textBox_pw";
             this.textBox_pw.Size = new System.Drawing.Size(172, 22);
             this.textBox_pw.TabIndex = 4;
-            this.textBox_pw.Text = "sad123";
             this.textBox_pw.UseSystemPasswordChar = true;
             this.textBox_pw.TextChanged += new System.EventHandler(this.textBox_pw_TextChanged);
             // 
@@ -133,7 +131,7 @@
             this.checkBox1.ForeColor = System.Drawing.Color.White;
             this.checkBox1.Location = new System.Drawing.Point(459, 272);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(173, 21);
+            this.checkBox1.Size = new System.Drawing.Size(152, 19);
             this.checkBox1.TabIndex = 7;
             this.checkBox1.Text = "Mostrar a palavra passe";
             this.checkBox1.UseVisualStyleBackColor = false;
