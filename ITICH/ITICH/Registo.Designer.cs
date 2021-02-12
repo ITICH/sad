@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registo));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -179,7 +180,7 @@
             this.checkBox1_pwd.Font = new System.Drawing.Font("Nirmala UI", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1_pwd.Location = new System.Drawing.Point(342, 374);
             this.checkBox1_pwd.Name = "checkBox1_pwd";
-            this.checkBox1_pwd.Size = new System.Drawing.Size(174, 21);
+            this.checkBox1_pwd.Size = new System.Drawing.Size(154, 19);
             this.checkBox1_pwd.TabIndex = 13;
             this.checkBox1_pwd.Text = "Mostrar a palavra-passe";
             this.checkBox1_pwd.UseVisualStyleBackColor = false;
@@ -219,6 +220,7 @@
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Registo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registo";

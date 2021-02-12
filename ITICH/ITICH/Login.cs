@@ -10,13 +10,8 @@ namespace ITICH
 {
     public partial class Login : Form
     {
-        //variáveis da conta do utilizador para que a app saiba que conta foi usada para o login
-        //pw tem a password desencriptada enquanto não conseguimos desencriptar a partir da base de dados---------------ALTERAR ESTA PARTE DEPOIS DE ARRANJAR A PARTE DE DESENCRIPTAR
-        //public int id;
-        //public String pw;
-
         //metodo que encripta a palavra-passe antes de ser guardada na BD
-        public string Encriptarpwd(string password) //VERIFICAR QUE METODO É USADO PARA ENCRIPTAR------------------------------------------------------
+        public string Encriptarpwd(string password) 
         {
             string msg = "";
             byte[] encode = new byte[password.Length];
@@ -30,7 +25,6 @@ namespace ITICH
             InitializeComponent();
         }
 
-        //COMO DEFINIR ISTO METODO OU CLASSE????????????????????????????????????????????????????????????????
         public static string utilizadorLogado;
         public static int idUtilizadorLogado;
         public static string pwdUtilizadorLogado;
@@ -58,9 +52,11 @@ namespace ITICH
             string userAtual = textBox_nome.Text;
 
             //seleciona os utitilizadores com perfil de Empresa
-            string queryLoginEMP = "SELECT id_empresa, e_mail, password, perfil, validada FROM Empresa WHERE e_mail = '" + textBox_nome.Text + "' AND password = '" + Encriptarpwd(textBox_pw.Text) + "' AND perfil = 2";
+            string queryLoginEMP = "SELECT id_empresa, e_mail, password, perfil, validada FROM Empresa WHERE e_mail = '" + textBox_nome.Text + "' " +
+                "AND password = '" + Encriptarpwd(textBox_pw.Text) + "' AND perfil = 2";
             //seleciona os utitilizadores com perfil de Administrador
-            string queryLoginADM = "SELECT id_empresa, e_mail, password, perfil, validada FROM Empresa WHERE e_mail = '" + textBox_nome.Text + "' AND password = '" + Encriptarpwd(textBox_pw.Text) + "' AND perfil = 1";
+            string queryLoginADM = "SELECT id_empresa, e_mail, password, perfil, validada FROM Empresa WHERE e_mail = '" + textBox_nome.Text + "' " +
+                "AND password = '" + Encriptarpwd(textBox_pw.Text) + "' AND perfil = 1";
 
             DataTable dadosUtilizador = ConecaoSQLServer.ExecutaSql(queryLoginEMP);
             DataTable dadosUtilizadorADM = ConecaoSQLServer.ExecutaSql(queryLoginADM);
@@ -86,8 +82,7 @@ namespace ITICH
                     {
                         dadosLogin = userAtual;
                         dadosLoginID = Int32.Parse(dadosUtilizador.Rows[0][0].ToString());
-                        dadosLoginPwd = textBox_pw.Text;//-----------------------------------------------------ALTERAR ESTA PARTE DEPOIS DE ARRANJAR A PARTE DE DESENCRIPTAR
-
+                        dadosLoginPwd = textBox_pw.Text;
                         this.textBox_nome.Clear();
                         this.textBox_pw.Clear();
                         this.checkBox1.Checked = false;
@@ -96,9 +91,6 @@ namespace ITICH
 
                         PaginaInicial paginaInicial = new PaginaInicial();
                         paginaInicial.ShowDialog();
-
-                        // this.Show();
-                        // this.textBox_nome.Select();
                     }
                     //Mensagem de aviso caso a conta não tenha sido validada
                     else
@@ -106,16 +98,14 @@ namespace ITICH
                         MessageBox.Show("A conta ainda não foi validada!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
-                //só pode ser acedido pelo perfil do ADM  ----------------------------------VERIFICAR SE É NECESSARIO OU NÃO TER ESTA PARTE
+                //só pode ser acedido pelo perfil do ADM  
                 else if (dadosUtilizadorADM.Rows.Count > 0)
                 {
                     //guarda o id e a password da conta para saber que conta foi usada para o login
-                    //this.id = Int32.Parse(dadosUtilizadorADM.Rows[0][0].ToString());
-                    //this.pw = textBox_pw.Text; //-----------------------------------------------------ALTERAR ESTA PARTE DEPOIS DE ARRANJAR A PARTE DE DESENCRIPTAR
 
                     dadosLogin = userAtual;
                     dadosLoginID = Int32.Parse(dadosUtilizadorADM.Rows[0][0].ToString());
-                    dadosLoginPwd = textBox_pw.Text;//-----------------------------------------------------ALTERAR ESTA PARTE DEPOIS DE ARRANJAR A PARTE DE DESENCRIPTAR
+                    dadosLoginPwd = textBox_pw.Text;
 
                     this.textBox_nome.Clear();
                     this.textBox_pw.Clear();

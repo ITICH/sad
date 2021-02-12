@@ -508,7 +508,9 @@ namespace ITICH.RegistoParques
             int juridicialGeral = comboBox_JuridicialGeral.SelectedIndex == -1 ? 0 : comboBox_JuridicialGeral.SelectedIndex;
             int faseGeral = comboBox_FaseGeral.SelectedIndex == -1 ? 0 : comboBox_FaseGeral.SelectedIndex;
             int temIncubadora = dataGridView_Incubadora.Rows.Count > 0 ? temIncubadora = 1 : temIncubadora = 0;
-            ConecaoSQLServer.ExecutaSql("INSERT INTO Parques_cientificos (entidade_gestora, fins_lucrativos, interesse_publico, contacto_tel, ano_de_inicio, patrimonio_acossiativo_e_capital_social, id_fase_de_desenvolvimento, id_carateristica_juridica, id_localizacao, nome_parque, e_mail, temIncubadora) VALUES (" +
+            ConecaoSQLServer.ExecutaSql("INSERT INTO Parques_cientificos (entidade_gestora, fins_lucrativos, interesse_publico, contacto_tel, ano_de_inicio, " +
+                "patrimonio_acossiativo_e_capital_social, id_fase_de_desenvolvimento, id_carateristica_juridica, id_localizacao, nome_parque, " +
+                "e_mail, temIncubadora) VALUES (" +
                                         "'" + textBox_EntidadeGeral.Text + "', " +
                                         "'" + finsGeral + "', " +
                                         "'" + interesseGeral + "', " +

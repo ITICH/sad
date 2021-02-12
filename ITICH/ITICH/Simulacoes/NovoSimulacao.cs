@@ -327,7 +327,8 @@ namespace ITICH.Simulacoes
 
     //########################################################################################################################################################################
             //busca os parques com o mesmo local na comboBox
-            string queryLocalizacao = "SELECT P.id_parque, L.distrit FROM Parques_cientificos P, Localizacao L WHERE P.id_localizacao = L.id_localizacao AND L.distrit = '" + comboBox1.Text + "'";
+            string queryLocalizacao = "SELECT P.id_parque, L.distrit FROM Parques_cientificos P, Localizacao L " +
+                "WHERE P.id_localizacao = L.id_localizacao AND L.distrit = '" + comboBox1.Text + "'";
             DataTable dtLocal = ConecaoSQLServer.ExecutaSql(queryLocalizacao);
             int[] locaisMaisImp = new int[dtLocal.Rows.Count];
             for (int i = 0; i < dtLocal.Rows.Count; i++)

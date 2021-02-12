@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DadosEmpresa));
             this.groupBox_dadosEmpresa = new System.Windows.Forms.GroupBox();
             this.textBox_contacto = new System.Windows.Forms.TextBox();
             this.label_contactoConta = new System.Windows.Forms.Label();
@@ -338,6 +339,7 @@
             this.Controls.Add(this.label_nomeEmpresa);
             this.Controls.Add(this.groupBox_dadosEmpresa);
             this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DadosEmpresa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

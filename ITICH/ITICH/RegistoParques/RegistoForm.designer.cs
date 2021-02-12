@@ -38,6 +38,7 @@ namespace ITICH.RegistoParques
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistoForm));
             this.button_Confirmar = new System.Windows.Forms.Button();
             this.textBox_MoradaGeral = new System.Windows.Forms.TextBox();
             this.comboBox_JuridicialGeral = new System.Windows.Forms.ComboBox();
@@ -1334,6 +1335,7 @@ namespace ITICH.RegistoParques
             this.Controls.Add(this.groupBox_DadosGerais);
             this.Controls.Add(this.button_Confirmar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RegistoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
