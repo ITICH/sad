@@ -79,21 +79,20 @@ namespace ITICH.Simulacoes
                 result.Add(new Resultados { id_parques = id_parques[i], nome_parque=nome_parque[i], email=email[i], resl=Math.Round((double)resultados[id] * 100, 2)});
                 id++;
             }
-
-            //Coloca os resusltados todos na tabela
-            for (int i = 0; i < resultados.Count; i++)
+            List<Resultados> SortedList = result.OrderByDescending(o => o.resl).ToList();//Ordena os dados pela ordem decrescente da percentagem
+            //Coloca os resusltados todos na tabela. Apresenta um top 3 dos melhores parques
+            for (int i = 0; i < 3/*resultados.Count*/; i++)
             {
-                dataGridView_teste.Rows.Add(/*result[i].id_parques, */result[i].nome_parque, result[i].email, result[i].resl+"%");
+                dataGridView_teste.Rows.Add(/*result[i].id_parques, */SortedList[i].nome_parque, SortedList[i].email, SortedList[i].resl+"%");
             }
             //Ordena os dados pela ordem decrescente da percentagem
-            this.dataGridView_teste.Sort(dataGridView_teste.Columns["Value"], ListSortDirection.Descending);
-
+            //this.dataGridView_teste.Sort(dataGridView_teste.Columns["Value"], ListSortDirection.Descending);
             //Apresenta um top 3 dos melhores parques, removo todos os resultados depois do terceiro valor
-            for (int i = 1; i < dataGridView_teste.Rows.Count; i++)
+            /*for (int i = 0; i < dataGridView_teste.Rows.Count; i++)
             {
                 DataGridViewRow apagarRow = dataGridView_teste.Rows[i];
                 dataGridView_teste.Rows.Remove(apagarRow);
-            }
+            }*/
             dataGridView_teste.Columns[0].Width = 120;
             dataGridView_teste.Columns[1].Width = 115;
             dataGridView_teste.Columns[2].Width = 115;

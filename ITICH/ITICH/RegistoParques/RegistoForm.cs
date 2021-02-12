@@ -324,11 +324,11 @@ namespace ITICH.RegistoParques
         {
             if (verificarIncubadoras())
             {
-
                 if (!string.IsNullOrEmpty(textBox_NomeIncubadora.Text) ||
                     !string.IsNullOrEmpty(textBox_VolumeIncubadora.Text) ||
                     !string.IsNullOrEmpty(textBox_RHIncubadora.Text) ||
-                    dataGridView_Espaco.Rows.Count > 0)
+                    dataGridView_Espaco.Rows.Count > 0 ||
+                    dataGridView_Servico.Rows.Count > 0)
                 {
                     int IncubadoraRowIndex = dataGridView_Incubadora.Rows.Add();
 
@@ -341,11 +341,22 @@ namespace ITICH.RegistoParques
                     {
                         espacoCell.Items.Add(dataGridView_Espaco.Rows[i].Cells[0].Value.ToString());
                     }
+                    DataGridViewComboBoxCell servicoCell = (DataGridViewComboBoxCell)dataGridView_Incubadora[4, IncubadoraRowIndex];
+                    servicoCell.Items.Clear();
+                    for (int i = 0; i < dataGridView_Servico.Rows.Count; i++)
+                    {
+                        servicoCell.Items.Add(dataGridView_Servico.Rows[i].Cells[0].Value.ToString());
+                    }
 
                     textBox_Espaco.Clear();
                     while (dataGridView_Espaco.Rows.Count > 0)
                     {
                         dataGridView_Espaco.Rows.RemoveAt(0);
+                    }
+                    textBox_Servico.Clear();
+                    while (dataGridView_Servico.Rows.Count > 0)
+                    {
+                        dataGridView_Servico.Rows.RemoveAt(0);
                     }
                     textBox_NomeIncubadora.Clear();
                     textBox_VolumeIncubadora.Clear();
@@ -551,7 +562,7 @@ namespace ITICH.RegistoParques
                     foundRows = dataTable.Select();
                     int indexIncubadora = Convert.ToInt32(foundRows[0][0]);
 
-                    DataGridViewComboBoxCell espacoCell = (DataGridViewComboBoxCell)dataGridView_Incubadora[3, i];
+                    DataGridViewComboBoxCell espacoCell = (DataGridViewComboBoxCell)dataGridView_Incubadora[4, i];
                     for (int k = 0; k < espacoCell.Items.Count; k++)
                     {
                         ConecaoSQLServer.ExecutaSql("INSERT INTO Espacos_incubadora (tipo_espaco, id_incubadora) VALUES (" +
