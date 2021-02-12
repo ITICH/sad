@@ -124,6 +124,7 @@ namespace ITICH.Simulacoes
         {
             button_guardar.Visible = false;
             label39.Visible = false;
+            button3.Visible = false;
 
             niveisImp.Add(3, "Pouco Importânte");//adiciona os niveis de importância ao dicionario
             niveisImp.Add(1, "Mesma Importância");
@@ -470,6 +471,8 @@ namespace ITICH.Simulacoes
 
             button_guardar.Visible = true;
             label39.Visible = true;
+            //button3.Visible = true;
+            //button_ConfirmarDados.Enabled = false;
         }
 
         private void button_guardar_Click(object sender, EventArgs e)
@@ -488,7 +491,17 @@ namespace ITICH.Simulacoes
             string caminho = CriarXml.CriarXML(email);
             MessageBox.Show("Dados exportados e guardados com sucesso, em \n"+caminho, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
+        private void button3_Click(object sender, EventArgs e)
+        {
+            /*this.Controls.Clear();
+            this.InitializeComponent();
+            button_ConfirmarDados.Enabled = true;*/
+            /*NovoSimulacao fr = new NovoSimulacao();
+            this.Hide();
+            fr.Show();*/
+            
+            //return;
+        }
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             label_ImpLocal.Text = trackBar1.Value.ToString();
