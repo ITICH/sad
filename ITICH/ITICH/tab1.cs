@@ -24,11 +24,11 @@ namespace ITICH
 
             if (i == 1)
             {
+                chart1.DataSource = dt;
                 chart1.Series["Volume"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
                 chart1.Series["Volume"].XValueMember = "nome_parque";
                 chart1.Series["Volume"].YValueMembers = "patrimonio_acossiativo_e_capital_social";
-                //chart1.Series["Volume"].IsValueShownAsLabel = true;
-                chart1.DataSource = dt;
+                chart1.Series["Volume"].IsValueShownAsLabel = true;
                 chart1.DataBind();
             }
             else if (i == 2)
@@ -78,7 +78,7 @@ namespace ITICH
         private void tab1_Load(object sender, EventArgs e)
         {
             //grafico Volume de Negócios
-            string volNegocios = "SELECT I.volume_negocios, P.patrimonio_acossiativo_e_capital_social, P.nome_parque FROM Incubadoras I, Parques_cientificos P /*WHERE P.id_parque = I.id_parque*/ Order By P.nome_parque";
+            string volNegocios = "SELECT P.patrimonio_acossiativo_e_capital_social, P.nome_parque FROM Parques_cientificos P Order By P.nome_parque";
             string areas = "SELECT N.nome_area, COUNT(A.id_nome_area) AS total FROM Areas_negocios A, Nome_area N WHERE N.id_nome_area = A.id_nome_area GROUP BY N.nome_area";
             string fases = "SELECT F.nome_fase, COUNT(P.id_fase_de_desenvolvimento) AS fases FROM Parques_cientificos P, Fases_desenvolvimento F WHERE F.id_fase_desenvolvimento = P.id_fase_de_desenvolvimento GROUP BY F.nome_fase";
             //DataTable dt = ConecaoSQLServer.ExecutaSql(volNegocios);
