@@ -36,7 +36,7 @@ namespace ITICH.Simulacoes
         private DataRow[] foundRows;
         string[] distritos = { "", "Aveiro", "Beja", "Braga", "Bragança", "Castelo Branco", "Coimbra", "Évora", "Faro", "Guarda", "Leiria", "Lisboa", "Portalegre", "Porto", "Santarém", "Setúbal", "Viana do Castelo", "Vila Real", "Viseu", "Ilha da Madeira", "Ilha de Porto Santo", "Ilha de Santa Maria", "Ilha de São Miguel", "Ilha Terceira", "Ilha da Graciosa", "Ilha de São Jorge", "Ilha do Pico", "Ilha do Faial", "Ilha das Flores", "Ilha do Corvo" };
         int[] volNeg = { 10000, 100000, 300000, 500000, 700000, 900000, 1000000, 30000000, 50000000, 100000000 };
-        string[] tipoInst = { "", "Salas", "Incubação", "Cowork", "Lotes" };
+        string[] tipoInst = { "", "Salas", "Incubação", "Cowork", "Lotes", "Gabinete individual", "Sala de reuniões e de formação", "Gabinete virtual" };
         //dicionario onde são guardados os niveis de importância
         Dictionary<int, string> niveisImp = new Dictionary<int, string>();
         
