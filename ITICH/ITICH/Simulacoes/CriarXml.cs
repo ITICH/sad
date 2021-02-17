@@ -128,25 +128,33 @@ namespace ITICH.Simulacoes
                 tiN.AppendChild(instNode);
             }
 
-            string nomeDoc = id.Rows[0][1].ToString().Replace(" ", "")+ "_XMLparque.xml";
-            doc.Save(@"C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\Xml\"+ nomeDoc);
-            
-            string root = @"C:\Users\Asus\Desktop\XMLparques";
+            string nomeDoc = id.Rows[0][1].ToString().Replace(" ", "") + "_XMLparque.xml";//nome documento
+
+            //string caminho = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
+            //doc.Save(@"C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\Xml" + nomeDoc);
+
+            //string root = @"C:\Users\Asus\Desktop\XMLparques";
+            string root = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\XMLparques";
             // If directory does not exist, create it. 
             if (!Directory.Exists(root))
             {
                 Directory.CreateDirectory(root);
-                doc.Save(@"\Users\Asus\Desktop\XMLparques\" + nomeDoc);//COLOCAR A DATA NO NOME
+                //string caminho = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                string filePath = root + @"" + nomeDoc;
+                //doc.Save(@"\Users\Asus\Desktop\XMLparques" + nomeDoc);
+                doc.Save(filePath);
                 SaveXml(nomeDoc);//Guarda na bd
             }
-            else if(Directory.Exists(root))
+            else if (Directory.Exists(root))
             {
-                doc.Save(@"\Users\Asus\Desktop\XMLparques\" + nomeDoc);
+                string caminho = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                //doc.Save(@"\Users\Asus\Desktop\XMLparques" + nomeDoc);
+                string filePath = caminho + @"\XMLparques" + nomeDoc;
+                doc.Save(filePath);
                 SaveXml(nomeDoc);//Guarda na bd
             }
 
-            return @"\Users\Asus\Desktop\XMLparques\" + nomeDoc;
-        //C: \Users\Asus\Desktop >
+            return Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\XMLparques" + nomeDoc;
         }
         public static void SaveXml(string xmlFileName)//metodo que guarda na base de dados o XML
         {

@@ -10,9 +10,6 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using ITICH.ConecaoBD;
 using ITICH.RegistoParques;
-using System.Diagnostics;
-
-using System.Diagnostics;
 using System.Media;
 
 namespace ITICH.RegistoParques

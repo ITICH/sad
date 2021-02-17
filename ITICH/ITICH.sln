@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITICH", "ITICH\ITICH.csproj", "{3CBBC3A7-CBD1-4443-B2EB-2C42ABEBD52E}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "InstaladorITICH", "ITICH\Instalador\InstaladorITICH\InstaladorITICH.vdproj", "{5E1BD421-5BE8-4528-ABAE-B9618FAAC0D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configurador ITICH", "Configurador ITICH\Configurador ITICH.csproj", "{8E64FDB7-8D2F-4DDD-95B9-1581078F884D}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Instalador ITICH", "Instalador ITICH\Instalador ITICH.vdproj", "{6BBD6DE4-B468-4104-8DE5-2D203A79B3DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +19,12 @@ Global
 		{3CBBC3A7-CBD1-4443-B2EB-2C42ABEBD52E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CBBC3A7-CBD1-4443-B2EB-2C42ABEBD52E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CBBC3A7-CBD1-4443-B2EB-2C42ABEBD52E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5E1BD421-5BE8-4528-ABAE-B9618FAAC0D2}.Debug|Any CPU.ActiveCfg = Debug
-		{5E1BD421-5BE8-4528-ABAE-B9618FAAC0D2}.Release|Any CPU.ActiveCfg = Release
+		{8E64FDB7-8D2F-4DDD-95B9-1581078F884D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E64FDB7-8D2F-4DDD-95B9-1581078F884D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E64FDB7-8D2F-4DDD-95B9-1581078F884D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E64FDB7-8D2F-4DDD-95B9-1581078F884D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BBD6DE4-B468-4104-8DE5-2D203A79B3DF}.Debug|Any CPU.ActiveCfg = Debug
+		{6BBD6DE4-B468-4104-8DE5-2D203A79B3DF}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

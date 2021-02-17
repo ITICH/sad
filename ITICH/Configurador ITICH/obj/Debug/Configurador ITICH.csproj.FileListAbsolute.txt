@@ -1,0 +1,10 @@
+D:\OneDrive - ISPGAYA\4º Ano\Semestre 1\SAD\Projeto\Repo\ITICH\Configurador ITICH\bin\Debug\Configurador ITICH.exe.config
+D:\OneDrive - ISPGAYA\4º Ano\Semestre 1\SAD\Projeto\Repo\ITICH\Configurador ITICH\bin\Debug\Configurador ITICH.exe
+D:\OneDrive - ISPGAYA\4º Ano\Semestre 1\SAD\Projeto\Repo\ITICH\Configurador ITICH\bin\Debug\Configurador ITICH.pdb
+D:\OneDrive - ISPGAYA\4º Ano\Semestre 1\SAD\Projeto\Repo\ITICH\Configurador ITICH\obj\Debug\Configurador_ITICH.Properties.Resources.resources
+D:\OneDrive - ISPGAYA\4º Ano\Semestre 1\SAD\Projeto\Repo\ITICH\Configurador ITICH\obj\Debug\Configurador ITICH.csproj.GenerateResource.cache
+D:\OneDrive - ISPGAYA\4º Ano\Semestre 1\SAD\Projeto\Repo\ITICH\Configurador ITICH\obj\Debug\Configurador ITICH.csproj.CoreCompileInputs.cache
+D:\OneDrive - ISPGAYA\4º Ano\Semestre 1\SAD\Projeto\Repo\ITICH\Configurador ITICH\obj\Debug\Configurador ITICH.exe
+D:\OneDrive - ISPGAYA\4º Ano\Semestre 1\SAD\Projeto\Repo\ITICH\Configurador ITICH\obj\Debug\Configurador ITICH.pdb
+D:\OneDrive - ISPGAYA\4º Ano\Semestre 1\SAD\Projeto\Repo\ITICH\Configurador ITICH\obj\Debug\Configurador ITICH.csprojAssemblyReference.cache
+D:\OneDrive - ISPGAYA\4º Ano\Semestre 1\SAD\Projeto\Repo\ITICH\Configurador ITICH\obj\Debug\Configurador_ITICH.Main.resources

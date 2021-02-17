@@ -1,0 +1,5 @@
+<appinfo>
+    <connection>
+        <address>(LocalDb)\MSSQLLocalDB</address>
+    </connection>
+</appinfo>

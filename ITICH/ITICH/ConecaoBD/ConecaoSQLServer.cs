@@ -11,7 +11,7 @@ namespace ITICH.ConecaoBD
 {
     class ConecaoSQLServer
     {
-        public static string stringConecao = @"Data Source = LAPTOP-O0RQ78U5\SQLEXPRESS;Initial Catalog = ITICH;Integrated Security = True";
+        public static string stringConecao = null;
 
         public static DataTable ExecutaSql(string sql)
         {
@@ -29,11 +29,10 @@ namespace ITICH.ConecaoBD
                 connection.Close();
                 connection = null;
                 return dt;
-
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Ocorreu um erro: " + ex.Message, "Ocorreu um erro na coneção ao servidor", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ocorreu um erro, por favor contactar um administrador: \n" + ex.Message, "Ocorreu um erro na coneção ao servidor", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 dt = null;
             }
             return dt;
