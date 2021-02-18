@@ -134,13 +134,13 @@ namespace ITICH.Simulacoes
             //doc.Save(@"C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\Xml" + nomeDoc);
 
             //string root = @"C:\Users\Asus\Desktop\XMLparques";
-            string root = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\XMLparques";
+            string root = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\XMLparques\";
             // If directory does not exist, create it. 
             if (!Directory.Exists(root))
             {
                 Directory.CreateDirectory(root);
                 //string caminho = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                string filePath = root + @"" + nomeDoc;
+                string filePath = root + @"\" + nomeDoc;    
                 //doc.Save(@"\Users\Asus\Desktop\XMLparques" + nomeDoc);
                 doc.Save(filePath);
                 SaveXml(nomeDoc);//Guarda na bd
@@ -149,12 +149,12 @@ namespace ITICH.Simulacoes
             {
                 string caminho = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                 //doc.Save(@"\Users\Asus\Desktop\XMLparques" + nomeDoc);
-                string filePath = caminho + @"\XMLparques" + nomeDoc;
+                string filePath = caminho + @"\XMLparques\" + nomeDoc;
                 doc.Save(filePath);
                 SaveXml(nomeDoc);//Guarda na bd
             }
 
-            return Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\XMLparques" + nomeDoc;
+            return Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\XMLparques\" + nomeDoc;
         }
         public static void SaveXml(string xmlFileName)//metodo que guarda na base de dados o XML
         {
@@ -162,7 +162,7 @@ namespace ITICH.Simulacoes
             int utilizadorLogadoId = Login.dadosLoginID;
 
             // read your XML
-            string xmlContent = File.ReadAllText(@"C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\Xml\" + xmlFileName);
+            //string xmlContent = File.ReadAllText(@"C:\Users\Asus\Source\Repos\sad\ITICH\ITICH\Xml\" + xmlFileName);
 
             // set up query
             string insertQuery = "INSERT INTO Resultados_simulacao(id_empresa, resultado) VALUES ('"+utilizadorLogadoId+"', '"+xmlFileName+"')";
