@@ -1,9 +1,9 @@
 USE master;
 GO
 IF DB_ID (N'ITICH') IS NOT NULL
-DROP DATABASE mytest;
+DROP DATABASE ITICH;
 GO
-CREATE DATABASE mytest;
+CREATE DATABASE ITICH;
 GO
 -- Verify the database files and sizes
 SELECT name, size, size*1.0/128 AS [Size in MBs]
